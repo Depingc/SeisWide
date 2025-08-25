@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<velMod numHorizon="10" numHorizonValid="9" zmin="0" zmax="16.9767436981201" cruise="" processor="Home" company="" date="08/15/2017">
+	<deploy title="">
+		<drop x="0" z="0" lon="-99999" lat="-99999"></drop>
+		<start x="0" lon="-99999" lat="-99999"></start>
+		<end x="140" lon="-99999" lat="-99999"></end>
+	</deploy>
+	<pseudoWell title="" x="4" lon="-99999" lat="-99999">
+#TWT    VEL    DEPTH   VRMS   LAYER (s-km/s-km-km/s)
+ 0.000  1.510  0.000  1.510   1
+ 6.988  1.520  5.293  1.515   1
+ 6.989  1.520  5.294  1.515   2
+ 7.282  2.200  5.564  1.530   2
+ 7.283  2.200  5.565  1.530   3
+ 7.549  2.300  5.864  1.561   3
+ 7.550  2.600  5.865  1.561   4
+ 8.434  2.800  7.059  1.716   4
+ 8.435  2.800  7.060  1.716   5
+ 8.743  3.000  7.507  1.771   5
+ 8.744  3.900  7.508  1.771   6
+ 8.881  4.276  7.788  1.829   6
+ 8.882  4.500  7.789  1.829   7
+ 9.464  5.000  9.172  2.128   7
+ 9.465  6.500  9.173  2.128   8
+10.261  7.208 11.902  2.797   8
+10.262  7.700 11.903  2.797   9
+</pseudoWell>
+	<layer number="1" anisotropy="0" poisson="0">
+		<horizon xmin="-99999" xmax="-99999">
+			<point x="0" z="0" t="0"></point>
+			<point x="140" z="0" t="0"></point>
+		</horizon>
+		<topVelocity>
+			<point x="0" v="1.51"></point>
+			<point x="140" v="1.51"></point>
+		</topVelocity>
+		<bottomVelocity>
+			<point x="0" v="1.52"></point>
+			<point x="140" v="1.52"></point>
+		</bottomVelocity>
+	</layer>
+	<layer number="2" anisotropy="0" poisson="0">
+		<horizon xmin="-99999" xmax="-99999">
+			<point x="0" z="5.31" t="7.009926"></point>
+			<point x="4.8" z="5.29" t="6.983524"></point>
+			<point x="31.33" z="5.29" t="6.983524"></point>
+			<point x="47.91" z="5.25" t="6.930718"></point>
+			<point x="53.22" z="5.21" t="6.877913"></point>
+			<point x="60.64" z="5.17" t="6.825108"></point>
+			<point x="65.98" z="5.15" t="6.798705"></point>
+			<point x="73.44" z="5.11" t="6.745899"></point>
+			<point x="78.66" z="5.08" t="6.706295"></point>
+			<point x="80.77987" z="5.084888" t="6.712748"></point>
+			<point x="87.56637" z="5.042911" t="6.657332"></point>
+			<point x="91.15044" z="5.012127" t="6.616693"></point>
+			<point x="95.97" z="4.97" t="6.56108"></point>
+			<point x="101.16" z="4.93" t="6.508274"></point>
+			<point x="109.34" z="4.9" t="6.46867"></point>
+			<point x="116.82" z="4.85" t="6.402663"></point>
+			<point x="120.54" z="4.82" t="6.36306"></point>
+			<point x="122.42" z="4.8" t="6.336657"></point>
+			<point x="125.14" z="4.75" t="6.27065"></point>
+			<point x="126.21" z="4.74" t="6.257448"></point>
+			<point x="127.76" z="4.74" t="6.257448"></point>
+			<point x="130.99" z="4.74" t="6.257448"></point>
+			<point x="140" z="4.78" t="6.310254"></point>
+		</horizon>
+		<topVelocity>
+			<point x="0" v="1.52"></point>
+			<point x="140" v="1.52"></point>
+		</topVelocity>
+		<bottomVelocity>
+			<point x="0" v="2.2"></point>
+			<point x="140" v="2.2"></point>
+		</bottomVelocity>
+	</layer>
+	<layer number="3" anisotropy="0" poisson="0">
+		<horizon xmin="-99999" xmax="-99999">
+			<point x="0" z="5.566231" t="7.288576"></point>
+			<point x="15.79646" z="5.557836" t="7.274793"></point>
+			<point x="22.54425" z="5.541045" t="7.256533"></point>
+			<point x="27.19027" z="5.566231" t="7.283923"></point>
+			<point x="32.16814" z="5.524254" t="7.237803"></point>
+			<point x="43.89381" z="5.566231" t="7.276871"></point>
+			<point x="53.40708" z="5.54944" t="7.246817"></point>
+			<point x="60.09956" z="5.515858" t="7.201903"></point>
+			<point x="68.91593" z="5.423508" t="7.09248"></point>
+			<point x="82.85398" z="5.364739" t="7.014099"></point>
+			<point x="89.32522" z="5.289179" t="6.921632"></point>
+			<point x="99.18142" z="5.213619" t="6.820256"></point>
+			<point x="111.8252" z="5.180037" t="6.769344"></point>
+			<point x="120.5863" z="5.104477" t="6.672312"></point>
+			<point x="126.1615" z="5.012127" t="6.55349"></point>
+			<point x="128.8248" z="5.045673" t="6.589865"></point>
+			<point x="130.6416" z="4.936567" t="6.471214"></point>
+			<point x="140" z="4.978545" t="6.52617"></point>
+		</horizon>
+		<topVelocity>
+			<point x="0" v="2.2"></point>
+			<point x="140" v="2.2"></point>
+		</topVelocity>
+		<bottomVelocity>
+			<point x="0" v="2.3"></point>
+			<point x="140" v="2.3"></point>
+		</bottomVelocity>
+	</layer>
+	<layer number="4" anisotropy="0" poisson="0">
+		<horizon xmin="-99999" xmax="-99999">
+			<point x="0" z="5.876866" t="7.564741"></point>
+			<point x="5.265487" z="5.860075" t="7.544604"></point>
+			<point x="11.38274" z="5.826492" t="7.514103"></point>
+			<point x="15.71903" z="5.834888" t="7.52111"></point>
+			<point x="20.44248" z="5.818097" t="7.50388"></point>
+			<point x="26.85841" z="5.750933" t="7.447772"></point>
+			<point x="30.01106" z="5.70056" t="7.398625"></point>
+			<point x="31.12832" z="5.658582" t="7.359436"></point>
+			<point x="36.4823" z="5.717351" t="7.410116"></point>
+			<point x="42.62168" z="5.734142" t="7.42596"></point>
+			<point x="46.21682" z="5.708955" t="7.40164"></point>
+			<point x="52.43363" z="5.753731" t="7.430392"></point>
+			<point x="65.04425" z="5.681903" t="7.334728"></point>
+			<point x="82.52213" z="5.636194" t="7.256187"></point>
+			<point x="87.72124" z="5.557836" t="7.1674"></point>
+			<point x="92.09071" z="5.603545" t="7.191348"></point>
+			<point x="98.13053" z="5.590485" t="7.158786"></point>
+			<point x="105.2987" z="5.583955" t="7.139194"></point>
+			<point x="110.8739" z="5.603545" t="7.147838"></point>
+			<point x="116.781" z="5.531716" t="7.06581"></point>
+			<point x="121.9137" z="5.512127" t="7.027077"></point>
+			<point x="125.6195" z="5.492537" t="6.983552"></point>
+			<point x="127.1681" z="5.394589" t="6.895923"></point>
+			<point x="127.9978" z="5.185634" t="6.712228"></point>
+			<point x="128.8274" z="5.172575" t="6.702653"></point>
+			<point x="131.3164" z="5.394589" t="6.879349"></point>
+			<point x="140" z="5.38806" t="6.890243"></point>
+		</horizon>
+		<topVelocity>
+			<point x="0" v="2.6"></point>
+			<point x="66.59" v="2.6"></point>
+			<point x="85.31" v="2.6"></point>
+			<point x="89.74" v="2.7"></point>
+			<point x="140" v="2.7"></point>
+		</topVelocity>
+		<bottomVelocity>
+			<point x="0" v="2.8"></point>
+			<point x="66.75" v="2.8"></point>
+			<point x="83.54" v="2.8"></point>
+			<point x="91.15" v="3.1"></point>
+			<point x="140" v="3.1"></point>
+		</bottomVelocity>
+	</layer>
+	<layer number="5" anisotropy="0" poisson="0">
+		<horizon xmin="-99999" xmax="-99999">
+			<point x="0" z="7.057654" t="8.439799"></point>
+			<point x="3.846154" z="7.081511" t="8.45153"></point>
+			<point x="6.009615" z="6.765408" t="8.214846"></point>
+			<point x="7.8125" z="6.282306" t="7.855175"></point>
+			<point x="8.353365" z="6.28827" t="7.859098"></point>
+			<point x="9.134615" z="6.353877" t="7.907001"></point>
+			<point x="11.25" z="6.890656" t="8.302855"></point>
+			<point x="13.31731" z="7.003976" t="8.387063"></point>
+			<point x="17.42257" z="6.996422" t="8.380193"></point>
+			<point x="21.79086" z="6.918489" t="8.316604"></point>
+			<point x="23.61726" z="6.715563" t="8.164173"></point>
+			<point x="26.6226" z="6.192843" t="7.775374"></point>
+			<point x="28.41814" z="6.070662" t="7.679332"></point>
+			<point x="30.50885" z="6.345259" t="7.872798"></point>
+			<point x="31.06195" z="6.545617" t="8.01728"></point>
+			<point x="32.45575" z="6.791977" t="8.19936"></point>
+			<point x="41.41593" z="6.808769" t="8.221676"></point>
+			<point x="44.2146" z="6.548508" t="8.027716"></point>
+			<point x="46.07301" z="6.373882" t="7.894684"></point>
+			<point x="48.36283" z="6.403918" t="7.916454"></point>
+			<point x="49.6792" z="6.603545" t="8.063028"></point>
+			<point x="54.05973" z="6.624067" t="8.070588"></point>
+			<point x="58.63938" z="6.695896" t="8.109655"></point>
+			<point x="64.51328" z="6.634328" t="8.042565"></point>
+			<point x="73.23009" z="6.648321" t="8.026236"></point>
+			<point x="79.20354" z="6.70056" t="8.05069"></point>
+			<point x="83.90487" z="6.667911" t="8.010964"></point>
+			<point x="85.14423" z="6.526839" t="7.893258"></point>
+			<point x="86.75885" z="6.13153" t="7.586696"></point>
+			<point x="87.75443" z="5.977612" t="7.466326"></point>
+			<point x="91.33849" z="6.531716" t="7.833598"></point>
+			<point x="94.08186" z="6.752799" t="7.977265"></point>
+			<point x="102.9314" z="6.649254" t="7.878746"></point>
+			<point x="105.0901" z="6.379722" t="7.689197"></point>
+			<point x="108.2212" z="6.502982" t="7.772016"></point>
+			<point x="113.6173" z="6.498134" t="7.751328"></point>
+			<point x="117.8761" z="6.341418" t="7.620367"></point>
+			<point x="120.1438" z="6.393657" t="7.646599"></point>
+			<point x="125.2323" z="6.289179" t="7.536354"></point>
+			<point x="125.9292" z="6.171642" t="7.447068"></point>
+			<point x="126.4049" z="5.916977" t="7.264428"></point>
+			<point x="127.0465" z="5.583955" t="7.02795"></point>
+			<point x="127.5774" z="5.38153" t="6.867486"></point>
+			<point x="128.031" z="5.244403" t="6.752802"></point>
+			<point x="128.5684" z="5.262019" t="6.764637"></point>
+			<point x="129.1026" z="5.298077" t="6.790932"></point>
+			<point x="129.4444" z="5.418269" t="6.875927"></point>
+			<point x="130.1709" z="5.682693" t="7.062769"></point>
+			<point x="132.3673" z="6.223881" t="7.454048"></point>
+			<point x="140" z="6.29" t="7.51326"></point>
+		</horizon>
+		<topVelocity>
+			<point x="0" v="2.8"></point>
+			<point x="68.76" v="2.8"></point>
+			<point x="88.14" v="2.8"></point>
+			<point x="90.75" v="3"></point>
+			<point x="140" v="3"></point>
+		</topVelocity>
+		<bottomVelocity>
+			<point x="0" v="3"></point>
+			<point x="35.15" v="3"></point>
+			<point x="64.27" v="3"></point>
+			<point x="74.03" v="3"></point>
+			<point x="90.22" v="3"></point>
+			<point x="96.13" v="3.1"></point>
+			<point x="140" v="3.1"></point>
+		</bottomVelocity>
+	</layer>
+	<layer number="6" anisotropy="0" poisson="0">
+		<horizon xmin="-99999" xmax="-99999">
+			<point x="0" z="7.45975" t="8.717216"></point>
+			<point x="1.238938" z="7.458955" t="8.715145"></point>
+			<point x="2.38938" z="7.677239" t="8.864331"></point>
+			<point x="3.628319" z="7.616604" t="8.820974"></point>
+			<point x="7.743363" z="6.403918" t="7.940089"></point>
+			<point x="8.451327" z="6.355411" t="7.905751"></point>
+			<point x="9.20354" z="6.452425" t="7.975823"></point>
+			<point x="10.88496" z="6.998134" t="8.372604"></point>
+			<point x="12.87611" z="7.507463" t="8.733116"></point>
+			<point x="14.69027" z="7.677239" t="8.851686"></point>
+			<point x="15.88496" z="7.75" t="8.90182"></point>
+			<point x="17.9646" z="7.519589" t="8.740093"></point>
+			<point x="20.97345" z="7.13153" t="8.466002"></point>
+			<point x="22.69912" z="6.925373" t="8.314579"></point>
+			<point x="26.72566" z="6.270523" t="7.82856"></point>
+			<point x="28.36283" z="6.161381" t="7.742337"></point>
+			<point x="29.77876" z="6.31903" t="7.854335"></point>
+			<point x="32.30088" z="7.192164" t="8.473785"></point>
+			<point x="39.29203" z="7.277052" t="8.543379"></point>
+			<point x="41.85841" z="7.058769" t="8.392299"></point>
+			<point x="44.94469" z="6.531716" t="8.0112"></point>
+			<point x="46.93584" z="6.521455" t="7.996909"></point>
+			<point x="48.15266" z="6.552239" t="8.018862"></point>
+			<point x="49.70133" z="6.716418" t="8.140885"></point>
+			<point x="51.76991" z="6.829291" t="8.21711"></point>
+			<point x="54.60177" z="7.070896" t="8.377626"></point>
+			<point x="56.99115" z="7.216418" t="8.472553"></point>
+			<point x="61.06195" z="7.192164" t="8.442373"></point>
+			<point x="63.93805" z="7.058769" t="8.337889"></point>
+			<point x="65.30974" z="7.095149" t="8.357664"></point>
+			<point x="67.43363" z="7.046642" t="8.316738"></point>
+			<point x="69.82301" z="7.058769" t="8.317555"></point>
+			<point x="71.9469" z="6.998134" t="8.270648"></point>
+			<point x="73.84956" z="6.9375" t="8.224459"></point>
+			<point x="75.39823" z="6.986008" t="8.254652"></point>
+			<point x="78.00885" z="7.313433" t="8.475035"></point>
+			<point x="82.92036" z="7.240672" t="8.414392"></point>
+			<point x="84.69026" z="7.010261" t="8.234049"></point>
+			<point x="86.16151" z="6.347015" t="7.746886"></point>
+			<point x="86.89159" z="6.172575" t="7.612986"></point>
+			<point x="87.82079" z="6.059701" t="7.522806"></point>
+			<point x="90.05531" z="6.498134" t="7.813009"></point>
+			<point x="91.88053" z="6.800373" t="8.012254"></point>
+			<point x="94.60177" z="7.270523" t="8.315951"></point>
+			<point x="96.79204" z="7.270523" t="8.305079"></point>
+			<point x="99.35841" z="7.137127" t="8.207423"></point>
+			<point x="101.4602" z="6.890858" t="8.040088"></point>
+			<point x="103.2522" z="6.706157" t="7.914162"></point>
+			<point x="104.8451" z="6.456157" t="7.740774"></point>
+			<point x="105.8739" z="6.447761" t="7.734177"></point>
+			<point x="107.2013" z="6.523321" t="7.784647"></point>
+			<point x="108.0973" z="6.791977" t="7.961452"></point>
+			<point x="109.0929" z="7.096082" t="8.160345"></point>
+			<point x="110.5199" z="7.418843" t="8.370162"></point>
+			<point x="112.4004" z="7.405784" t="8.353508"></point>
+			<point x="114.4469" z="7.288246" t="8.263702"></point>
+			<point x="116.2721" z="6.935634" t="8.01975"></point>
+			<point x="117.3894" z="6.613806" t="7.801739"></point>
+			<point x="118.3186" z="6.598881" t="7.787644"></point>
+			<point x="120.3097" z="6.972948" t="8.025656"></point>
+			<point x="122.3673" z="6.942164" t="7.99102"></point>
+			<point x="124.4911" z="6.81903" t="7.890549"></point>
+			<point x="126.2611" z="6.080224" t="7.375619"></point>
+			<point x="127.1128" z="5.610075" t="7.043528"></point>
+			<point x="127.7102" z="5.401119" t="6.872632"></point>
+			<point x="128.1195" z="5.309701" t="6.795671"></point>
+			<point x="128.5398" z="5.331157" t="6.809962"></point>
+			<point x="129.0929" z="5.389925" t="6.851087"></point>
+			<point x="130.9071" z="6.145523" t="7.380279"></point>
+			<point x="134.1372" z="7.153846" t="8.067592"></point>
+			<point x="135.9569" z="7.243291" t="8.130029"></point>
+			<point x="140" z="7.302326" t="8.177139"></point>
+		</horizon>
+		<topVelocity>
+			<point x="0" v="3.9"></point>
+			<point x="50.18" v="3.9"></point>
+			<point x="87.19" v="3.9"></point>
+			<point x="88.19" v="3.9"></point>
+			<point x="100.73" v="3.9"></point>
+			<point x="106.28" v="3.9"></point>
+			<point x="122.48" v="3.9"></point>
+			<point x="128.65" v="3.8"></point>
+			<point x="140" v="3.9"></point>
+		</topVelocity>
+		<bottomVelocity>
+			<point x="0" v="4.3"></point>
+			<point x="51.06" v="4"></point>
+			<point x="67.17" v="4"></point>
+			<point x="73.54" v="4"></point>
+			<point x="78.5" v="4.3"></point>
+			<point x="87.17" v="3.95"></point>
+			<point x="88.34" v="4"></point>
+			<point x="95.87" v="4"></point>
+			<point x="101.28" v="4"></point>
+			<point x="104.42" v="4"></point>
+			<point x="111.13" v="4"></point>
+			<point x="117.43" v="4"></point>
+			<point x="121.95" v="4"></point>
+			<point x="140" v="4"></point>
+		</bottomVelocity>
+	</layer>
+	<layer number="7" anisotropy="0" poisson="0">
+		<horizon xmin="-99999" xmax="-99999">
+			<point x="0" z="7.752799" t="8.860281"></point>
+			<point x="2.345133" z="7.855411" t="8.949822"></point>
+			<point x="3.893805" z="7.824627" t="8.906427"></point>
+			<point x="7.920354" z="6.452425" t="7.960438"></point>
+			<point x="8.938053" z="6.464552" t="7.973483"></point>
+			<point x="11.85841" z="7.383396" t="8.617547"></point>
+			<point x="14.51327" z="8.019589" t="9.017251"></point>
+			<point x="16.15044" z="8.132463" t="9.084595"></point>
+			<point x="17.9646" z="7.896455" t="8.92641"></point>
+			<point x="19.77876" z="7.519589" t="8.690984"></point>
+			<point x="25.22124" z="6.658582" t="8.082159"></point>
+			<point x="27.25664" z="6.306903" t="7.837254"></point>
+			<point x="28.71681" z="6.306903" t="7.822776"></point>
+			<point x="31.37168" z="7.198694" t="8.407522"></point>
+			<point x="33.40708" z="7.568097" t="8.667711"></point>
+			<point x="34.9115" z="7.958023" t="8.869308"></point>
+			<point x="36.9469" z="7.906716" t="8.85204"></point>
+			<point x="39.38053" z="7.875933" t="8.842686"></point>
+			<point x="46.23894" z="6.726679" t="8.100548"></point>
+			<point x="47.65487" z="6.644589" t="8.063058"></point>
+			<point x="49.82301" z="6.961754" t="8.266125"></point>
+			<point x="53.73894" z="7.543843" t="8.605749"></point>
+			<point x="59.95575" z="8.077425" t="8.896735"></point>
+			<point x="68.67257" z="7.895523" t="8.74323"></point>
+			<point x="69.46902" z="7.531716" t="8.557551"></point>
+			<point x="71.0177" z="7.298508" t="8.429833"></point>
+			<point x="73.5177" z="7.228545" t="8.374474"></point>
+			<point x="74.86726" z="7.639925" t="8.580461"></point>
+			<point x="77.20132" z="8.655784" t="9.118258"></point>
+			<point x="78.36283" z="8.553172" t="9.079057"></point>
+			<point x="79.35841" z="8.235075" t="8.921165"></point>
+			<point x="79.63496" z="7.906716" t="8.759499"></point>
+			<point x="81.65929" z="8.110075" t="8.853622"></point>
+			<point x="83.42921" z="7.416045" t="8.486281"></point>
+			<point x="84.91151" z="7.029851" t="8.22178"></point>
+			<point x="86.50443" z="6.414179" t="7.759295"></point>
+			<point x="87.19026" z="6.263992" t="7.648604"></point>
+			<point x="87.83186" z="6.263992" t="7.626901"></point>
+			<point x="88.42921" z="6.357276" t="7.693267"></point>
+			<point x="91.52655" z="6.951492" t="8.079435"></point>
+			<point x="93.41547" z="7.599291" t="8.455216"></point>
+			<point x="95.01711" z="8.458333" t="8.915196"></point>
+			<point x="97.46749" z="8.340425" t="8.838779"></point>
+			<point x="98.78319" z="7.629664" t="8.46336"></point>
+			<point x="101.969" z="6.911381" t="8.041639"></point>
+			<point x="105.1549" z="6.603545" t="7.813563"></point>
+			<point x="107.0796" z="6.665112" t="7.855325"></point>
+			<point x="109.2699" z="7.414179" t="8.327271"></point>
+			<point x="110.3982" z="7.804104" t="8.561301"></point>
+			<point x="112.6549" z="7.875933" t="8.587934"></point>
+			<point x="114.7788" z="7.362873" t="8.289598"></point>
+			<point x="116.969" z="6.952425" t="7.993663"></point>
+			<point x="118.1195" z="6.962687" t="7.973042"></point>
+			<point x="120.5752" z="8.050373" t="8.569259"></point>
+			<point x="121.615" z="8.265859" t="8.668539"></point>
+			<point x="123.5177" z="7.55597" t="8.281961"></point>
+			<point x="126.604" z="5.943097" t="7.268379"></point>
+			<point x="127.4447" z="5.616604" t="7.012036"></point>
+			<point x="128.7721" z="5.486008" t="6.893276"></point>
+			<point x="130.6305" z="6.221082" t="7.39498"></point>
+			<point x="133.8827" z="7.228545" t="8.09356"></point>
+			<point x="135.6637" z="7.354477" t="8.183878"></point>
+			<point x="140" z="7.494403" t="8.274399"></point>
+		</horizon>
+		<topVelocity>
+			<point x="0" v="4.5"></point>
+			<point x="39.42" v="4.5"></point>
+			<point x="46.99" v="4"></point>
+			<point x="60.33" v="4.5"></point>
+			<point x="67.7" v="5"></point>
+			<point x="73.8" v="4.7"></point>
+			<point x="77.38" v="5.5"></point>
+			<point x="81.42" v="5.3"></point>
+			<point x="87.11" v="5.3"></point>
+			<point x="88.43" v="4.5"></point>
+			<point x="95.17" v="4.5"></point>
+			<point x="96.48" v="5.7"></point>
+			<point x="104.28" v="5.3"></point>
+			<point x="110.21" v="5.5"></point>
+			<point x="117.35" v="5.3"></point>
+			<point x="121.64" v="5.5"></point>
+			<point x="128.24" v="4.5"></point>
+			<point x="140" v="5.5"></point>
+		</topVelocity>
+		<bottomVelocity>
+			<point x="0" v="5"></point>
+			<point x="47.84" v="5"></point>
+			<point x="54.81" v="5.2"></point>
+			<point x="62.06" v="6.5"></point>
+			<point x="70.33" v="6.5"></point>
+			<point x="79.03" v="6.9"></point>
+			<point x="86.34" v="6.8"></point>
+			<point x="90.91" v="7.2"></point>
+			<point x="95.09" v="6.9"></point>
+			<point x="98.03" v="6.5"></point>
+			<point x="101.13" v="6.4"></point>
+			<point x="104.85" v="6.5"></point>
+			<point x="140" v="6.5"></point>
+		</bottomVelocity>
+	</layer>
+	<layer number="8" anisotropy="0" poisson="0">
+		<horizon xmin="-99999" xmax="-99999">
+			<point x="0" z="9.46353" t="9.581255"></point>
+			<point x="8.786611" z="8.823529" t="8.963133"></point>
+			<point x="16.01116" z="9.46353" t="9.648031"></point>
+			<point x="27.14087" z="8.804706" t="8.893672"></point>
+			<point x="29.09344" z="8.823529" t="8.902174"></point>
+			<point x="35.06276" z="9.2" t="9.393099"></point>
+			<point x="39.91632" z="9.143529" t="9.363621"></point>
+			<point x="43.01255" z="8.842353" t="9.136697"></point>
+			<point x="45.94142" z="8.352942" t="8.824745"></point>
+			<point x="48.03347" z="8.352942" t="8.826815"></point>
+			<point x="51.04602" z="8.56" t="8.984602"></point>
+			<point x="54.56067" z="9.087059" t="9.275796"></point>
+			<point x="61.79203" z="9.173508" t="9.276364"></point>
+			<point x="70.30974" z="9.215485" t="9.130424"></point>
+			<point x="74.52991" z="10.36539" t="9.515638"></point>
+			<point x="86.53761" z="10.27892" t="9.03846"></point>
+			<point x="89.86726" z="10.78265" t="9.330344"></point>
+			<point x="91.88053" z="10.69869" t="9.419198"></point>
+			<point x="94.60177" z="10.18937" t="9.498671"></point>
+			<point x="96.92478" z="9.427238" t="9.203361"></point>
+			<point x="98.14159" z="9.072762" t="9.009137"></point>
+			<point x="101.8363" z="8.795709" t="8.686834"></point>
+			<point x="104.4911" z="8.781716" t="8.577474"></point>
+			<point x="107.4779" z="9.179105" t="8.738974"></point>
+			<point x="108.9712" z="9.320895" t="8.937894"></point>
+			<point x="111.5929" z="10.08302" t="9.330903"></point>
+			<point x="114.4469" z="10.11847" t="9.245478"></point>
+			<point x="121.8805" z="10.11847" t="9.270044"></point>
+			<point x="130.0443" z="9.88806" t="8.643512"></point>
+			<point x="140" z="9.905784" t="9.080061"></point>
+		</horizon>
+		<topVelocity>
+			<point x="0" v="6.5"></point>
+			<point x="47.64" v="6.5"></point>
+			<point x="61.33" v="7.2"></point>
+			<point x="70.93" v="7.2"></point>
+			<point x="75.46" v="7.4"></point>
+			<point x="91.99" v="7.5"></point>
+			<point x="98.65" v="7.3"></point>
+			<point x="102.06" v="7.3"></point>
+			<point x="107.99" v="7.3"></point>
+			<point x="140" v="7.3"></point>
+		</topVelocity>
+		<bottomVelocity>
+			<point x="0" v="7.2"></point>
+			<point x="47.64" v="7.3"></point>
+			<point x="63.34" v="7.4"></point>
+			<point x="71.36" v="7.7"></point>
+			<point x="98.65" v="7.7"></point>
+			<point x="105.09" v="7.7"></point>
+			<point x="111.19" v="7.7"></point>
+			<point x="140" v="7.7"></point>
+		</bottomVelocity>
+	</layer>
+	<layer number="9" anisotropy="0" poisson="0">
+		<horizon xmin="-99999" xmax="-99999">
+			<point x="0" z="11.88372" t="10.2885"></point>
+			<point x="35.15487" z="12.04651" t="10.2207"></point>
+			<point x="71.70354" z="11.97948" t="9.875319"></point>
+			<point x="88.69469" z="12.24534" t="9.642279"></point>
+			<point x="95.79646" z="11.92631" t="9.92351"></point>
+			<point x="104.7566" z="11.83769" t="9.382103"></point>
+			<point x="111.5266" z="13.23787" t="10.17096"></point>
+			<point x="122.3451" z="13.07836" t="10.02891"></point>
+			<point x="140" z="12.84795" t="9.864824"></point>
+		</horizon>
+		<topVelocity validated="0">
+			<point x="0" v="7.7"></point>
+			<point x="43.05" v="7.7"></point>
+			<point x="87.86" v="7.8"></point>
+			<point x="105.15" v="7.8"></point>
+			<point x="140" v="7.8"></point>
+		</topVelocity>
+		<bottomVelocity validated="0">
+			<point x="0" v="8.1"></point>
+			<point x="140" v="8.1"></point>
+		</bottomVelocity>
+	</layer>
+	<!--All following layers are not controled by data, but needed to stay for modeling purposes, and actually they may well be correct.-->
+	<layer number="10" validated="0">
+		<horizon xmin="-99999" xmax="-99999">
+			<point x="0" z="16.97674" t="11.57814"></point>
+			<point x="140" z="16.93023" t="10.89194"></point>
+		</horizon>
+		<topVelocity></topVelocity>
+		<bottomVelocity></bottomVelocity>
+	</layer>
+</velMod>
+<!--Draft XML format Version 3.1 used by SeisWide:
+	1. Attributes of <velMod> and <layer> elements are optional, although xmin, xmax, zmin and zmax may be used if supplied. numHorizonValid indicates horizons constrained by data. Multiple <deploy> for the model can exist with >2 deployments displayed near the end of file. <pseudoWell> for each deployment incidates an approximate location near the center of raytracing for target layers.
+	2. Layer number attrbute may be arbitrary integer.
+	3. Each horizon should have >= 2 points starting from xmin to xmax. Each horizon can be optionally constrained by [xmMin, xmMax], outside which the structure is not controlled by data.
+	4. Optional attributes of <point> include t(two-way time), lat(latitude), and lon(longitude). Only when z(depth) does not exist, t is required.
+	5. All the latitude/longitude values may be empty when not available.
+	6. If the velocities below the max valid horizon are not validated (e.g. Moho without Pn), <topVelocity> can have validated="0" attribute. -->

@@ -1,0 +1,41 @@
+ &pltpar iroute=1,iseg=0,iray=2,ibnd=0,irays=0,ivel=0,
+	  itx=1,itxout=1,idump=0,iszero=0,idash=0,isum=1,iplot=0,
+ 
+	  idata=0,vred= 7.000,nrskip=3,nskip=0,velht=0.05,
+          symht=0.1,itxbox=1,isep=0,istep=0,ircol=3,irayps=0,itcol=3,ifcol=6,ibcol=0,
+          mcol=8,14,1,4,14,  colour=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,
+  /
+  &axepar  xmin=   0.0,xmax=  40.0,xtmin=   0.0,xtmax=40.000,xmm=200,ntickx=0,ndecix=-1,
+           zmin=   0.0,zmax=  15.0,ztmin=   0.0,ztmax=15.000,zmm=85,ntickz=0,ndeciz=-1,
+           tmin=   0.0,tmax=  12.0,ttmin=   0.0,ttmax=  12.0,tmm=85,ntickt=0,ndecit=-1,
+           xmint=   0.0,xmaxt=  40.0,xtmint=   0.0,xtmaxt=  40.0,xmm=200,ntickx=0,ndecix=-1,
+           iaxlab=1,itrev=0, sep=15, orig=15,
+  /
+  &trapar imodf=1, ibsmth=0, nbsmth=0, istop=0, crit=0., hws=1.0, iraysl=1,ifast=1,isrch=1,is_anisotropy=1,
+  ishot=  1,
+  xshot= 0.000, 
+  zshot= 0.049,
+  irayt=1,   1,   1,   1,   1,    1,   1,   1,   1,   1,
+        1,   1,   1,   1,   1,    1,   1,   1,   1,   1,
+  ray = 9.1,10.1, 11.1,12.1,13.1, 1.2,2.1,3.1,4.1,5.1,6.1,7.1,8.1,9.1,10.1, 11.1,12.1,13.1, 
+  iturn=0,   0,   0,   0,   0,    0,   0,   0,   0,   0,
+  nray =00, 20,   20,  20,  20,   20, 20, 20, 20, 20, 20, 20, 20, 20, 20,   20,  20,  20,
+  ncbnd=2,   2,   2,   2,   2,
+  cbnd =8,9, 8,11,8,13,8,15,8,17,
+
+  xsmax=0.,nsmax=45,
+  space=1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0,  2.0, 2.0, 2.0,2.0, 2.0, 2.0, 2.0,
+  aamin=0.000, aamax=90, step=0.003,
+  i2pt=0,n2pt=100,
+  frbnd=0,   0,   0,   0,   0,   0,   0,     0,    0,    0,   0,   0,   0,   0,   0,   0,
+  frbnd=0,   0,   0,   0,   0,   0,   0,     0,    0,    0,   0,   0,   0,   0,   0,   0,
+  pois=0.5,0.45,0.42,0.42,0.41,0.37,0.34,0.33,0.31,    0.27, 0.26,0.26,0.27,   nhray=30,
+
+  /
+  &invpar  invr=0,
+  ivray= 2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  8,  0,
+           bndunc=0.08,   velunc=0.05,  ximax=2.0,
+  /
+  &amppar iamp=1, isect=1, omega = 6000.,
+          xmins=0., xmaxs=40., xincs=0.5,iden=1,
+  &end

@@ -1,0 +1,9 @@
+You can use onscreen line drawing functions to help your complicated modeling process; see File | Import | Import Line-Drawing in Depth.
+Most of Seiswide displays except seismograms can be copied to clipboard. If you use CorelDraw to paste, use "Paste Special" and ungroup to edit each of the pasted objects.
+You can use scanned Seismic data (BMP format only) in ways similar to segy data in SeisWide. Use File | Import BMP, and define corner coordinates. This function needs some further improvements.
+You can digitize onscreen with the Zoom, Pick, Delete, Move, Add buttons.
+During modeling, you may find it convenient to open many windows in SeisWide. Multiple screens would make work easier. Seiswide program can be run more than once concurrently.
+Updated velocity models will not be automatically saved to disk unless you manually click Save Model button. Raytracing will use saved model only. Try saving models to different file names if you later want to revert back to previous model versions.
+Raytracing results are stored in the same directory as the velocity model, and shared by different sub-windows inside SeisWide. Therefore, it may be convenient to store one velocity model per directory, or several related models per directory.
+When a model boundary or a travel-time curve goes outside the display rectangle, the segment is NOT displayed. In this case, you may either clip the model or widen the display rectangle.
+It is usually more convenient to revise an existing model than creating a new model.

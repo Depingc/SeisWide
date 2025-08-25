@@ -1,0 +1,30 @@
+	double rVZero = fabs(modX->regVZero) == 0. ? 0. : 1. / modX->regVZero;
+	double rVInf = fabs(modX->regVInf) == 0. ? 0. : 1. / modX->regVInf;
+
+				if (modX->layerRegression == icont) {
+					// consider regression
+					register double h = depth[it - 1] - modX->depthMod[icont];
+					v = rVInf + (rVZero - rVInf) * exp(-modX->regAlpha * h);
+					if (v > 0.) {
+						v = 1. / v;
+					}
+					else {
+						v = modX->vTop[icont] + ratio[icont] * (t - t1);
+					}
+					depth[it] = depth[it - 1] + dt2*v;
+				}
+				else {
+
+
+
+	bool getDepthFromVt(CVelMod::VELMOD_X *modX, int nt, double dt, double *depth);
+	bool getVZCurveAtDist(CVelMod::VELMOD *velm, CVelMod::VELMOD_X *modX, double dist, bool isAnisotropyApply = true);
+	bool getTwttModFromZModAtDistance(CVelMod::VELMOD_X *modX, double dz, double dist, double *twttMod);
+
+	this->getTwttFromVz(modX, nzmaxModelAll, 0, dz, tTrc);
+
+modX->depthMod
+modX.depthMod
+modX.timeMod
+	CVelMod::VELMOD_X modX;
+

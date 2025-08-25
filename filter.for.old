@@ -1,0 +1,145 @@
+C234567----------------------- SUBROUTINE BANDPASS -------------------------
+      SUBROUTINE BANDPASS(F1,F2,DELT,D,G)
+C     A BANDPASS FILTER ALGORITHM FROM KANASEWICH PAGE 274-277.
+ 
+      COMPLEX P(4),S(8),Z1,Z2
+      DIMENSION D(8),X(1),XC(3),XD(3),XE(3)
+	INTEGER IG
+	INTEGER*2 N
+	REAL G,DELT
+      DATA ISW/0/,TWOPI/6.2831853/
+
+C...... This section calculates the filter and must be called before
+C       the first call to entry point FILTER is made
+C           F1 = Low frequency cutoff (6 DB down)
+C           F2 = High frequency cutoff (6 DB down)
+C           DELT = Sample interval in milliseconds
+C           D = To contain 8 Z-domain co-efficients of recursive filter
+C           G = To contain the gain of the filter
+ 
+      WRITE(4,1)F1,F2,DELT
+1     FORMAT('   Bandpass filter design LOWCUT = ',F8.3,
+     +  '  HIGHCUT = ',F8.3, '(HZ)',
+     + / '   SAMPLE INTERVAL =',F5.2,' (MS)')
+      DT=DELT/1000.
+      TDT=2./DT
+      FDT=4./DT
+      ISW=1
+      P(1)=CMPLX(-.3826834,.9238795)
+      P(2)=CMPLX(-.3826834,-.9238795)
+      P(3)=CMPLX(-.9238795,.3826834)
+      P(4)=CMPLX(-.9238795,-.3826834)
+      W1=TWOPI*F1
+      W2=TWOPI*F2
+      W1=TDT*TAN(W1/TDT)
+      W2=TDT*TAN(W2/TDT)
+      HWID=(W2-W1)/2.
+      WW=W1*W2
+      DO 19 I=1,4
+      Z1=P(i)*HWID
+      Z2=Z1*Z1-WW
+      Z2=CSQRT(Z2)
+      S(I)=Z1+Z2
+19    S(I+4)=Z1-Z2
+      G=.5/HWID
+      G=G*G
+      G=G*G
+      DO 29 I=1,7,2
+      B=-2.*REAL(S(i))
+      Z1=S(I)*S(I+1)
+      C=REAL(Z1)
+      A=TDT+B+C/TDT
+      G=G*A
+      D(I)=(C*DT-FDT)/A
+29    D(I+1)=(A-2.*B)/A
+      G=G*G
+      RETURN
+ 
+      ENTRY FILTER(x,n,d,g,ig)
+ 
+C...... X = Data vector of length N containing data to be filtered
+c       D = Filter co-efficients calculated by bandpass
+c       G = Filter gain
+c       IG = 1 means to remove the filter gain so that the gain is
+c              unity
+ 
+31    xm2=x(1)
+      xm1=x(2)
+      xm=x(3)
+      xc(1)=xm2
+	xc(2)=xm1-d(1)*xc(1)
+	xc(3)=xm-xm2-d(1)*xc(2)-d(2)*xc(1)
+      xd(1)=xc(1)
+      xd(2)=xc(2)-d(3)*xd(1)
+      xd(3)=xc(3)-xc(1)-d(3)*xd(2)-d(4)*xd(1)
+      xe(1)=xd(1)
+	xe(2)=xd(2)-d(5)*xe(1)
+	xe(3)=xd(3)-xd(1)-d(5)*xe(2)-d(6)*xe(1)
+      x(1)=xe(1)
+      x(2)=xe(2)-d(7)*x(1)
+      x(3)=xe(3)-xe(1)-d(7)*x(2)-d(8)*x(1)
+      do 39 i=4,n
+      xm2=xm1
+      xm1=xm
+      xm=x(i)
+      k=i-((i-1)/3)*3
+      goto(34,35,36),k
+34    m=1
+      m1=3
+      m2=2
+      goto 37
+35    m=2
+      m1=1
+      m2=3
+      goto 37
+36    m=3
+      m1=2
+      m2=1
+37    xc(m)=xm-xm2-d(1)*xc(m1)-d(2)*xc(m2)
+      xd(m)=xc(m)-xc(m2)-d(3)*xd(m1)-d(4)*xd(m2)
+      xe(m)=xd(m)-xd(m2)-d(5)*xe(m1)-d(6)*xe(m2)
+      x(i)=xe(m)-xe(m2)-d(7)*x(i-1)-d(8)*x(i-2)
+39      continue
+ 
+      xm2=x(n)
+      xm1=x(n-1)
+      xm=x(n-2)
+      xc(1)=xm2
+      xc(2)=xm1-d(1)*xc(1)
+      xc(3)=xm-xm2-d(1)*xc(2)-d(2)*xc(1)
+      xd(1)=xc(1)
+      xd(2)=xc(2)-d(3)*xd(1)
+      xd(3)=xc(3)-xc(1)-d(3)*xd(2)-d(4)*xd(1)
+      xe(1)=xd(1)
+      xe(2)=xd(2)-d(5)*xe(1)
+      xe(3)=xd(3)-xd(1)-d(5)*xe(2)-d(6)*xe(1)
+      x(n)=xe(1)
+      x(n-1)=xe(2)-d(7)*x(1)
+      x(n-2)=xe(3)-xe(1)-d(7)*x(2)-d(8)*x(1)
+      do 49 i=4,n
+      xm2=xm1
+      xm1=xm
+      j=n-i+1
+      xm=x(j)
+      k=i-((i-1)/3)*3
+      goto(44,45,46),k
+44    m=1
+      m1=3
+      m2=2
+      goto 47
+45    m=2
+      m1=1
+      m2=3
+      goto 47
+46    m=3
+      m1=2
+      m2=1
+47    xc(m)=xm-xm2-d(1)*xc(m1)-d(2)*xc(m2)
+      xd(m)=xc(m)-xc(m2)-d(3)*xd(m1)-d(4)*xd(m2)
+      xe(m)=xd(m)-xd(m2)-d(5)*xe(m1)-d(6)*xe(m2)
+49    x(j)=xe(m)-xe(m2)-d(7)*x(j+1)-d(8)*x(j+2)
+      if(ig.ne.1)return
+      do 59 i=1,n
+59      x(i)=x(i)/g
+      return
+	END

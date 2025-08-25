@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "gravMod2", "gravMod2.vfproj", "{9834E2F0-DD1D-40BF-BD27-171512B4523B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9834E2F0-DD1D-40BF-BD27-171512B4523B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9834E2F0-DD1D-40BF-BD27-171512B4523B}.Debug|Win32.Build.0 = Debug|Win32
+		{9834E2F0-DD1D-40BF-BD27-171512B4523B}.Release|Win32.ActiveCfg = Release|Win32
+		{9834E2F0-DD1D-40BF-BD27-171512B4523B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

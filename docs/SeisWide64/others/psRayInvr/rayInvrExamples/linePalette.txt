@@ -1,0 +1,14 @@
+#Color index file applied to the same directory as line drawings file.
+#If more lines exist than colors, repeat colors will be used.
+#r      g     b    (You may manually edit these texts.)
+  0  255    0
+127  255    0
+255  255    0
+255  127    0
+200   10   10
+127  255  127
+255  255  255
+  0  127  255
+  0    0  255
+127    0  255
+255    0  255

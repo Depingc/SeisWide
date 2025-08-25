@@ -1,0 +1,1 @@
+This directory contains a fortran source code (and project files of Digital Fortran) that read in line-drawing file in dxf format from Autocad 12. Note that for dxf files newer than Autocad 12, they have to converted to Autocad 12 format before running this program. Good luck.

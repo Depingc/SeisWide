@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h1>SeisWide FAQ (<a href="http://seiswide.hopto.org/seiswide.zip">Download</a>)</h1>
+<p>(Please note:  the help is just a preliminary writing. However, most of the functionalities of SeisWide  is provided with self-evident instructions).</p>
+<ul>
+  <li><a href="#Purpose">Purpose/scope of Seiswide</a></li>
+  <li><a href="#Licensing">Licensing of usage</a></li>
+  <li><a href="#Conversion">Segy Conversion: Unix-PC, PC-Unix</a></li>
+  <li><a href="#MCS">Multi-channel (MCS) seismic reflection profiles</a></li>
+  <li><a href="#Wide">Wide-angle Data</a></li>
+  <li><a href="#Viewing">Viewing Segy Data</a></li>
+  <li><a href="#Depth">Time-Depth Conversion and Gravity Modeling</a></li>
+  <li><a href="#Modeling">Wide-Angle Modeling</a></li>
+  <li><a href="#NMO">Reduced NMO</a></li>
+  <li><a href="#Velocity">2D Velocity Model</a></li>
+  <li><a href="#Digitizing">Digitizing</a></li>
+  <li><a href="#Sonobuoys">Sonobuoys</a></li>
+  <li><a href="#Line">View Line drawings/Markers</a></li>
+  <li><a href="#Magnetic">Magnetic Modeling</a></li>
+  <li><a href="#Copy">Copy/pasting</a></li>
+  <li><a href="#Exporting">Exporting/Printing</a></li>
+  <li><a href="#Importing">Importing</a></li>
+  <li><a href="#Processing">Common Data Processing</a></li>
+  <li><a href="#References">References</a></li>
+</ul>
+<h2><a name="Purpose" id="Purpose"></a>Purpose/scope of Seiswide</h2>
+<p><span class="MsoNormal">Seiswide was created in 1996 using Microsoft
+  Visual C++, aiming at unified graphical manipulation of SEG-Y seismic
+  data (including multichannel seismic reflection data, wide-angle Ocean Bottom
+Seismometer and sonobuoy data) with interactive 2D velocity modeling and digitizing.&nbsp; </span>It can  combine MCS data with wide-angle to produce model results in either time <span class="MsoNormal"> (TWTT) </span>and/or depth domain using computed 2D velocity structures.</p>
+<p><span class="MsoNormal">Seiswide tries to handle all needed data processing for the purpose of wide-angle modeling, including water wave picking and offset assigning, distance assignment for
+  multichannel data, filtering (time varying or distance varying), despiking,
+  deconvolution, time-code removal, regular noise reduction, and optimal
+coherency trace mixing.</span></p>
+<h2><a name="Licensing" id="Licensing"></a>Licensing of usage</h2>
+<p>License is machine (PC/Windows) specific. Internet is required to get a FULL demo license for 30 days. After it expires, one can register again for another 30 days of demo usage, unless exceptions occur. Conmercial usage should purchase licenses via emailing to seiswide@gmail.com .</p>
+<p>Licensing inclue:</p>
+<ul>
+  <li>FULL: all functions</li>
+  <li>REFL: non-wide-angle manipulations, but all other functions</li>
+  <li>REFR: wide-angle manipulations</li>
+  <li>DEMO: 30 days of full usages</li>
+</ul>
+<h2><b><a name="Conversion" id="Conversion"></a>Segy Conversion</b>: Unix-PC, PC-Unix</h2>
+<p>Due to historical reasons, less than half of Seiswide's functions can only handle small-endian or PC data format of Segy, which is different from Unix' big-endian format that most of the industry Segy data adopts. Therefore, a manual conversion may be needed for converting to PC format first, handily from the Processing menu. However, newer functions of Seiswide perform this conversion automatically.</p>
+<p class="MsoNormal">SeisWide also utilizes some extensions that differ from
+  standard SEG-Y format: </p>
+<ul>
+  <li><span style='font-size:12.0pt'>Traditional header for trace time
+    delay (short delrt, bytes 108-109, first byte counted as 0) is complemented
+    with another header (int delrtEx, bytes 210-214). When fabs(delrtEx) &gt; 32000 ms, Seiswide will use delrtEx to describe the trace delay, and will set delrt=0. Such combination allows us to describe much greater time delays while maintaining compatibilities with other&nbsp; industry
+    software.</span></li>
+  <li><span style='font-size:12.0pt'>A new header (float trcDist, bytes
+    224-227) stores trace distance and allows </span><span style='font-size:12.0pt'>model
+      distances to be assigned for as much as thousands of kilometers.</span></li>
+  <li><span style='font-size:12.0pt'>A new header (float trcOffset,
+    bytes 228-231) stores the decimal part of trace offset and is created to allow
+    for greater resolution (i.e. cm in Seiswide) than the offset header in standard SEG-Y. The standard offset header in meter as in industry SEG-Y
+    still remains unchanged.</span></li>
+</ul>
+<h2><a name="MCS" id="MCS"></a>Multi-channel (MCS) seismic reflection profiles</h2>
+<p>For quick viewing, zooming, exporting or printing MCS data, only may simply drag and drop a segy file to Seiswide, and it will show the complete section at its full scale. After that, you may use View menu to change the viewing parameters. </p>
+<p>To use MCS data for any modelling purposes, one needs to assign distance information to each trace, using the Processing | Reflection | .... functions. For multiple segments of MCS data, one may assign distances separately for each file, and then merge them together using the two Processing | Append data functions. Note that one may assign trace distance up to more than thousands of kilometers. This is because trace distance is stored as floating point at bytes 224-227 (counting from 0) of each trace header.</p>
+<p>To convert MCS data into depth, one needs to construct a 2D velocity model. You may either do it in time or depth domain. Usually construct the model in the time domain is better, since one can make the velocity model boundaries perfectly match the events in the MCS data.</p>
+<h2><a name="Wide" id="Wide"></a>Wide-angle Data</h2>
+<p>Wide-angle Segy data can be dropped to Seiswide which will automatically be viewed in Trace mode. For further usage, one need to assign offsets to the data. For OBS data, offsets can be assigned from Processing | Reflection | Assign km to trace. For sonobuoy data, Seiswide provides several function to assign it. See section &quot;Sonobuoys: offset determination&quot;.</p>
+<p>Once offsets are assigned to each trace, one needs to define the source position Xs using Processing | Wide-angle | Define source position. This will assign a floating point distance information to bytes 224-227 (counting from 0) of each trace header. You will note that distance can either be Xs+offset or Xs-offset. Or you can using the latitude/longitude information to assign distance assuimg 1 million is multipled to properly field of each trace.</p>
+<p>After offset/distance is assigned, wide-angle data can be viewed by Processing | Time section by km, or by Processing | Reduced NMO section. The former allows you to specify a reduction velocity for the display, gained by offset at your specified power. For the latter, see the section &quot;Reduced NMO section&quot;. </p>
+<p>Special processing functions for wide-angle data: </p>
+<ul>
+  <li><strong>Define Source/Receiver Distance</strong>: This function will assume that all offsets have already been assigned. To do wide-angle modeling, you need to place the wide-angle profile to a position (Xs) in the model, and each trace will be placed to either the left or right side of Xs, by setting Xs-offset or Xs+offset, respectively. After clicking OK, every trace will be assigned a distance. Noteworthy is that in Seiswide, distance can be as much as more than thousands of km since it stores as floating point in trace headers.</li>
+  <li><strong>RMS Velocity Analysis</strong>: not fuly tested, but should work, and it can produce correct results.</li>
+  <li><strong>Taup Slant Stack</strong>: This function is designed to work on offset doamin only, and is designed to filter nearly linearly-aligned noises. To start, please digitize two curves each with only 2 points, which is required for slowness estimates and shall be used to compute slopes to limit the data. In the subsequent dialogbox, you may choose whether to keep the data inside these two slopes or to exclude them. Parameters include:
+    <ul>
+      <li>pmin, pmax (Min and max slowness' for transformation).</li>
+      <li>p1, p2, p3, p4 (Slowness ranges based on the 2 digitized curves): p2 and p3 are the main limiting slownesses (or pmin and pmax), and p1 and p4 are for tapering.</li>
+      <li>npoints (num of points for rho filter, default 70)</li>
+      <li>dp (slowness sampling interval. Suggested value is automatically computed from current configuration. Reduce to avoid aliasing): Sampling theorem: pmax-pmin &lt;= 1/(dx*fMax) to avoid aliasing, where fMax is max frequency in data.</li>
+      <li>Tmin, Tmax (output time limits at the zero offset)</li>
+      <li>Forward and optionally inverse transform will be stored as separate files in the same folder as input file.</li>
+    </ul>
+  </li>
+  <li><strong>Inverse Taup Stack Only</strong> : Will take taup transformed data above to inverse transform back to offset-time domain.</li>
+  <li><strong>Apply Reducing Velocity Manually</strong>: Use this routine if you know that the data is already reduced by a certain velocity and yet SeisWide does not know this. NOTE: You can get the same data by apply +8 km/s first and -8 km/s second.</li>
+</ul>
+<p>Sonobuoy   is a special type of wide-angle data. See <a href="#Sonobuoys">Sonobuoy</a> section.</p>
+<h2><a name="Viewing" id="Viewing"></a>Viewing Segy Data</h2>
+<p>There are some common parameters shared among various display modes for viewing Segy data. These include:</p>
+<p>Xmin, Xmax, Tmin and Tmax specify the display axes on screen. Segy displays are all buffered inside Seiswide, so that when you refresh the screen (Refresh Drawing button on the toolbar), it will flush instantly. If you resize the screen, the same buffered display will be instantly resized to fit the new rectangle, with a poorer display quality at any window size. When you are satisfied with the newer size, click &quot;Recalculate Drawing&quot; on the toolbar, the Segy data will be reloaded and the display will be recalculated. The data loading will be depended on the screen size, so that, for a smaller window, it will load data faster. </p>
+<p>Display method: </p>
+<ul>
+  <li>Wiggle: Wiggle display</li>
+  <li>Area Fill: Only shade fill the right side of wiggle (you may check Reverse Polarity to shade the other side)</li>
+  <li>Wiggle + Area Fill</li>
+  <li>Bi-Color Fill: Shade both side of the wiggle using differing colors</li>
+  <li>Color Fill: use a color map to display amplitude values. Every pixel of display will be calculated. This mode will use a log scale threshold (default 70% of the maximum amplitude) to determine if a linear scaling will be used. If an amplitude is greater than this value, log scale will be used, otherwise a linear scale will be used. An an example, for amplitudes of 1000, 100, 10, and 1, log scale will gives 3, 2, 1, and 0, which will be subsequently used for coloring. If you found that too much lower amplitudes are clustering the display, you may increase the threshold from 70% to 85%, such that more amplitudes will be linearly scaled.</li>
+</ul>
+<p>Color Fill is the default display method for segy data. Clicking Options button nearby it will invoke a GUI interface to visually specify the color scaling, which includes 6 color patterns (i.e. White-Black, Bright-Black, Negative, Blue-Red, Black-Red, and More Color). Once you click OK, the color information and amplitude mapping information will be automatically saved to a text file named colPalette.txt, where you may manually edit if you choose to. All Segy file in the same folder will share the same colPalette.txt file. If you want a different coloring scheme, please put the Segy files in a different folder.</p><p>Average Energy: Check this option will first squar each amplitude before display the data. This option is commonly used in showing MCS data, where stronger amplitudes are scaled even stronger, while lower amplitudes are even lower.</p>
+<h2><a name="Depth" id="Depth"></a>Time-Depth Conversion and Gravity Modeling</h2>
+<p>MCS section in time domain can be converted to depth as long as its distance is within the range of a velocity model. Then you can use Processing | Reflection | T-Z Conversion to convert to depth. Depth section will be the same Segy format, with sample interval in m which is 4 m by default. Minimum sample interval is 1 mm.</p>
+<p><img src="images/depthModel.png" width="758" height="548" alt="Depth and model" /></p>
+<p>With Seiswide it's possible to interactively produce depth models for thousands of kilometers. This involves several issues:</p>
+<ul>
+  <li>Several individule models can be displayed in a big model; you specify them in the Velocity Display tab. Notat that each wide-angle model cannot usually be directly extended to wider area since sedimentary compaction plays an important role in layer velocities. </li>
+  <li>The best representation of regional sedimentary velocities may be Al-Chalabi's formula: 1/V = 1/Vinf + (1/V0 - 1/Vinf) exp(-alpha*Z), where V0 and Vinf are velocities for un-compacted and infinitely-compacted sediments (Al-Chalabi, M. 1997, Instantaneous slowness versus depth functions. Geophysics, 62: 270–273. doi:
+  736 10.1190/1.1444127). As an example, the center Canada Basin has an experimental value of 1.69, 5.33, and 0.42745 for V0, Vinf, and alpha, respectively (see Shimeld et al., 2015, accepted to Geophysical Journal International).</li>
+  <li>Model editting can be performed in the time domain if you have MCS profile along the large model. If you use  Al-Chalabi's formula for the sedimentary layer, switching to depth domain will automatically convert the model to depth. </li>
+  <li>Once each MCS seismic trace in time domain is assigned a distance, it can be converted to depth and displayed. One may selectively remove part of the displayed items, such as color map, nodes, lines et al. by selections in the Edit | Display Tune up.</li>
+  <li>Gravity modeling can also be performed and displayed on screen as a curve together with observed gravity values displayed as circles (from Modeling | Gravity Model). In doing this, Seiswide will automatically determine optimum density blocks using current velocity model, and save the results to a file for another program to generate a computed gravity (to be displayed as a curve).</li>
+</ul>
+<h2><a name="Modeling" id="Modeling"></a>Wide-Angle Modeling</h2>
+<p>2D Raytracing can be invoked by Modeling | Raytracing (or Alt+R). A dialog box will show up, letting you specify ray parameters, velocity model, and optionally two other files (floating reflector and picked travel-time points). </p>
+<p><span class="MsoNormal">The
+  open source Fortran raytracing program RAYINVR (Zelt et al., 1992) was revised
+  (and renamed to myRayInvr.exe) for proper file inputs and outputs for interfacing with Seiswide for the 2D raytracing. As a result, RAYINVR only takes the SeisWide's model, does the raytracing,
+and output results as disk files, and Seiswide handles all other tasks. </span>For instructions on raytracing parameters, refer to  \others\documentation\rayinvr.txt, where you may ignore all descriptions on plotting and coloring since they will be handled by Seiswide instead. It may be noteworthy that <span class="MsoNormal">myRayInvr.exe</span> handles velocity models at a horizontal resolution of meters, and <span class="MsoNormal">myRayInvrNew.exe</span> (in the Seiswide's program folder) handles models at a horizontal resolution of centemeters. To enable it, <span class="MsoNormal">rename myRayInvr.exe</span> to <span class="MsoNormal">myRayInvrMeter.exe</span>, and then rename <span class="MsoNormal">myRayInvrNew.exe</span> to <span class="MsoNormal">myRayInvr.exe</span>. The reason that <span class="MsoNormal">myRayInvrNew.exe</span> is not used by default is that it is found that the executable does not run properly in some 64-bit machines for some unknown reasons.</p>
+<p><span class="MsoNormal">myRayInvr.exe will </span>read binary v.bin as input velocity model file instead of an ascii v.in. Seiswide provides a function (available from toolbar or Modeling | Model Tools) to convert from v.bin format to v.in format using 2, 3, and 4 decimals for other authors' program variances and preferences. An advantage of Seiswide's v.bin format is its ability to handle any model length whereas v.in format has a limitation of decimals vs. model resolution. In addition, here you may choose to save the model as an XML format, under extension .vxml, which will be the prefered model format for all newer functions in Seiswide.</p>
+<p>To do amplitude modeling, you may open a DOS window, and cd to ..\others\myRayInvrWork\run2010\ and run mytramp.exe and mypltsyn.exe, which will produce PS version of results, together with a binary file syn.sgy.data for SeisWide to convert to Segy. Some instructions were written in ..\others\documentation\tramp.txt .</p>
+<h2><a name="NMO" id="NMO"></a>Reduced NMO</h2>
+<p>For convenience of modeling, we introduce a  new transformation (called “Reduced normal move-out or Reduced NMO”) for wide  angle data.  The main purpose of this  transformation is to tie wide-angle events with MCS data at zero offset.</p>
+<p>The time of each trace in   reduced NMO transformation is reduced by:</p>
+<p>dT = <img align="middle" src="images/index_clip_image002B.gif" alt="" width="450" height="66" /></p>
+<p>  where <em>X</em> is full offset of each trace from the airgun (default Zg = 0.011   km) to the sonobuoy (<em>default Z</em>s  =0.06 km), a= dZ/dW (dimensionless), <em>Z</em>w is the  seafloor depth, <em>V</em>w is  average water velocity above sonobuoy, and <em>V</em>r  is desired reduction velocity. The figure below shows the geometry for estimating. If <em>X </em>=  0, we have dT = -(Zs+2Zg)/Vw, which indicates that in order to align the sonobuoy  reflections at zero offset with MCS data, we only need a one-way raypath  correction for the sonobuoy depth and a two-way raypath correction for airgun  depth below sea surface.</p>
+<p><br />
+  <img width="519" height="407" src="images/index_clip_image002_0000.gif" alt="Text Box:      Geometry and variables used in determining reduced NMO. See text for a description of the variables and equations used.    " /><br clear="all" />
+  <br clear="all" />
+</p>
+<p>Alternatively, an equally valid  approximation to the above formula was used in the work of this Atlas:</p>
+<p>dTavg = <img align="middle" src="images/index_clip_image008.gif" alt="" height="55" />  <br />
+  where <em>X</em>h  = <em>X</em>/2 is half offset, and <em>Y</em> = <em>X</em>h  / a. A quick  calculation indicates that (dTavg - dT) is always 0 at <em>X </em>= 0, and 0.139 sec at <em>X </em>= 35 km assuming d<em>W </em>= 3.8km, <em>Z</em>s =  0.06 km. Therefore, the difference is very small. After this transformation, every reflection  event of the sonobuoy data at zero-offset exactly coincides with reflection  data in two-way travel time domain.  An  example of a reduced NMO section with its coincident MCS profile is shown the figure below:  </p>
+<p><img width="648" height="706" src="images/index_clip_image002_0001.gif" alt="Text Box:      Figure. Raytraced sonobuoy 2008-12 (right) with the reduced NMO transformation to coincide with the zero-offset coincident multichannel reflection (MCS) profile (left).  Superimposed on the sonobuoy data are computed refractions (red lines) and wide angle reflections (blue lines). Note that every modeled event in the MCS profile is directly connected to wide-angle sonobuoy data at zero offset. Top panels show shallow layers with NMO reduced at smaller velocity than the panels below.   " /></p>
+<p>Modeling with reduced NMO has four main  advantages:</p>
+<ul>
+  <li>A direct 1:1 linkage exists for  every event of the reflection profile with the corresponding event in the  sonobuoy data at zero offset. Thus, every reflection event can be visually  traced/linked into the offset domain’s wide angle reflection and refraction for  the full sonobuoy record. </li>
+  <li>Details of various phase  patterns at wide angles can be revealed by changing the reduction velocity Vr  for display (e.g. in Figure above, Vr = 1.9 km/s for near seafloor events and 4  km/s for deeper sediments). </li>
+  <li>Small targets (e.g., for oil  and gas) can be studied in more detail in the offset domain. </li>
+  <li>More importantly, many thin  sedimentary layers can be revealed this way that are not possible to be seen in  conventional refraction modeling methods.</li>
+</ul>
+<h2><a name="Velocity" id="Velocity"></a>2D Velocity Model</h2>
+<p>You may create a new model using Modeling | Model Tools | New Model, or modify an existing model. Velocity models can be editted either in Boundary or Velocity mode, as specified in Edit menu. One can edit the model in either time or depth domains, using &quot;View | Model in TWTT&quot; or &quot;View | Velocity Color Map or Contours&quot;.</p>
+<p>To edit a boundary, select it first, and move or add nodes. To add a new boundary or layer, select one and click Duplicate in the tool bar. Boundary relief can be specified by adding nodes from the tool bar. Similar, you may delete a boundary after selecting one. Note that you cannot add nodes outside of the [Xmin,  Xmax] of a model. However, you may expand the model by clicking Resize button on the tool bar, and then you can add nodes within the newer model limits.</p>
+<p>Frequently, you may need to fine tune a boundary or its velocity value as a whole. In this case, you may use Up and Down arows. An even finer tuning can be achieved by pressing down Cntl key while clicking Up and Down arrows (in either Boundary or velocity mode).</p>
+<p>Normally left and right sides of a model represents North and South, or West and East directions. But sometimes a reversed direction is desired, and you may use Modeling | Flip Model to achieve it.</p>
+<p>Sometimes it is worthwhile to move the model horizontally or vertically, and you may use Modeling | Move Model in X-Z.</p>
+<p>Although there can be only one model to be the main model that is edittable at one time, you may overlain many more velocity models in a current display (works in either time or depth domain). You specify all these in the text box in the Velocity Display tab. Here, each extra model is specified as one line: xShift  xWell mod.vxml, space deliminated, where xShift is the horizontal shift in km, xWell is the pseudo well X-value (an X-value in the original un-shifted model), and mod.vxml is the extra model name (either .vxml or .bin format). If the model contains no path, the current folder is assumed. </p>
+<p>Any editting of a model must be saved manually (by clicking on Save) before it can be used in raytracing (Alt+R). If current model display is in time domain, clicking on Save will make Seiswide to first (automatically) convert the model to depth followed by saving. </p>
+<p>In Modeling | Perturb Model, you may perturb the model by a percentage or by differing values.</p>
+<p>2D raytracing can be invoked by Modeling | Raytracing or Alt+R shortcut. After raytracing program finishes correctly, you click OK button, and Seiswide will refresh all displayed windows inside Seiswide's mainframe. However, only the profile having the same source position (Xs) will be refreshed. If a profile does not show the travel-time curves as expected, check if its Xs is already set by Processing | Wide-angle | Define Source Distance, and in the subsequent dialog box, click the Xs button to show the current value.</p><h2><a name="Digitizing" id="Digitizing"></a>Digitizing </h2>
+<blockquote>
+  <p>From Digitizing | Start menu, you may pick arrivals and store in either X-Y mode or in the (tx.in) format required by Zelt's fortran program for error analysis. Any comment lines starting with # will be ignored in actual plotting or computation.</p>
+  <p>Use toolbar's Add and Move for adding and moving digitized points, or use Pick button to pick a different curve for working ok.</p>
+  <p>By pressing Control key while drag and drop (here refering to mouse drawing activity from one location to another, not to be confused with dragging screen objects), SeisWide will conpute, for every trace, the proper picks along the drawn line defined by start and end points. Coherency of amplitudes will be used to determined the pick when Control key is pressed. Some paratemeters for coherency computation can be adjusted in the Option section in the dialog. The default parameters here are tested for sonobuoy data at 2-50Hz sampled at 4ms. If &quot;Energy mode&quot; is checked, amplitudes will be squared before semblence calculation. Oversampling factor of 5 (the default) is useful when the resolution of picks is supposed to be finer than the sampling rate.</p>
+  <p>When &quot;A&quot; key is pressed during drag and drop, a simple linear interpolation will be used to determine the picks.</p>
+  <p>When either Control and &quot;A&quot; key is pressed, drag and drop will automatically overwrite any existing X-values if they fall in the range.</p>
+  <p>The digitized values or picks will not be saved until you click &quot;Save and show&quot; or &quot;Finish Digitizing&quot;.</p>
+  <h3>1. Onscreen Digitize in X-Y Mode</h3>
+  <p>This mode will save data in X-Y text format, with the third column as curve number. Each line specifies one point for a curve. If the curve number does not change, it is still the same curve. </p>
+  <h3>2. Onscreen Digitize in Zelt's Mode</h3>
+  <p>Digitizing in Zelt's Mode is similar to X-Y mode, with some additional information added and, as a result, will be saved with .in extension formated for error analysis for myRayInvr program. This mode requires working in the Distance domain (as opposed to offset domain).</p>
+  <p><strong>source/Distance in Model (km): </strong>The (profile) source location in the model. Usually the same as OBS, sonobuoy et al.</p>
+  <p><strong>Comment line for this profile: </strong>Comment line will be written on the resulting file with each line beginning with #.</p>
+  <p>Each phase will be digitized as a new curve. Each curve has 2 extra parameters:</p>
+  <p><strong>Resolution (in sec):</strong> typically 0.04 for water wave, 0.12 for Moho</p>
+  <p><strong>ivray (Ray integer Label): </strong>This is directly used in raytracing parameter file to identify each ray code. You need a consistent convention for denoting them. </p>
+</blockquote>
+<h2><a name="Sonobuoys" id="Sonobuoys"></a>Sonobuoys</h2>
+<blockquote>
+  <h3>1. Direct water wave</h3>
+  <p>Offsets of sonobuoy data are determined from observed direct water wave. Digitizing the travel times of the direct  water wave arrivals  Tw to the empirical equation (see  section 4.1) involves several steps. Pre-processing  of the sonobuoy data includes correction for the delay between the trigger and  airgun firing (e.g.  57 ms), followed  by doubling trace length based on the firing interval (e.g. 14-20 s). The reason for  trace length doubling is because at farther offsets, clear seismic energy,  including the direct water wave arrival, continues to arrive after subsequent  airgun firings. </p>
+  <p>The offset assignment process begins by  assigning a preliminary offset using the latitude and longitude of the sonobuoy  drop location and airgun firing location. In case geographical coordinates are  not available in the SEG-Y data, the water wave from the entire trace display is picked and assigned  a preliminary offset assuming a constant velocity and linear raypath.  Subsequently, the data are displayed using a reduction velocity of either 1.441  or 1.45 km/s which is the average water velocity at the sea level. Picked values  are then overlain onto the data within a small time window (100 ms typically), where  small misfits are spotted by the jittery pattern of arrivals and fixed by  re-picking the water wave and re-assigning the offsets. This process  is repeated until a satisfactory fit is achieved. </p>
+  <p>To get smooth and accurate phases in the  sonobuoy data in the offset-time domain, every trace has to be picked  separately. With Seiswide, a semi-automatic picking algorithm was developed,  which involves the following computing steps:</p>
+  <ul>
+    <li>The user determines an  estimated optimal digitizing line by mouse drag and drop.</li>
+    <li>An average trace is produced in  a small time window (~100 ms) immediately after and along the optimal line at a  sample interval of ~3 ms.  All traces in  this time window are extracted in memory, oversampled by a factor of 5 to a  sample interval of ~0.6 ms, and then an average trace for this window is  computed. </li>
+    <li>            Each trace in the same window is checked for an optimum time  delay against the average trace using a semblance criterion. The computed  optimum time delay is applied to each trace, and is repeated for all related  traces covered by this drag and drop mouse movement.  </li>
+  </ul>
+  <p><img width="554" height="330" src="images/index_clip_image002_0003.gif" alt="Text Box:      Figure.  Comparison of initial and final picking of the direct water wave for offsets of 8-12 km for sonobuoy 2007-11.  Left shows the alignment of traces for the initial picks using a mouse-assisted automatic picking algorithm. Right shows the same series of traces after nine iterations of picking.        " /><br clear="all" />
+  </p>
+  <p>The left panel of the Figure  shows an example  from sonobuoy 2007-11 with an initial pick of the water wave using Seiswide. The  right panel shows the result of the automatic picking and assigning  offsets.  After nine iterations, the  overlay of computed travel time shows a nearly perfect match and much of the  jittering noise is eliminated. Unfiltered data are found to be most useful for  this step. This processing is especially useful in producing a good RMS  velocity analysis because it improves the continuity of the wide-angle  reflections. The same picking algorithm is also quite useful in picking other  phases, such as crustal phases for refraction error analysis.</p>
+  <h3>2. Offset determination</h3>
+  <p>Several methods are available in Processing | Sonobuoy menu. The prefered equation for determining  offsets based on the water velocity is: X (Tw) = 1.441*Tw+0.00075*Tw2-0.006, where X is offset in kilometres and Tw is  direct-wave arrival time in seconds (Lebedeva-Ivanova &amp; Lizarralde, 2011).  This derived empirical function is for a receiver depth at 60 m.</p>
+  <p> If it is a two sided deployment, is it best to split the data into to files. Zoom in to find the trace number that is closest to the SB.</p>
+</blockquote>
+<h2><a name="Line" id="Line"></a>View Line drawings/Markers</h2>
+<p>In viewing time section in km, or depth section, or velocity model, one can overlay line drawings or markers specified in text files in Seiswide's digitizing format, specified in depth parameters area. Note that the X-Y values here do not carry information of time or depth domains. Therefore, switching between time or depth domains shall have no effect on them.</p>
+<h2><a name="Magnetic" id="Magnetic"></a>Magnetic Modeling</h2>
+<p>Magnetic modeling is quite simple to perform, although this function is still not fully tested. First, display the model on screen. Select a layer that is to be associated with magnetic property (at boundary mode, the selected layer is beneath selected boundary). In the subsequent dialogbox, you may specify the magnetic suscepbility (default 0.015 S.I. units), angle of incidence (default 90 degrees), and angle of the strike line.</p>
+<p>If you have observed points, save them to a text file in Seiswide's digitize format, and Seiswide will compute for each of the points.</p>
+<p> Reference: Won, I. J. and Michael Bevis, Computing the gravitational and magnetic anomalies due to a polygon:<br />
+  Algorithms and Fortran subroutines, GEOPHYSICS, VOL. 52, NO. 2 (FEBRUARY I987); P. 232-238, 3 FIGS., 2 TABLES.<br />
+</p>
+<h2><a name="Copy" id="Copy"></a>Copy/pasting</h2>
+<p>Most of information in the displays of Seiswide can be copied and pasted to other softwares such as CorelDraw. It can be useful for copying several times using different options of copying. When pasting in CorelDraw, make sure to use Paste Special such that you may modify the individule pasted objects separately. Seiswide has chosen not to copy/paste Segy data. Instead, it is recomended to use File | Export Bitmap function.</p>
+<h2><a name="Exporting" id="Exporting"></a>Exporting/Printing</h2>
+<p>With Printing, you may print to a printer or to Adobe PDF. </p>
+<p>Exporting is one of the best way to output displays to other programs. Here you may specify the size of the exported bitmaps. In exporting, Seiswide will use this specified size to calculate the pixel colors. The bitmap can be vectorized if you check the last checkbox, which will output PDF in vector format (black and white only). This vector PDF can be useful if you plan to output it to very small size in a paper, and can be put to CorelDraw editting. </p>
+<p>Both of exporting and printing have the options for removing labels outside of axes and inside as well.</p>
+<h2><a name="Importing" id="Importing"></a>Importing</h2>
+<p>Over a dozen bitmap formats can be imported into Seiswide. If you drop these images into Seiswide, it will display the whole image to fill the complete rectangle on screen. You may click File | Import  to revise the upper-left and lower-right corners to re-position the image. This way, the image can be used as a Segy data by design, although this function has not been completely optimized yet.</p>
+<p>If the image is a GSCA's JP2 format, when dropped to Seiswide, you will have the option to either display as image or convert to Segy data file. As of the writing of this document, this resulting Segy will lose information on tracing starting time, offset, and distance. The request has been sent to the author of the JP2 format, and hopefully this issue can be resolved in later during its program updates.</p>
+<h2><a name="Processing" id="Processing"></a>Common Data Processing</h2>
+<p>Most of the data processing functions are accessible from the Processing menu:</p>
+<ul>
+  <li>Reverse sign of offsets or distances for each trace</li>
+  <li>Shift trace distance, offset, or time as a whole</li>
+  <li>Adjust trace distance by multiplying a given factor, useful for dealing with non-straight lines</li>
+  <li>Reorganize traces based on trace numbers, distance, offset, or longitude. </li>
+  <li>Chop data to remove the beginning or ending parts</li>
+  <li>Simply addition of data having the same trace numbers and length</li>
+  <li>Data resample to any given sample interval or length. An 8-coefficient sinc interpolation will be performed for output. It is estimated that the maximum error for frequencies of less than 0.6 nyquist is less than 1%.</li>
+  <li>Concatenate multiple segy files</li>
+  <li>Frequency spectrum: after clicking, Seiswide will automatically calculate frequency specturm for all traces, with vertical axis as frequency in unit of 1000 Hz from 0 to Nyquist. You may specify a smaller display window by clicking View | Depth Section and change depth limits (which are frequency in this case). Note that Depth section generated from Seiswide is tuned for all special purpose Segy sections.</li>
+  <li>Trace filtering and manipulation, include:
+    <ul>
+      <li>3-point recursive time domain filter, designed to be &quot;causal&quot; so that after filter no energy to appear before any event. This is the prefered filter for refraction since an accurate determination of the first break is important. Time varying is optionally allowed in the computation of filtering parameters. Multiple time of filter can be specified, with a default of 2.</li>
+      <li>Frequency filter, with options to specify the 2 slopes at the both ends of the frequency limits. Zero phase option can be checked if desired.</li>
+      <li>Normalize the maximum amplitude if checked.</li>
+      <li>Output as Hilbert transform if checked. This transform can be viewed as an envelope transform when the option for output phase*Amp^2 is checked, which will loose information on tracing phases, but will provide a better view of amplitude patterns which is especially useful when shrinking the display to small size publications.</li>
+      <li>Option to multiple each sample by a value at an exponent of 0.6</li>
+      <li>Option to output a shorter trace by specifying the min and max of trace time.</li>
+      <li>Option to output IEEE float format instead of IBM float (a default Segy format)</li>
+    </ul>
+  </li>
+  <li>Time domain trace filter with filter parameters varying in both offset and time. </li>
+  <li>Time-Frequency De-Noise: Time-frequency de-noising. Reference: Thomas Elboth, 2011, De-noising seismic data in the time-frequency domain. <strong>Parameters</strong>: Noise Threshald (spectrum above it will be treated as noise; default: 30; Increase threshald for smaller effects on data). De-noised output will be shown automatically. You may also browse for the difference file named xxx_TfdnDiff.sgy int he same folder.</li>
+  <li>Data normalize, despike and debias</li>
+  <li>Trace balancing using a sliding time window</li>
+  <li>Trace balancing using a sliding window in both time and distance and/or trace</li>
+  <li>Noise removal along any picked curve. This can be useful in remove noises such as time code cross talk. In either trace or distance display, you first digitize a curve and this function will subtract nabouring trace along the defined curve. You may use Cntl key with drag and drop to let Seiswide compute a curve using semblance along your defined curve. This processing has been quite successful in removing some noises.</li>
+  <li>Wiener predictive error filter for deconvolution. Default parameters may work well if you are not sure how to set their values.</li>
+  <li>Coherency plot can be used to &quot;sharpen&quot; seismic data, by amplifying coherent signals. Main parameters include: mixing window size along distance (or offset) and Time. Window height in time axis is specified in number of cycles at main frequency (default: 1). The target frequency range will dictate the actual window length in time. If you target 2-36 Hz, for example, and set number of frequency divisions to 10, Seiswide will first filter the data at a frequency window 3.4Hz wide, and adjust the actual computation window to 1 cycle of the central frequency, and eventually sum all outputs to form a single cohency-mixed Segy file. This function is one of the slowest to run.</li>
+</ul>
+<h2><a name="References" id="References"></a>References</h2>
+<p>Chian, D. and Lebedeva-Ivanova,  N.,  2015. <a href="http://geoscan.nrcan.gc.ca/starweb/geoscan/servlet.starweb?path=geoscan/shorte.web&amp;search1=R=295857">Atlas of Sonobuoy Velocity Analyses in Canada Basin; Geological Survey of  Canada, Open File 7661</a>, 55 p., 1 zip file. doi:10.4095/295857 </p>
+<p>Lebedeva-Ivanova N.  and Lizarralde D., 2011. An empirical direct-wave travel time equation for  Arctic sonobuoy data, The Sixth International Conference on Arctic Margins,  abstract.</p>
+<p>&nbsp;</p>
+</body>
+</html>

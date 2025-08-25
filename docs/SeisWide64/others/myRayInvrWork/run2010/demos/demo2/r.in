@@ -1,0 +1,30 @@
+  &pltpar  iroute=2, iplot=0, vred=2.2, isep=0, itx=1,  
+           imod=1, iray=2, ibnd=0, isum=2,
+           xwndow=290., ywndow=175.,
+           ircol=1, itcol=1,idump=1,
+  &end
+  &axepar  xmax=27., xmm=270.,
+           zmax=5.,  zmm=70., 
+           tmin=0., tmax=10.,  tmm=70., 
+  &end   
+  &trapar  imodf=1, ibsmth=0, i2pt=1,
+
+  ishot=   2,
+  xshot= 15.977,
+  zshot= 1.05,
+  irayt=1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,    1,
+        1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,    1,
+  ray = 1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2, 5.1, 5.2, 6.1, 6.2, 7.1, 7.2, 8.1, 8.2, 9.1, 9.2,10.1, 10.2,
+  iturn=0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,    0,   0,
+  nray =10,  15,  10,  15,  10,  15,  10,  10,  10,  10,  10,  10,  10,  10,  15,  30,  30,  10,   10, 10,
+  xsmax=0.,nsmax=45,
+  space=1.0, 2.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0,  2.0, 2.0,
+
+           aamin=0.00025, aamax=89.,
+  &end
+  &invpar  invr=0,
+           ivray=1,1,2,3,4,
+  &end
+  &amppar iamp=1, isect=1, omega = 5.,
+          xmins=0., xmaxs=27., xincs=.2,iden=1,
+  &end

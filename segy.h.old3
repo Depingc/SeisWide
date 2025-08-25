@@ -1,0 +1,447 @@
+/* SeisWide Version: 
+* Copyright (c) Colorado School of Mines, 1996.*/
+/* All rights reserved.                       */
+/* Copyright (c) Colorado School of Mines, 1994.*/
+/* All rights reserved.                       */
+/* segy.h - include file for SEGY traces
+ *
+ * declarations for:
+ *	typedef struct {} segy - the trace identification header
+ *	typedef struct {} bhed - binary header
+ *
+ * Note:
+ *	If header words are added, run the makefile in this directory
+ *	to recreate hdr.h.
+ *
+ * Reference:
+ *	K. M. Barry, D. A. Cavers and C. W. Kneale, "Special Report:
+ *		Recommended Standards for Digital Tape Formats",
+ *		Geophysics, vol. 40, no. 2 (April 1975), P. 344-352.
+ *	
+ * $Author: jkc $
+ * $Source: /usr/local/cwp/src/su/include/RCS/segy.h,v $
+ * $Revision: 1.20 $ ; $Date: 1996/02/20 16:41:29 $
+ */ 
+#ifndef SEGY_H
+#define SEGY_H
+// #define SU_NFLTS	22768	/* Arbitrary limit on data array size	*/
+#define SU_NFLTS	65000	/* Arbitrary limit on data array size	*/
+
+/* TYPEDEFS */
+
+
+
+
+union DAT {
+	float  data[SU_NFLTS];
+	int  dataint[SU_NFLTS];
+	short  datashort[SU_NFLTS*2];
+};
+
+
+typedef struct segy {	/* segy - trace identification header */
+#pragma pack(push, 1) // note: this is required for .net
+	int tracl;	/* trace sequence number within line */
+	int tracr;	/* trace sequence number within reel */
+	int fldr;	/* field record number  or FFID */
+	int tracf;	/* trace number within field record */
+	int ep;	/* energy source point number */
+	int cdp;	/* CDP ensemble number */
+	int cdpt;	/* trace number within CDP ensemble */
+	short trid;	/* trace identification code: i2buf[14]
+			1 = seismic data
+			2 = dead
+			3 = dummy
+			4 = time break
+			5 = uphole
+			6 = sweep
+			7 = timing
+			8 = water break
+			9---, N = optional use (N = 32,767)
+			Following are CWP id flags:
+			 9 = autocorrelation
+			10 = Fourier transformed - no packing
+			     xr[0],xi[0], ..., xr[N-1],xi[N-1]
+			11 = Fourier transformed - unpacked Nyquist
+			     xr[0],xi[0],...,xr[N/2],xi[N/2]
+			12 = Fourier transformed - packed Nyquist
+	 		     even N:
+			     xr[0],xr[N/2],xr[1],xi[1], ...,
+				xr[N/2 -1],xi[N/2 -1]
+				(note the exceptional second entry)
+			     odd N:
+			     xr[0],xr[(N-1)/2],xr[1],xi[1], ...,
+				xr[(N-1)/2 -1],xi[(N-1)/2 -1],xi[(N-1)/2]
+				(note the exceptional second & last entries)
+			13 = Complex signal in the time domain
+			     xr[0],xi[0], ..., xr[N-1],xi[N-1]
+			14 = Fourier transformed - amplitude/phase
+			     a[0],p[0], ..., a[N-1],p[N-1]
+			15 = Complex time signal - amplitude/phase
+			     a[0],p[0], ..., a[N-1],p[N-1]
+			16 = Real part of complex trace from 0 to Nyquist
+			17 = Imag part of complex trace from 0 to Nyquist
+			18 = Amplitude of complex trace from 0 to Nyquist
+			19 = Phase of complex trace from 0 to Nyquist
+			21 = Wavenumber time domain (k-t)
+			22 = Wavenumber frequency (k-omega)
+			23 = Envelope of the complex time trace
+			24 = Phase of the complex time trace
+			25 = Frequency of the complex time trace
+			30 = Depth-Range (z-x) traces
+			101 = Seismic data packed to bytes (by supack1)
+			
+			102 = Seismic data packed to 2 bytes (by supack2)
+			*/
+	short nvs;	/* 30;  number of vertically summed traces (see vscode
+			   in bhed structure) */
+	short nhs;	/* number of horizontally summed traces (see vscode
+			   in bhed structure) */
+	short duse;	/* 34: data use:
+				1 = production
+				2 = test */
+	int offset;	/* 36: distance from source point to receiver i2buf[18-19]
+			   group (negative if opposite to direction
+			   in which the line was shot) */
+	int gelev;	/* 40: receiver group elevation from sea level
+			   (above sea level is positive) */
+	int selev;	/* 44: source elevation from sea level
+			   (above sea level is positive) */
+	int sdepth;	/* 48: source depth (positive) i2buf[24-25]*/
+	int gdel;	/* 52 (checked): datum elevation at receiver group */
+	int sdel;	/* 56: datum elevation at source */
+	int swdep;	/* 60: water depth at source */
+	int gwdep;	/* 64: water depth at receiver group */
+	short scalel;	/* 68 checked: scale factor for previous 7 entries
+			   with value plus or minus 10 to the
+			   power 0, 1, 2, 3, or 4 (if positive,
+			   multiply, if negative divide) */
+	short scalco;	/* 70 checked: scale factor for next 4 entries
+			   with value plus or minus 10 to the
+			   power 0, 1, 2, 3, or 4 (if positive,
+			   multiply, if negative divide) */
+	int  sx;	/* 72: X source coordinate  latitude i2buf[36-37] */
+	int  sy;	/* 76: Y source coordinate longitude*/
+	int  gx;	/* 80: X group coordinate */
+	int  gy;	/*84  checked: Y group coordinate   i2buf[42-43] */
+	short counit;	/* 88: coordinate units code:
+				for previous four entries
+				1 = length (meters or feet)
+				2 = seconds of arc (in this case, the
+				X values are longitude and the Y values
+				are latitude, a positive value designates
+				the number of seconds east of Greenwich
+				or north of the equator */
+	short wevel;	/* 90: weathering velocity */
+	short swevel;	/* 22: subweathering velocity */
+	short sut;	/* 94: uphole time at source */
+	short gut;	/* 96: uphole time at receiver group */
+	short sstat;	/* 98: source static correction */
+	short gstat;	/* 100: group static correction i2buf[50]*/
+	short tstat;	/* 102; total static applied */
+	short laga;	/* 104: lag time A, time in ms between end of 240-
+			   byte trace identification header and time
+			   break, positive if time break occurs after
+			   end of header, time break is defined as
+			   the initiation pulse which maybe recorded
+			   on an auxiliary trace or as otherwise
+			   specified by the recording system */
+	short lagb;	/* 106 checked:   96: lag time B, time in ms between the time break
+			   and the initiation time of the energy source,
+			   may be positive or negative i2buf[53]*/
+	short delrt;	/* 108: delay recording time, time in ms between
+			   initiation time of energy source and time
+			   when recording of data samples begins
+			   (for deep water work if recording does not
+			   start at zero time) i2buf[54]*/
+	short muts;	/* 110: mute time--start */
+	short mute;	/* 112: mute time--end */
+	unsigned short ns;	/* 114 checked: number of samples in this trace */
+	unsigned short dt;	/* 116: sample interval; in micro-seconds */
+	short gain;	/* 118: gain type of field instruments code:
+				1 = fixed
+				2 = binary
+				3 = floating point
+				4 ---- N = optional use */
+	short igc;	/* 120: instrument gain constant */
+	short igi;	/* 122: instrument early or initial gain */
+	short corr;	/* 124: correlated:
+				1 = no
+				2 = yes */
+	short sfs;	/* 126: sweep frequency at start */
+	short sfe;	/* 128: sweep frequency at end i2buf[64]*/
+	short slen;	/* 130 checked: sweep length in ms */
+	short styp;	/* 132: sweep type code:
+				1 = linear
+				2 = cos-squared
+				3 = other */
+	short stas;	/* 134: sweep trace length at start in ms */
+	short stae;	/* 136: sweep trace length at end in ms */
+	short tatyp;	/* 138: taper type: 1=linear, 2=cos^2, 3=other */
+	short afilf;	/* 140: alias filter frequency if used */
+	short afils;	/* 142: alias filter slope */
+	short nofilf;	/* 144: notch filter frequency if used */
+	short nofils;	/* 146: notch filter slope */
+	short lcf;	/* 148: low cut frequency if used */
+	short hcf;	/* 150: high cut frequncy if used */
+	short lcs;	/* 152: low cut slope */
+	short hcs;	/* 154: high cut slope */
+	short year;	/* 156: year data recorded */
+	short day;	/* 158: day of year */
+	short hour;	/* 160 checked: hour of day (24 hour clock) i2buf[80]*/
+	short minute;	/* 162: minute of hour */
+	short sec;	/* 164: second of minute */
+	short timbas;	/* 166: time basis code:
+				1 = local
+				2 = GMT
+				3 = other 
+				Now revised for storing mili-seconds of shot, to be consistent
+				with GSCA single channel segy */
+	short trwf;	/* 168: trace weighting factor, defined as 1/2^N
+			   volts for the least sigificant bit */
+	short grnors;	/* 170: geophone group number of roll switch
+			   position one */
+	short grnofr;	/* 172: geophone group number of trace one within
+			   original field record */
+	short grnlof;	/* 174: geophone group number of last trace within
+			   original field record */
+	short gaps;	/* 176: gap size (total number of groups dropped) */
+	short otrav;	/* 178: overtravel taper code:
+				1 = down (or behind)
+				2 = up (or ahead) i2buf[89]*/
+	/* local assignments */
+	float d1;	/* 180: sample spacing for non-seismic data i2buf[90-91]; i4int[45]*/
+	float f1;	/* 184: First depth sample in meter  i2buf[92-93]; i4int[46]*/
+	float d2;	/* 188: sample spacing between traces i2buf[94-95]; i4int[47] */
+	float f2;	/* 192: first trace location i2buf[96-97]; i4int[48]*/
+	float ungpow;	/* 196: negative of power used for dynamic range compression i2buf[98-99]; i4int[49]*/
+	float unscale;	/* 200: reciprocal of scaling factor to normalize range i2buf[100-101]; i4int[50]*/
+	int ntr; 	/* 204: number of traces i2buf[102-103]; i4int[51]*/
+	short mark;	/* 208: mark selected traces i2buf[104]*/
+	int t1;  /* 210: trace delay time in msec, to be added to delrt, by Deping! i2buf[105-106]*/
+	int cdpbak;	/* 214: CDP ensemble number backup i2buf[107-108]*/
+	int cdptbak; /* 218: trace number within CDP ensemble backup i2buf[109-110]*/
+
+	/* Added 2 more variables May 28, 2008 */
+	short idistopt;	/* 222: 9=use the next float for distance; 0=use CDP for distance */
+	float trcdist;  /* 224 checked: trace distance; used only if idistopt=9 */
+
+	char unass[12];	
+			/* 216:  unassigned--NOTE: last entry causes 
+			   a break in the word alignment, if we REALLY
+			   want to maintain 240 bytes, the following
+			   entry should be an odd number of short/UINT2
+			   OR do the insertion above the "mark" keyword */
+#pragma pack(pop)
+	 DAT dat; /* 240 checked */
+} segy;
+
+
+//	short *i2buf;
+//	i2buf = (short *) &tr;
+//	float *trcdat;
+//	trcdat = (float *) &i2buf[120];
+
+ 
+typedef struct bhed {	/* bhed - sectio binary header */
+	int jobid;	/* i2buf[0-1] job identification number */
+	int lino;	/* i2buf[2-3] line number (only one line per reel) */
+	int reno;	/* i2buf[4-5] reel number */
+	short ntrpr;	/* i2buf[6] number of data traces per record */
+        short nart;	/* i2buf[7] number of auxiliary traces per record */
+	unsigned short hdt; /* i2buf[8] sample interval in micro secs for this reel */
+	unsigned short dto; /* i2buf[9] same for original field recording */
+	unsigned short hns; /* i2buf[10] number of samples per trace for this reel */
+	unsigned short nso; /* i2buf[11] same for original field recording */
+	short format;	/* i2buf[12] data sample format code:
+				1 = floating point (4 bytes)
+				2 = fixed point (4 bytes)
+				3 = fixed point (2 bytes)
+				4 = fixed point w/gain code (4 bytes) */
+	short fold;	/* i2buf[13] CDP fold expected per CDP ensemble */
+	short tsort;	/* i2buf[14] trace sorting code: 
+				1 = as recorded (no sorting)
+				2 = CDP ensemble
+				3 = single fold continuous profile
+				4 = horizontally stacked */
+	short vscode;	/* i2buf[15] vertical sum code:
+				1 = no sum
+				2 = two sum ...
+				N = N sum (N = 32,767) */
+	short hsfs;	/* i2buf[16] sweep frequency at start */
+	short hsfe;	/* i2buf[17] sweep frequency at end */
+	short hslen;	/* i2buf[18] sweep length (ms) */
+	short hstyp;	/* i2buf[19] sweep type code:
+				1 = linear
+				2 = parabolic
+				3 = exponential
+				4 = other */
+	short schn;	/* i2buf[20] trace number of sweep channel */
+	short hstas;	/* i2buf[21] sweep trace taper length at start if
+			   tapered (the taper starts at zero time
+			   and is effective for this length) */
+	short hstae;	/* i2buf[22] sweep trace taper length at end (the ending
+			   taper starts at sweep length minus the taper
+			   length at end) */
+	short htatyp;	/* i2buf[23] sweep trace taper type code:
+				1 = linear
+				2 = cos-squared
+				3 = other */
+	short hcorr;	/* i2buf[24] correlated data traces code:
+				1 = no
+				2 = yes */
+	short bgrcv;	/* i2buf[25] binary gain recovered code:
+				1 = yes
+				2 = no */
+	short rcvm;	/* i2buf[26] amplitude recovery method code:
+				1 = none
+				2 = spherical divergence
+				3 = AGC
+				4 = other */
+	short mfeet;	/* i2buf[27] measurement system code:
+				1 = meters
+				2 = feet */
+	short polyt;	/* i2buf[28] impulse signal polarity code:
+				1 = increase in pressure or upward
+				    geophone case movement gives
+				    negative number on tape
+				2 = increase in pressure or upward
+				    geophone case movement gives
+				    positive number on tape */
+	short vpol;	/* i2buf[29] vibratory polarity code:
+				code	seismic signal lags pilot by
+				1	337.5 to  22.5 degrees
+				2	 22.5 to  67.5 degrees
+				3	 67.5 to 112.5 degrees
+				4	112.5 to 157.5 degrees
+				5	157.5 to 202.5 degrees
+				6	202.5 to 247.5 degrees
+				7	247.5 to 292.5 degrees
+				8	293.5 to 337.5 degrees */
+
+	/*
+	The followings are for OBS refraction data usages:
+				i2buf[31] = GunDel;
+				i2buf[32] = offsetClockReset;
+				i2buf[38] = refdayClockReset;
+				i2buf[39] = refhrClockReset;
+				i2buf[40] = refminClockReset;
+				i2buf[41] = refsecClockReset;
+*/
+
+	short gunDelay;
+	short offsetClockReset;
+	short refdayClockReset;
+	short refhrClockReset;
+	short refminClockReset;
+	short refsecClockReset;
+	float lattCorr;
+	float longCorr;
+	float drftrate;
+
+	short hunass[158];	/* unassigned */
+} bhed;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+typedef struct datafile {	/* datafile - trace identification header */
+	short t0;	/*  */
+	short blocksize;	/* blocksize of each record */
+	short numrecs;	/* num of total records in a file */
+	short t3;	/*  */
+	short t4;	/*  */
+	short datlen;	/* length of data in bytes */
+	short numchan;  // num of channels at byte#12-13.
+	char u[18];	// short at byte#14-31 
+	float freq;		//frequency at byte#32-35.
+	char u1[61];		//at bytes#36-96.
+} datafile;
+
+/* DEFINES */
+#define gettr(x)	fgettr(stdin, (x))
+#define vgettr(x)	fvgettr(stdin, (x))
+#define puttr(x)	fputtr(stdout, (x))
+#define gettra(x, y)    fgettra(stdin, (x), (y))
+/* The following refer to the trid field in segy.h		*/
+/* CHARPACK represents byte packed seismic data from supack1	*/
+#define		CHARPACK	101
+/* SHORTPACK represents 2 byte packed seismic data from supack2	*/
+#define		SHORTPACK	102
+/* TREAL represents real time traces 				*/
+#define		TREAL		1
+/* TDEAD represents dead time traces 				*/
+#define		TDEAD		2
+/* TDUMMY represents dummy time traces 				*/
+#define		TDUMMY		3
+/* TBREAK represents time break traces 				*/
+#define		TBREAK		4
+/* UPHOLE represents uphole traces 				*/
+#define		UPHOLE		5
+/* SWEEP represents sweep traces 				*/
+#define		SWEEP		6
+/* TIMING represents timing traces 				*/
+#define		TIMING		7
+/* WBREAK represents timing traces 				*/
+#define		WBREAK		8
+/* TCMPLX represents complex time traces 			*/
+#define		TCMPLX		13
+/* TAMPH represents time domain data in amplitude/phase form	*/
+#define		TAMPH		15
+/* FPACK represents packed frequency domain data 		*/
+#define		FPACK		12
+/* FUNPACKNYQ represents complex frequency domain data 		*/
+#define		FUNPACKNYQ	11
+/* FCMPLX represents complex frequency domain data 		*/
+#define		FCMPLX		10
+/* FAMPH represents freq domain data in amplitude/phase form	*/
+#define		FAMPH		14
+/* REALPART represents the real part of a trace to Nyquist	*/
+#define		REALPART	16
+/* IMAGPART represents the real part of a trace to Nyquist	*/
+#define		IMAGPART	17
+/* AMPLITUDE represents the amplitude of a trace to Nyquist	*/
+#define		AMPLITUDE	18
+/* PHASE represents the phase of a trace to Nyquist		*/
+#define		PHASE		19
+/* KT represents wavenumber-time domain data 			*/
+#define		KT		21
+/* KOMEGA represents wavenumber-frequency domain data		*/
+#define		KOMEGA		22
+/* ENVELOPE represents the envelope of the complex time trace	*/
+#define		ENVELOPE	23
+/* INSTPHASE represents the phase of the complex time trace	*/
+#define		INSTPHASE	24
+/* INSTFREQ represents the frequency of the complex time trace	*/
+#define		INSTFREQ	25
+/* DEPTH represents traces in depth-range (z-x)			*/
+#define		TRID_DEPTH	30
+#define ISSEISMIC(id) ( (id)==0 || (id)==TREAL || (id)==TDEAD || (id)==TDUMMY )
+/* FUNCTION PROTOTYPES */
+#ifdef __cplusplus /* if C++, specify external linkage to C functions */
+extern "C" {
+#endif
+/* hdrpkge */
+//void gethval(const segy *tp, int index, Value *valp);
+//void puthval(segy *tp, int index, Value *valp);
+//void getbhval(const bhed *bhp, int index, Value *valp);
+//void putbhval(bhed *bhp, int index, Value *valp);
+//void gethdval(const segy *tp, char *key, Value *valp);
+//void puthdval(segy *tp, char *key, Value *valp);
+char *hdtype(const char *key);
+char *getkey(const int index);
+int getindex(const char *key);
+#ifdef __cplusplus /* if C++, end external linkage specification */
+}
+#endif
+#endif

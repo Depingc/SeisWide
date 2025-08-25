@@ -1,0 +1,19 @@
+  &pltpar
+          icol=1, iseg=0, imod=2, igrav=1, isigma0=0,
+          irmdc=1, idata=1, ilab=2, idump=0, 
+          nsmth=0, nevery=2,
+          xsdata=0., dsmax=.2,
+          symht=1., numht=2.0, isymb=2,
+  &end
+  &axepar 
+xmin=-500.000000, xmax=250.000000, xmm=200., ntickx=25, 
+xtmin=-500.000000, xtmax=250.000000, xmm=200.,
+          zmin=0.0, zmax=60.000000, zmm=100.,
+          gmin=-50.0, gmax=50, gmm=35., ntickg=1,
+          albht=3., xorig=15., yorig=15.,
+  &end
+  &grvpar
+          polys=500, den0=3.1,
+first=-700.000000, last=450.000000, spacng=4.,
+          pincl=-1, pomit=-1,
+  &end

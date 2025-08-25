@@ -1,0 +1,18 @@
+--------------------Configuration: psRayInvr - Win32 Release--------------------
+Begining build with project "D:\Deping\SeisWideMay\SeisWide\rayInvr\psRayInvr\psRayInvr.dsp", at root.
+Active configuration is Win32 (x86) QuickWin Application (based on Win32 (x86) QuickWin Application)
+
+Project's tools are:
+			"Fortran 90 Compiler for 80x86" with flags "/include:"Release/" /compile_only /nologo /libs:qwin /warn:nofileopt /module:"Release/" /object:"Release/" "
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/psRayInvr.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/psRayInvr.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /entry:"WinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"Release/psRayInvr.pdb" /machine:I386 /nodefaultlib:"dfconsol.lib" /out:"Release/psRayInvr.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+
+
+
+psRayInvr.exe - 0 error(s), 0 warning(s)

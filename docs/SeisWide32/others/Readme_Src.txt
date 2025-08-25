@@ -1,0 +1,5 @@
+This directory and its sub-directories contain the modified source codes for all of Colin Zelt's ray tracing package (original version 1992; freeware).  There are makefiles for all souce codes, ready to be compiled by Digital Fortran for Windows 95 (98) or NT. 
+
+Please note that in order to generate PostScipt output, two files should be always included in each project for compiling: psPltlib.f  and  pltsub.for  .  These two files provide wrap-up routines for Calcomp-like plotting calls and generate PS calls instead. Note that I have modified the psPltlib.f for the PC.
+
+The results of these compilations should NOT be messed up with my SeisWide package: they should be used separately. This package only takes v.in files as input velocity format (later found that psRayInvr actually read in v.bin velocity format, sorry for this). You could easily generate a v.in file from SeisWide (in "save Velocity As"). This is the only way this package interacts with SeisWide!!!

@@ -1,0 +1,621 @@
+ %! xpltlib
+ /initxplt
+ {90 rotate
+ 50 -600 translate
+ 2.834 2.834 scale
+ 0.2 setlinewidth
+ /Helvetica findfont 12 scalefont setfont
+ } def
+ initxplt
+ % segment
+ erasepage
+   15.00000       200.0000      moveto
+   15.00000       200.0000      moveto
+   215.0000       200.0000      lineto
+ stroke
+   15.00000       200.0000      moveto
+   15.00000       200.0000      moveto
+   15.00000       202.5000      lineto
+ stroke
+   43.57143       200.0000      moveto
+   43.57143       200.0000      moveto
+   43.57143       202.5000      lineto
+ stroke
+   72.14285       200.0000      moveto
+   72.14285       200.0000      moveto
+   72.14285       202.5000      lineto
+ stroke
+   100.7143       200.0000      moveto
+   100.7143       200.0000      moveto
+   100.7143       202.5000      lineto
+ stroke
+   129.2857       200.0000      moveto
+   129.2857       200.0000      moveto
+   129.2857       202.5000      lineto
+ stroke
+   157.8571       200.0000      moveto
+   157.8571       200.0000      moveto
+   157.8571       202.5000      lineto
+ stroke
+   186.4286       200.0000      moveto
+   186.4286       200.0000      moveto
+   186.4286       202.5000      lineto
+ stroke
+   215.0000       200.0000      moveto
+   215.0000       200.0000      moveto
+   215.0000       202.5000      lineto
+ stroke
+   12.50000       203.7500      moveto
+ gsave
+  0.0000000E+00  rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(0) show
+ grestore
+   41.07143       203.7500      moveto
+ gsave
+  0.0000000E+00  rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(5) show
+ grestore
+   69.64285       203.7500      moveto
+ gsave
+  0.0000000E+00  rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(10) show
+ grestore
+   98.21429       203.7500      moveto
+ gsave
+  0.0000000E+00  rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(15) show
+ grestore
+   126.7857       203.7500      moveto
+ gsave
+  0.0000000E+00  rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(20) show
+ grestore
+   155.3571       203.7500      moveto
+ gsave
+  0.0000000E+00  rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(25) show
+ grestore
+   183.9286       203.7500      moveto
+ gsave
+  0.0000000E+00  rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(30) show
+ grestore
+   212.5000       203.7500      moveto
+ gsave
+  0.0000000E+00  rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(35) show
+ grestore
+   98.75000       207.5000      moveto
+ gsave
+  0.0000000E+00  rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(DISTANCE (km)) show
+ grestore
+   15.00000       115.0000      moveto
+   15.00000       115.0000      moveto
+   15.00000       200.0000      lineto
+ stroke
+   15.00000       115.0000      moveto
+   15.00000       115.0000      moveto
+   12.50000       115.0000      lineto
+ stroke
+   15.00000       125.6250      moveto
+   15.00000       125.6250      moveto
+   12.50000       125.6250      lineto
+ stroke
+   15.00000       136.2500      moveto
+   15.00000       136.2500      moveto
+   12.50000       136.2500      lineto
+ stroke
+   15.00000       146.8750      moveto
+   15.00000       146.8750      moveto
+   12.50000       146.8750      lineto
+ stroke
+   15.00000       157.5000      moveto
+   15.00000       157.5000      moveto
+   12.50000       157.5000      lineto
+ stroke
+   15.00000       168.1250      moveto
+   15.00000       168.1250      moveto
+   12.50000       168.1250      lineto
+ stroke
+   15.00000       178.7500      moveto
+   15.00000       178.7500      moveto
+   12.50000       178.7500      lineto
+ stroke
+   15.00000       189.3750      moveto
+   15.00000       189.3750      moveto
+   12.50000       189.3750      lineto
+ stroke
+   15.00000       200.0000      moveto
+   15.00000       200.0000      moveto
+   12.50000       200.0000      lineto
+ stroke
+   11.25000       112.5000      moveto
+ gsave
+   90.00000      rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(15) show
+ grestore
+   11.25000       123.1250      moveto
+ gsave
+   90.00000      rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(13) show
+ grestore
+   11.25000       133.7500      moveto
+ gsave
+   90.00000      rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(11) show
+ grestore
+   11.25000       144.3750      moveto
+ gsave
+   90.00000      rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(9) show
+ grestore
+   11.25000       155.0000      moveto
+ gsave
+   90.00000      rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(7) show
+ grestore
+   11.25000       165.6250      moveto
+ gsave
+   90.00000      rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(5) show
+ grestore
+   11.25000       176.2500      moveto
+ gsave
+   90.00000      rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(3) show
+ grestore
+   11.25000       186.8750      moveto
+ gsave
+   90.00000      rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(1) show
+ grestore
+   11.25000       197.5000      moveto
+ gsave
+   90.00000      rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(0) show
+ grestore
+   7.500000       145.0000      moveto
+ gsave
+   90.00000      rotate
+ /Helvetica findfont    2.500000      scalefont setfont
+(DEPTH (km)) show
+ grestore
+   15.00000       115.0000      moveto
+   15.00000       115.0000      moveto
+   215.0000       115.0000      lineto
+ stroke
+   215.0000       115.0000      moveto
+   215.0000       200.0000      lineto
+ stroke
+   215.0000       200.0000      moveto
+   15.00000       200.0000      lineto
+ stroke
+   15.00000       200.0000      moveto
+   15.00000       115.0000      lineto
+ stroke
+ newpath
+  -99.28571       200.0000      moveto
+   15.00000       200.0000      lineto
+   215.0000       200.0000      lineto
+   300.7143       200.0000      lineto
+ stroke
+ newpath
+  -99.28571       178.4734      moveto
+   15.00000       178.4734      lineto
+   22.45683       178.4787      lineto
+   23.67347       178.4604      lineto
+   26.64312       178.4839      lineto
+   28.04553       178.4604      lineto
+   30.59655       178.4604      lineto
+   32.71586       178.4455      lineto
+   34.28571       178.4604      lineto
+   36.91523       178.4529      lineto
+   39.23077       178.4604      lineto
+   42.49608       178.4679      lineto
+   45.00785       178.4380      lineto
+   47.10361       178.4708      lineto
+   48.51648       178.4380      lineto
+   49.71743       178.4455      lineto
+   50.88697       178.4529      lineto
+   52.67661       178.4604      lineto
+   55.17268       178.4529      lineto
+   57.75510       178.4455      lineto
+   61.30298       178.4529      lineto
+   63.52433       178.4679      lineto
+   65.55730       178.4455      lineto
+   67.15071       178.4604      lineto
+   70.28519       178.4813      lineto
+   72.47253       178.4828      lineto
+   74.54474       178.4455      lineto
+   77.06436       178.4604      lineto
+   79.79592       178.4529      lineto
+   81.53846       178.4828      lineto
+   84.58398       178.4604      lineto
+   86.89953       178.4529      lineto
+   88.85400       178.4604      lineto
+   92.51178       178.4604      lineto
+   96.91523       178.4455      lineto
+   100.4945       178.4604      lineto
+   105.5808       178.4604      lineto
+   110.5808       178.4455      lineto
+   113.7127       178.4455      lineto
+   116.2951       178.4679      lineto
+   118.9560       178.4529      lineto
+   121.6484       178.4604      lineto
+   124.6782       178.4679      lineto
+   127.3077       178.4380      lineto
+   132.8493       178.4529      lineto
+   143.3673       178.4604      lineto
+   152.2527       178.4604      lineto
+   158.6342       178.4455      lineto
+   170.4631       178.4306      lineto
+   179.7881       178.4455      lineto
+   192.6766       178.4380      lineto
+   201.9545       178.4604      lineto
+   210.7221       178.4604      lineto
+   215.0000       178.4306      lineto
+   300.7143       178.4306      lineto
+ stroke
+ newpath
+  -99.28571       175.9614      moveto
+   15.00000       175.9614      lineto
+   41.36148       176.0061      lineto
+   83.32025       175.9813      lineto
+   152.2684       176.0012      lineto
+   215.0000       175.9813      lineto
+   300.7143       175.9813      lineto
+ stroke
+ newpath
+  -99.28571       172.9050      moveto
+   15.00000       172.9050      lineto
+   128.1876       172.7647      lineto
+   215.0000       172.8115      lineto
+   300.7143       172.8115      lineto
+ stroke
+ newpath
+  -99.28571       171.8622      moveto
+   15.89450       171.9417      lineto
+   214.1318       171.8146      lineto
+   300.7143       171.4377      lineto
+ stroke
+ newpath
+  -99.28571       169.2769      moveto
+   15.31571       169.3405      lineto
+   28.33859       169.3405      lineto
+   41.07209       169.3246      lineto
+   54.09497       169.3723      lineto
+   70.30124       169.3246      lineto
+   94.70506       169.2254      lineto
+   120.6180       169.1232      lineto
+   165.4916       169.1232      lineto
+   194.7051       169.1232      lineto
+   215.0000       169.1573      lineto
+   300.7143       169.1573      lineto
+ stroke
+ newpath
+  -99.28571       164.7191      moveto
+   16.21335       164.7214      lineto
+   38.66026       164.6727      lineto
+   52.41153       164.5103      lineto
+   67.85881       164.3385      lineto
+   112.4329       164.1416      lineto
+   137.6371       164.1416      lineto
+   163.8372       164.0719      lineto
+   195.1820       164.2505      lineto
+   207.9221       164.2180      lineto
+   215.0000       164.2729      lineto
+   300.7143       164.2729      lineto
+ stroke
+ newpath
+  -99.28571       161.8419      moveto
+   24.31099       161.0269      lineto
+   40.69833       160.8321      lineto
+   54.66481       160.7209      lineto
+   73.38751       159.9810      lineto
+   111.4889       159.5319      lineto
+   138.1469       159.3972      lineto
+   161.5540       159.3714      lineto
+   199.6554       159.6442      lineto
+   210.3186       159.7806      lineto
+   215.0000       159.8488      lineto
+   300.7143       159.8488      lineto
+ stroke
+ newpath
+  -99.28571       152.3376      moveto
+   17.42086       152.4930      lineto
+   24.12477       152.6360      lineto
+   30.45624       152.7433      lineto
+   36.41527       153.5302      lineto
+   41.81564       153.9236      lineto
+   50.56797       152.4572      lineto
+   58.01676       151.2412      lineto
+   67.51397       150.0968      lineto
+   87.62570       150.1683      lineto
+   98.24023       149.7034      lineto
+   109.9721       146.7707      lineto
+   126.1732       146.5919      lineto
+   140.8846       146.9853      lineto
+   154.7394       146.7042      lineto
+   162.1136       146.0196      lineto
+   169.0037       145.8408      lineto
+   182.5978       146.5203      lineto
+   192.7416       147.6473      lineto
+   200.7763       149.0844      lineto
+   207.3996       149.8478      lineto
+   211.5255       149.8478      lineto
+   215.0000       149.9825      lineto
+   300.7143       149.9825      lineto
+ stroke
+ newpath
+  -99.28571       145.9010      moveto
+   15.97720       145.4842      lineto
+   49.85342       144.6758      lineto
+   103.1650       142.2957      lineto
+   174.5005       141.3975      lineto
+   215.0000       143.6429      lineto
+   300.7143       143.6429      lineto
+ stroke
+ newpath
+  -99.28571       135.0303      moveto
+   21.51769       135.0303      lineto
+   55.78212       135.2092      lineto
+   117.6059       133.6751      lineto
+   178.8436       134.1242      lineto
+   215.0000       134.0793      lineto
+   300.7143       134.0793      lineto
+ stroke
+ newpath
+  -99.28571       111.2933      moveto
+   15.13063       110.8049      lineto
+   215.0000       110.8049      lineto
+   300.7143       110.8049      lineto
+ stroke
+ newpath
+  -99.28571       98.34979      moveto
+   15.00000       98.34979      lineto
+   215.0000       98.34979      lineto
+   300.7143       98.34979      lineto
+ stroke
+ newpath
+   215.0000       199.6600      moveto
+   214.7296       198.8454      lineto
+   214.4581       198.0295      lineto
+   214.1855       197.2122      lineto
+   213.9119       196.3936      lineto
+   213.6372       195.5736      lineto
+   213.3615       194.7523      lineto
+   213.0847       193.9296      lineto
+   212.8068       193.1056      lineto
+   212.5279       192.2802      lineto
+   212.2479       191.4535      lineto
+   211.9668       190.6255      lineto
+   211.6847       189.7961      lineto
+   211.4015       188.9653      lineto
+   211.1171       188.1331      lineto
+   210.8317       187.2996      lineto
+   210.7221       186.9803      lineto
+   210.4340       186.1414      lineto
+   210.1447       185.3008      lineto
+   209.8541       184.4586      lineto
+   209.5623       183.6146      lineto
+   209.2693       182.7690      lineto
+   208.9750       181.9217      lineto
+   208.6795       181.0727      lineto
+   208.3827       180.2220      lineto
+   208.0846       179.3696      lineto
+   207.7853       178.5154      lineto
+   207.7660       178.4604      lineto
+   207.7088       178.3192      lineto
+   207.6515       178.1778      lineto
+   207.5938       178.0360      lineto
+   207.5359       177.8940      lineto
+   207.4778       177.7517      lineto
+   207.4194       177.6092      lineto
+   207.3608       177.4663      lineto
+   207.3019       177.3232      lineto
+   207.2427       177.1797      lineto
+   207.1833       177.0360      lineto
+   207.1236       176.8920      lineto
+   207.0637       176.7478      lineto
+   207.0035       176.6032      lineto
+   206.9431       176.4583      lineto
+   206.8824       176.3132      lineto
+   206.8214       176.1678      lineto
+   206.7602       176.0221      lineto
+   206.7441       175.9839      lineto
+   206.6750       175.8659      lineto
+   206.6055       175.7476      lineto
+   206.5357       175.6291      lineto
+   206.4656       175.5103      lineto
+   206.3951       175.3913      lineto
+   206.3243       175.2721      lineto
+   206.2532       175.1526      lineto
+   206.1817       175.0328      lineto
+   206.1099       174.9129      lineto
+   206.0377       174.7926      lineto
+   205.9652       174.6721      lineto
+   205.8924       174.5514      lineto
+   205.8192       174.4305      lineto
+   205.7457       174.3093      lineto
+   205.6718       174.1878      lineto
+   205.5976       174.0661      lineto
+   205.5230       173.9442      lineto
+   205.4481       173.8221      lineto
+   205.3728       173.6996      lineto
+   205.2972       173.5770      lineto
+   205.2212       173.4541      lineto
+   205.1448       173.3310      lineto
+   205.0681       173.2076      lineto
+   204.9910       173.0840      lineto
+   204.9135       172.9601      lineto
+   204.8357       172.8360      lineto
+   204.8169       172.8060      lineto
+   204.6901       172.6701      lineto
+   204.5625       172.5339      lineto
+   204.4342       172.3974      lineto
+   204.3052       172.2607      lineto
+   204.1755       172.1237      lineto
+   204.0450       171.9865      lineto
+   203.9139       171.8490      lineto
+   203.8872       171.8211      lineto
+   203.5682       171.5841      lineto
+   203.2485       171.3476      lineto
+   202.9283       171.1116      lineto
+   202.6074       170.8761      lineto
+   202.2860       170.6412      lineto
+   201.9641       170.4070      lineto
+   201.6417       170.1734      lineto
+   201.3188       169.9404      lineto
+   200.9954       169.7080      lineto
+   200.6715       169.4763      lineto
+   200.3471       169.2451      lineto
+   200.1883       169.1324      lineto
+   200.0257       169.1320      lineto
+   199.9606       169.1320      lineto
+   199.6354       169.2792      lineto
+   199.3104       169.4271      lineto
+   198.9855       169.5757      lineto
+   198.6609       169.7249      lineto
+   198.3364       169.8749      lineto
+   198.0121       170.0256      lineto
+   197.6879       170.1769      lineto
+   197.3640       170.3290      lineto
+   197.0401       170.4818      lineto
+   196.7165       170.6353      lineto
+   196.3930       170.7896      lineto
+   196.0697       170.9445      lineto
+   195.7466       171.1001      lineto
+   195.4237       171.2564      lineto
+   195.1011       171.4134      lineto
+   194.7787       171.5710      lineto
+   194.7051       171.6071      lineto
+   194.3831       171.7656      lineto
+   194.2583       171.8273      lineto
+   194.1210       171.8737      lineto
+   193.9838       171.9203      lineto
+   193.8468       171.9671      lineto
+   193.7098       172.0143      lineto
+   193.5730       172.0617      lineto
+   193.4362       172.1093      lineto
+   193.2996       172.1573      lineto
+   193.1631       172.2055      lineto
+   193.0267       172.2540      lineto
+   192.8905       172.3027      lineto
+   192.7543       172.3517      lineto
+   192.6182       172.4010      lineto
+   192.4823       172.4505      lineto
+   192.3465       172.5003      lineto
+   192.2108       172.5503      lineto
+   192.0753       172.6006      lineto
+   191.9399       172.6512      lineto
+   191.8046       172.7020      lineto
+   191.6695       172.7530      lineto
+   191.5490       172.7988      lineto
+   191.4231       172.8687      lineto
+   191.2973       172.9388      lineto
+   191.1717       173.0091      lineto
+   191.0461       173.0797      lineto
+   190.9208       173.1506      lineto
+   190.7955       173.2217      lineto
+   190.6704       173.2930      lineto
+   190.5455       173.3646      lineto
+   190.4206       173.4365      lineto
+   190.2959       173.5086      lineto
+   190.1714       173.5810      lineto
+   190.0470       173.6536      lineto
+   189.9227       173.7264      lineto
+   189.7986       173.7996      lineto
+   189.6746       173.8729      lineto
+   189.5507       173.9465      lineto
+   189.4270       174.0204      lineto
+   189.3035       174.0945      lineto
+   189.1800       174.1689      lineto
+   189.0568       174.2435      lineto
+   188.9336       174.3183      lineto
+   188.8106       174.3934      lineto
+   188.6878       174.4688      lineto
+   188.5651       174.5444      lineto
+   188.4425       174.6203      lineto
+   188.3201       174.6964      lineto
+   188.1978       174.7727      lineto
+   188.0757       174.8493      lineto
+   187.9538       174.9261      lineto
+   187.8320       175.0032      lineto
+   187.7103       175.0805      lineto
+   187.5888       175.1581      lineto
+   187.4675       175.2359      lineto
+   187.3463       175.3139      lineto
+   187.2252       175.3922      lineto
+   187.1043       175.4708      lineto
+   186.9836       175.5495      lineto
+   186.8631       175.6286      lineto
+   186.7427       175.7078      lineto
+   186.6224       175.7873      lineto
+   186.5023       175.8671      lineto
+   186.3824       175.9470      lineto
+   186.3177       175.9904      lineto
+   186.1719       176.1317      lineto
+   186.0263       176.2733      lineto
+   185.8811       176.4152      lineto
+   185.7362       176.5574      lineto
+   185.5915       176.6998      lineto
+   185.4471       176.8426      lineto
+   185.3031       176.9856      lineto
+   185.1600       177.1282      lineto
+   185.0177       177.2705      lineto
+   184.8763       177.4125      lineto
+   184.7358       177.5543      lineto
+   184.5960       177.6957      lineto
+   184.4571       177.8369      lineto
+   184.3190       177.9778      lineto
+   184.1818       178.1184      lineto
+   184.0453       178.2587      lineto
+   183.9097       178.3988      lineto
+   183.8668       178.4431      lineto
+   183.1661       179.2992      lineto
+   182.4690       180.1536      lineto
+   181.7757       181.0063      lineto
+   181.0859       181.8573      lineto
+   180.3998       182.7066      lineto
+   179.7881       183.4664      lineto
+   179.1093       184.3118      lineto
+   178.4341       185.1556      lineto
+   177.7623       185.9978      lineto
+   177.0939       186.8385      lineto
+   176.4290       187.6775      lineto
+   175.7675       188.5150      lineto
+   175.1094       189.3509      lineto
+   174.4547       190.1852      lineto
+   173.8032       191.0179      lineto
+   173.1550       191.8491      lineto
+   172.5101       192.6786      lineto
+   171.8685       193.5067      lineto
+   171.2301       194.3331      lineto
+   170.5949       195.1580      lineto
+   170.4631       195.3297      lineto
+   169.8318       196.1528      lineto
+   169.2037       196.9742      lineto
+   168.5788       197.7941      lineto
+   167.9572       198.6122      lineto
+   167.3387       199.4288      lineto
+   166.9072       200.0000      lineto
+ stroke

@@ -1,0 +1,11 @@
+:Base SeisWide.hlp
+1 Menus
+2 How to ...=main_index
+2 File menu=menu_file
+2 Edit menu=menu_edit
+2 View menu=menu_view
+2 Processing Menu=menu_processing
+2 Modeling menu=menu_Modeling
+2 Digitize menu=menu_digitize
+2 Window menu=menu_window
+2 Help menu=menu_help

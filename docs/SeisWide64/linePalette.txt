@@ -1,0 +1,13 @@
+#Color index file applied to the same directory as line drawings file.
+#r      g     b    (You may manually edit these texts.)
+255    0    0
+255  127    0
+255  255    0
+127  255    0
+  0  255    0
+  0  255  127
+  0  255  255
+  0  127  255
+  0    0  255
+127    0  255
+255    0  255

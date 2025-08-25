@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SeisWide">
+</Property><Property Name="Solution File" Value="E:\project\SeisWide.net\work4\SeisWide.sln">
+</Property><Property Name="User Options File" Value="E:\project\SeisWide.net\work4\SeisWide.suo">
+</Property><Property Name="Date" Value="2010年12月21日">
+</Property><Property Name="Time" Value="21:04">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="2" Project="" Source="SeisWide.sln" Description="Error creating backup file: E:\project\SeisWide.net\work4\SeisWide.sln.old">
+</Event><Event ErrorLevel="2" Project="" Source="SeisWide.suo" Description="Error creating backup file: E:\project\SeisWide.net\work4\SeisWide.suo.old">
+</Event><Event ErrorLevel="0" Project="SeisWide" Source="SeisWide.vcproj" Description="Converting project file 'E:\project\SeisWide.net\work4\SeisWide.vcproj'.">
+</Event><Event ErrorLevel="1" Project="SeisWide" Source="SeisWide.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="SeisWide" Source="SeisWide.vcproj" Description="MSB8012: $(TargetPath) ('E:\project\SeisWide.net\work4\.\Release\SeisWide.exe') does not match the Linker's OutputFile property value '.\Release/SeisWide.exe' ('E:\project\SeisWide.net\work4\Release/SeisWide.exe') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="SeisWide" Source="SeisWide.vcproj" Description="MSB8012: $(TargetPath) ('E:\project\SeisWide.net\work4\.\Debug\SeisWide.exe') does not match the Linker's OutputFile property value '.\Debug/SeisWide.exe' ('E:\project\SeisWide.net\work4\Debug/SeisWide.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="SeisWide" Source="SeisWide.vcproj" Description="Done converting to new project file 'E:\project\SeisWide.net\work4\SeisWide.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="SeisWide" Source="SeisWide.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SeisWide.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="SeisWide.sln" Description="Converted">
+</Event></UpgradeLog>

@@ -1,0 +1,33 @@
+ &pltpar iroute=1,iseg=0,iray=2,ibnd=0,irays=0,ivel=0,
+	  itx=1,itxout=1,idump=0,iszero=0,idash=0,isum=1,iplot=0,
+ 
+	  idata=0,vred= 7.000,nrskip=3,nskip=0,velht=0.05,
+          symht=0.1,itxbox=1,isep=0,istep=0,ircol=3,irayps=0,  itcol=3,ifcol=6,ibcol=0,
+          mcol=8,14,1,4,14,  colour=12,  3,  2,  2,  2,  6,  2,  9,  2,  4,  2,  4,  7, 14, 10, 13,
+  &end
+  &axepar  xmin=-150.000,xmax=370.,xtmin=-150.000,xtmax=370.0,xmm=200,  ntickx=0, ndecix=-1,
+           zmin= 0.000, zmax= 40.000, ztmin=  0.000,ztmax= 40.000,zmm=85, ntickz=0, ndeciz=-1,
+           tmin= 0.000,tmax=  6.000,ttmin= 0.000,ttmax=  14.000, tmm=85, ntickt=0, ndecit=-1,
+           xmint=-150.000,xmaxt=370.,xtmint=-150.000,xtmaxt=370.0,xmm=200,  ntickx=0, ndecix=-1,
+           iaxlab=1,itrev=0, sep=15, orig=15,
+  &end
+  &trapar imodf=1, ibsmth=1,  i2pt=0,
+  ishot=   2,
+  xshot= -138.186,
+  zshot= 0.1,
+  ray = 1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2, 5.1, 5.2,
+  nray =30,  20,  30,  35,  20,  15,  20,  15,  20,  30, 
+  space=1.0, 1.0, 2.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0,
+  ncbnd=0,   0,   0,   0,   0,   0,   2,   2,   2,   2,   
+  cbnd =                              3,4, 3,5, 3,6, 3,7, 
+  xsmax=0.,nsmax=45,
+  aamin=0.00, aamax=90., step=0.005,
+  pois=0.5,0.25,0.23,0.23,0.21,0.21,0.21, 0.25,0.25,0.25,0.25,0.25,  nhray=30,
+  &end
+  &invpar  invr=0,
+  ivray= 2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  8,  0,
+           bndunc=0.08,   velunc=0.05,  ximax=2.0,
+  &end
+  &amppar  iamp=1, isect=1,
+           xmins=0.3, xmaxs=177.7, xincs=0.6,
+  &end

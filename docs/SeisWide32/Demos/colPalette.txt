@@ -1,0 +1,13 @@
+#Color index file applied to all segy in each directory. Put to different sub-dirs for each variant.
+#r      g     b    amp (relative; commonly start from -1  to 1; however, if amplitudes found all positive, amp will be adjusted to 0-1 proportionally) (You may manually edit these texts.)
+  0    0  255  -1.000000
+ 20   30  200  -0.900000
+ 20   70  150  -0.700000
+ 20   80  100  -0.400000
+ 90  150  151  -0.100000
+255  255  255  0.000000
+255  100  150  0.100000
+255   80  100  0.400000
+255   50   70  0.700000
+255  150   40  0.900000
+255  255    0  1.000000

@@ -1,0 +1,3758 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\SeisWide.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#include ""afxolecl.rc""       // OLE container resources\r\n"
+    "#include ""afxolesv.rc""       // OLE server resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SeisWide.ico"
+IDR_SEISWITYPE          ICON                    "res\\SeisWideDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDR_SEISWITYPE_SRVR_IP  BITMAP                  "res\\IToolbar.bmp"
+IDB_BITMAP2             BITMAP                  "res\\bitmap2.bmp"
+IDB_BITMAP3             BITMAP                  "res\\Deping3.BMP"
+IDB_LIGHTBULB           BITMAP                  "res\\litebulb.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  24, 24
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    BUTTON      ID_TOOLBAR_ZOOM
+    BUTTON      ID_TOOLBAR_HAND
+    BUTTON      ID_TOOLBAR_UNZOOM
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_TOOLBAR_PICK
+    BUTTON      ID_TOOLBAR__REMOVE
+    BUTTON      ID_TOOBAR_MOVE
+    BUTTON      ID_TOOLBAR_ADD
+    BUTTON      ID_TOOLBAR_DUPLICATE
+    BUTTON      ID_TOOLBAR_NEWLINE
+    BUTTON      ID_TOOLBAR_DELLINE
+    BUTTON      ID_TOOLBAR_NEWMOD
+    BUTTON      ID_TOOLBAR_RESIZEMOD
+    BUTTON      ID_TOOLBAR_SAVEV
+    BUTTON      ID_TOOLBAR_SAVEASV
+    BUTTON      ID_TOOLBAR_REFRESH
+    SEPARATOR
+    BUTTON      ID_TOOLBAR_REFRESH_ALL
+    BUTTON      ID_TOOLBAR_BIGGER
+    BUTTON      ID_TOOLBAR_LESS
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_SEISWITYPE_SRVR_IP TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CONTEXT_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Segy Info",                   ID_VIEW_SEGYINFO
+        MENUITEM SEPARATOR
+        MENUITEM "&Time Section",               ID_VIEW_TIMESECTION
+        MENUITEM "&Depth Section",              ID_VIEW_DEPTHSECTION
+        MENUITEM "&Velocity Color Map",         ID_VIEW_VELOCITYCOLORMAP
+        MENUITEM "&Both Velocity+Depth Section", ID_VIEW_BOTH
+        MENUITEM "Velocity Contours",           ID_VIEW_CONTOURS
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Processing"
+    BEGIN
+        MENUITEM "&Associate km to Trace",      ID_VIEW_ADDRANGETOSEGY
+        MENUITEM "Define Source/Receiver Distance", ID_PROCESSING_DEFINESOURCEPOSITION
+        MENUITEM "Reverse Range",               ID_PROCESSING_REVERSERANGE
+        MENUITEM "&Shift in Time and Space",    ID_PROCESSING_LATERALSHIFT
+        MENUITEM "Trace &Re-order",             ID_PROCESSING_TRACEREORDER
+        MENUITEM "Apply Reducing Velocity Manually", ID_PROCESSING_REDUCEMANUAL
+        MENUITEM SEPARATOR
+        MENUITEM "Data Reduction and Filter",   ID_PROCESSING_DATAREDUCTIONANDFILTER
+        MENUITEM "Append a Segy File",          ID_PROCESSING_APPENDASEGYFILE
+        MENUITEM "Time-Depth &Conversion",      ID_VIEW_CONV
+        MENUITEM "Coherency &Mixing",           ID_PROCESSING_COHMIX
+        MENUITEM "TK Migration in Time",        ID_PROCESSING_MIGRATION
+        MENUITEM "Post-stack Kirchhoff Depth Migration", ID_PROCESSING_KDMIGPOST
+        MENUITEM "Pre-Stack Kirchhoff Depth Migration", ID_PROCESSING_KDMIG
+    END
+    POPUP "&Modeling"
+    BEGIN
+        MENUITEM "Load Zelt's Model",           ID_PROCESSING_LOADZELTSMODEL
+        MENUITEM "Merge Models",                ID_MODELING_MERGEMODELS
+        MENUITEM "Check Model Integrity",       ID_PROCESSING_CHECKMODELINTEGRITY
+        MENUITEM "&Ray Trace",                  ID_PROCESSING_RAYTRACE
+        MENUITEM "Ray &Path",                   ID_PROCESSING_RAYPATH
+        MENUITEM "Extract Velocity-Depth Curve", ID_MODELING_EXTRACTVZCURVE
+        MENUITEM "Extract Layer Information",   ID_MODELING_EXTRACTLAYERINFOR
+        MENUITEM SEPARATOR
+        MENUITEM "Pick or Update a Boundary/Layer", ID_TOOLBAR_PICK
+        MENUITEM "Delete Node",                 ID_TOOLBAR__REMOVE
+        MENUITEM "Move Nodes",                  ID_TOOBAR_MOVE
+        MENUITEM "Add Nodes",                   ID_TOOLBAR_ADD
+        MENUITEM "Add Layer",                   ID_TOOLBAR_NEWLINE
+        MENUITEM "Duplicate Boundary",          ID_TOOLBAR_DUPLICATE
+        MENUITEM "Delete Layer/Boundary",       ID_TOOLBAR_DELLINE
+        MENUITEM "New Model",                   ID_TOOLBAR_NEWMOD
+        MENUITEM "Resize Model",                ID_TOOLBAR_RESIZEMOD
+        MENUITEM "Save velocity",               ID_TOOLBAR_SAVEV
+        MENUITEM "Save velocity as",            ID_TOOLBAR_SAVEASV
+    END
+    POPUP "&Digitizing"
+    BEGIN
+        MENUITEM "Start Digitize",              ID_EDIT_DIGITIZE
+        MENUITEM "Undo Point",                  ID_DIGITIZE_UNDOPOINT
+        MENUITEM "New curve",                   ID_EDIT_NEWCURVE
+        MENUITEM "Save-digitize",               ID_EDIT_SAVEDIG
+        MENUITEM "&Finish Digitizing",          ID_DIGITIZE_FINISHDIGITIZING
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM "SeisWide's Home Page",        IDC_BTN_HOMEPAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&About SeisWide...",          ID_APP_ABOUT
+    END
+END
+
+IDR_SEISWITYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",                        ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        POPUP "Import"
+        BEGIN
+            MENUITEM "Import BMP File",             ID_FILE_IMPORTBITMAP
+            MENUITEM "&Resize Bitmap\tCtrl+R",      ID_FILE_RESIZEBITMAP
+            MENUITEM SEPARATOR
+            MENUITEM "Import Line-Drawings in Time", ID_EDIT_DISPLAYTUNEUP_EXTERNAL_DRAWINGS_TIM
+            MENUITEM "Import Line-Drawings in Depth", ID_EDIT_DISPLAYTUNEUP_EXTERNAL_DRAWINGS
+        END
+        MENUITEM "Export Bitmap",               ID_FILE_EXPORTBITMAP
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "Paste &Special...",           ID_EDIT_PASTE_SPECIAL
+        MENUITEM SEPARATOR
+        MENUITEM "Lin&ks...",                   ID_OLE_EDIT_LINKS
+        MENUITEM "<<OLE VERBS GO HERE>>",       ID_OLE_VERB_FIRST
+        MENUITEM SEPARATOR
+        MENUITEM "&Boundary",                   ID_EDIT_BOUNDARY
+        MENUITEM "&Velocity",                   ID_EDIT_VELOCITY
+        MENUITEM SEPARATOR
+        POPUP "Display Tune-Up"
+        BEGIN
+            MENUITEM "Fill-Area Once per Trace",    ID_EDIT_DISPLAYTUNEUP_FILLAREAONCE
+            MENUITEM "Label as TWTT",               ID_EDIT_DISPLAYTUNEUP_LABELASTWTT
+            MENUITEM "Skip Complaining Trace Too Dense", ID_EDIT_DISPLAYTUNEUP_SKIPCOMPLAININGTRACETOODENSE
+            POPUP "Model Properties"
+            BEGIN
+                MENUITEM "Big Model Nodes",             ID_EDIT_DISPLAYTUNEUP_BIGMODELNODES
+                MENUITEM "Remove Nodes and Boundaries in Display", ID_EDIT_TUNEUP_NOBOUNDARY
+                MENUITEM "Remove Nodes in Display",     ID_EDIT_NONODES
+                MENUITEM "Remove Color Mapping in Display", ID_EDIT_TUNEUP_NOCOLORMAP
+                MENUITEM "Change Color of Computed Rays\tCtrl+R", ID_EDIT_DISPLAYTUNEUP_CHANGCOLORTTCURVES
+                MENUITEM "Remove &OBS Positions",       ID_EDIT_TUNEUP_OBSPOSITIONS
+                MENUITEM "Remove All Outside Ray Points", ID_EDIT_DISPLAYTUNEUP_REMOVEOUTSIDERAYPOINTS
+                MENUITEM "Toggle TT Curves Overlay\tCtrl+T", ID_EDIT_DISPLAYTUNEUP_REMOVETTOVERLAY
+            END
+            MENUITEM "Toggle Inside Label Display\tCtrl+L", ID_EDIT_DISPLAYTUNEUP_MODELPROPERTIES_LINEDRAWINGLABEL
+            MENUITEM "Toggle Outside Labels in Display", ID_EDIT_NOLABLES
+            MENUITEM "Adjusting Label Sizes",       ID_EDIT_DISPLAYTUNEUP_ADJUSTINGLABELSIZES
+        END
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Segy Info",                   ID_VIEW_SEGYINFO
+        MENUITEM "Trace Analysis",              ID_VIEW_TRACEANALYSIS
+        MENUITEM SEPARATOR
+        MENUITEM "Time Section by Trace",       ID_VIEW_TIMESECTRC
+        MENUITEM "Time Section by km",          ID_VIEW_TIMESECTION
+        MENUITEM "&Depth Section",              ID_VIEW_DEPTHSECTION
+        MENUITEM "&Velocity Color Map",         ID_VIEW_VELOCITYCOLORMAP
+        MENUITEM "&Both Velocity+Depth Section", ID_VIEW_BOTH
+        MENUITEM "Velocity Contours",           ID_VIEW_CONTOURS
+        MENUITEM "Velocity Color Map in TWTT",  ID_VIEW_VELOCITYCOLORTWTT
+        MENUITEM SEPARATOR
+        MENUITEM "NMO-Corrected Section",       ID_MENU_VIEW_HYDRO
+        MENUITEM "NMO-Velocity Section",        ID_VIEW_NMO_VELOCITY
+        MENUITEM "Stacking Velocity Map",       ID_VIEW_STACKINGVELOCITYMAP
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Processing"
+    BEGIN
+        POPUP "Segy Conversion"
+        BEGIN
+            MENUITEM "UNIX to PC Batch",            ID_PROCESSING_UNIX2PCBATCH
+            MENUITEM "PC to UNIX",                  ID_PROCESSING_PC2UNIX
+            MENUITEM "PC to UNIX Batch",            ID_PROCESSING_PC2UNIXBATCH
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Associate km to Trace",      ID_VIEW_ADDRANGETOSEGY
+        MENUITEM "Define Source/Receiver Distance", ID_PROCESSING_DEFINESOURCEPOSITION
+        MENUITEM "Reverse Signs of Offset/Distance", ID_PROCESSING_REVERSERANGE
+        MENUITEM "&Shift in Time and Space",    ID_PROCESSING_LATERALSHIFT
+        MENUITEM "Trace &Re-Order",             ID_PROCESSING_TRACEREORDER
+        MENUITEM "Apply Reducing Velocity Manually", ID_PROCESSING_REDUCEMANUAL
+        MENUITEM SEPARATOR
+        MENUITEM "Data Debias",                 ID_PROCESSING_DEBIAS
+        MENUITEM "Wiener Predictive Error Filter", ID_PROCESSING_WIENER
+        MENUITEM "Data Reduction and Filter",   ID_PROCESSING_DATAREDUCTIONANDFILTER
+        MENUITEM "Data Resample",               ID_PROCESSING_DATARESAMPLE
+        MENUITEM "Append a Segy File",          ID_PROCESSING_APPENDASEGYFILE
+        MENUITEM "Append Many Segy Files",      ID_PROCESSING_APPENDMANYSEGYFILES
+        MENUITEM SEPARATOR
+        MENUITEM "Coherency &Mixing",           ID_PROCESSING_COHMIX
+        POPUP "Time-Depth Conversion"
+        BEGIN
+            MENUITEM "For Refl Segy Data",          ID_PROCESSING_CONV
+            MENUITEM "For Line-Drawings",           ID_EDIT_DISPLAYTUNEUP_EXTERNAL_DRAWINGS_TIM
+            MENUITEM "For Bitmap",                  ID_PROCESSING_TDCONVBMP
+            MENUITEM "For Wide-Angle Segy Data",    ID_TIME_FORWIDE
+            MENUITEM "For wide-angle segy with slowness stack", ID_TIME_FORWIDE_SEMB
+            MENUITEM "For Wide-Angle Segy With NMO-Velocity Analysis", ID_TIME_FORWIDE_NMOVELOCITY
+        END
+        MENUITEM "Post-stack Kirchhoff Depth Migration", ID_PROCESSING_KDMIGPOST
+        MENUITEM "Simple Pre-Stack Kirchhoff Migration", ID_PROCESSING_KDMIGSIMPLE
+        MENUITEM SEPARATOR
+        MENUITEM "Chop Wide-angle Data",        ID_PROCESSING_CHOPWIDEANGLEDATA
+        MENUITEM SEPARATOR
+        MENUITEM "Select Water Wave for Sonobuoy Data", ID_PROCESSING_SB
+        MENUITEM "Associate km to Sonobuoy Traces", ID_PROCESSING_SB_KM
+        MENUITEM SEPARATOR
+        MENUITEM "Calculator: Lat/Long to Distance", ID_PROCESSING_LATLONGTODISTANCE
+        MENUITEM "Simulate Raw DOBS data files to Segy", ID_PROCESSING_RAWTOSEGY
+        MENUITEM "Dump Distance ",              ID_PROCESSING_DUMPCDPDISTANCE
+        MENUITEM "Change Reduce Velocity for BMP", ID_PROCESSING_CHANGEREDUCEVELOCITYFORBMP
+    END
+    POPUP "&Modeling"
+    BEGIN
+        MENUITEM "Load Zelt's Model",           ID_PROCESSING_LOADZELTSMODEL
+        MENUITEM "Merge Models",                ID_MODELING_MERGEMODELS
+        MENUITEM "Check Model Integrity",       ID_PROCESSING_CHECKMODELINTEGRITY
+        MENUITEM "&Ray Trace",                  ID_PROCESSING_RAYTRACE
+        MENUITEM "Extract Velocity-Depth Curve", ID_MODELING_EXTRACTVZCURVE
+        MENUITEM "Extract Layer Information",   ID_MODELING_EXTRACTLAYERINFOR
+        MENUITEM "Model Density Blocks for Gravity Modeling", ID_MODELING_DENBLOCKS
+        MENUITEM "Subsidence Before Sediment Loading", ID_MODELING_SUBSIDENCEBEFORESEDIMENTLOADING
+        MENUITEM "Load Reid's Model",           ID_MODELING_LOADREIDSMODEL
+        MENUITEM SEPARATOR
+        MENUITEM "Flip Model in X-Axis",        ID_TOOLBAR_FLIPMOD
+        MENUITEM "Move Model in X-Z",           ID_MODEL_SHIFTXZ
+        MENUITEM "Move Boundary Vertically",    ID_MODELING_MOVEBOUNDARY
+        POPUP "Model Properties"
+        BEGIN
+            MENUITEM "Pick or Update a Boundary/Layer", ID_TOOLBAR_PICK
+            MENUITEM "Delete Node",                 ID_TOOLBAR__REMOVE
+            MENUITEM "Move Nodes",                  ID_TOOBAR_MOVE
+            MENUITEM "Add Nodes",                   ID_TOOLBAR_ADD
+            MENUITEM "Add Layer",                   ID_TOOLBAR_NEWLINE
+            MENUITEM "Duplicate Boundary",          ID_TOOLBAR_DUPLICATE
+            MENUITEM "Delete Layer/Boundary",       ID_TOOLBAR_DELLINE
+            MENUITEM "New Model",                   ID_TOOLBAR_NEWMOD
+            MENUITEM "Resize Model",                ID_TOOLBAR_RESIZEMOD
+            MENUITEM "Save velocity",               ID_TOOLBAR_SAVEV
+            MENUITEM "Save velocity as",            ID_TOOLBAR_SAVEASV
+        END
+    END
+    POPUP "&Digitizing"
+    BEGIN
+        MENUITEM "Start a New Digitizing File", ID_EDIT_DIGITIZE
+        MENUITEM "Load Existing Digitizing File", ID_DIGITIZING_LOADEXISTING
+        MENUITEM "Load Existing Pick File (Zelt's Format)", ID_DIGITIZING_LOADZELT_TX
+        MENUITEM SEPARATOR
+        MENUITEM "New curve\tN",                ID_EDIT_NEWCURVE
+        MENUITEM "Activate Line Segment",       ID_DIGITIZING_SELECT_CURRENT
+        MENUITEM "Shift Digited Points By ...", ID_DIGITIZING_SHIFTDIGITING
+        MENUITEM "Modify Line Label",           ID_DIGITIZING_REVISELINELABEL
+        POPUP "Zelt's Format"
+        BEGIN
+            MENUITEM "Re-Size && ivray\tCtrl+Q",    ID_DIGITIZING_CHANGECURVERES
+            MENUITEM "As Bar",                      ID_DIGITIZING_CHANGEERRORBAR_ASBAR
+            MENUITEM "As Open Circle",              ID_DIGITIZING_CHANGEERRORBAR_ASCIRCLE
+            MENUITEM "As Filled Circle",            ID_DIGITIZING_CHANGEERRORBAR_ASFILLCIRCLE
+            MENUITEM "As Cross",                    ID_DIGITIZING_CHANGEERRORBAR_ASSTAR
+            MENUITEM "Re-define Source Position",   ID_DIGITIZING_CHANGEERRORBAR_REDEFINESOURCE
+            MENUITEM "Toggle ZPLOT support",        ID_DIGITIZING_ZELTSFORMAT_TOGGLEZPLOT
+            MENUITEM "Split the current segment",   ID_DIGITIZING_SPLIT
+            MENUITEM "Toggle Raycode Display",      32936
+        END
+        MENUITEM "Where an I?",                 ID_DIGITIZING_WHEREANI
+        MENUITEM "Delete Last Point\tCtrl+Z",   ID_DIGITIZE_UNDOPOINT
+        MENUITEM "Save digitize",               ID_EDIT_SAVEDIG
+        MENUITEM "Save Digitize with FFID",     ID_DIGITIZING_SAVEDIGFFID
+        MENUITEM "Resize Line Segments By ...", ID_DIGITIZING_RESIZE_SEGMENTS
+        MENUITEM "&Finish Digitizing",          ID_DIGITIZE_FINISHDIGITIZING
+        MENUITEM SEPARATOR
+        MENUITEM "Migrate Line-Drawings",       ID_DIGITIZING_MIGRATELINEDRAWINGS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About SeisWide...",          ID_APP_ABOUT
+    END
+END
+
+IDR_SEISWITYPE_CNTR_IP MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+    END
+END
+
+IDR_SEISWITYPE_SRVR_EMB MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Update\tCtrl+S",             ID_FILE_UPDATE
+        MENUITEM "Save Copy &As...",            ID_FILE_SAVE_COPY_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Export Bitmap",               ID_FILE_EXPORTBITMAP
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "Paste &Special...",           ID_EDIT_PASTE_SPECIAL
+        MENUITEM SEPARATOR
+        MENUITEM "Lin&ks...",                   ID_OLE_EDIT_LINKS
+        MENUITEM "<<OLE VERBS GO HERE>>",       ID_OLE_VERB_FIRST
+        MENUITEM SEPARATOR
+        MENUITEM "&Boundary",                   ID_EDIT_BOUNDARY
+        MENUITEM "&Velocity",                   ID_EDIT_VELOCITY
+        MENUITEM SEPARATOR
+        POPUP "Display Tune-Up"
+        BEGIN
+            MENUITEM "Remove Lables in Display",    ID_EDIT_NOLABLES
+            MENUITEM "Remove &OBS Positions",       ID_EDIT_TUNEUP_OBSPOSITIONS
+            MENUITEM "Fill-Area Once per Trace",    ID_EDIT_DISPLAYTUNEUP_FILLAREAONCE
+            MENUITEM "Load External Line-Drawings in Depth (km)", ID_EDIT_DISPLAYTUNEUP_EXTERNAL_DRAWINGS
+            MENUITEM "Load External Line-Drawings in Time (sec)", ID_EDIT_DISPLAYTUNEUP_EXTERNAL_DRAWINGS_TIM
+            MENUITEM "Skip Complaining Trace Too Dense", ID_EDIT_DISPLAYTUNEUP_SKIPCOMPLAININGTRACETOODENSE
+            POPUP "Model Properties"
+            BEGIN
+                MENUITEM "Big Model Nodes",             ID_EDIT_DISPLAYTUNEUP_BIGMODELNODES
+                MENUITEM "Remove Nodes and Boundaries in Display", ID_EDIT_TUNEUP_NOBOUNDARY
+                MENUITEM "Remove Nodes in Display",     ID_EDIT_NONODES
+                MENUITEM "Remove Color Mapping in Display", ID_EDIT_TUNEUP_NOCOLORMAP
+                MENUITEM "Change Color of Computed Rays", ID_EDIT_DISPLAYTUNEUP_CHANGCOLORTTCURVES
+                MENUITEM "Remove All Outside Ray Points", ID_EDIT_DISPLAYTUNEUP_REMOVEOUTSIDERAYPOINTS
+            END
+        END
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Segy Info",                   ID_VIEW_SEGYINFO
+        MENUITEM "Time Section by Trace",       ID_VIEW_TIMESECTRC
+        MENUITEM SEPARATOR
+        MENUITEM "&Time Section",               ID_VIEW_TIMESECTION
+        MENUITEM "&Depth Section",              ID_VIEW_DEPTHSECTION
+        MENUITEM "&Velocity Color Map",         ID_VIEW_VELOCITYCOLORMAP
+        MENUITEM "&Both Velocity+Depth Section", ID_VIEW_BOTH
+        MENUITEM "Velocity Contours",           ID_VIEW_CONTOURS
+        MENUITEM SEPARATOR
+        MENUITEM "NMO-Corrected Section",       ID_MENU_VIEW_HYDRO
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Processing"
+    BEGIN
+        MENUITEM "&Associate km to Trace",      ID_VIEW_ADDRANGETOSEGY
+        MENUITEM "Define Source/Receiver Distance", ID_PROCESSING_DEFINESOURCEPOSITION
+        MENUITEM "Reverse Range",               ID_PROCESSING_REVERSERANGE
+        MENUITEM "&Shift in Time and Space",    ID_PROCESSING_LATERALSHIFT
+        MENUITEM "Trace &Re-order",             ID_PROCESSING_TRACEREORDER
+        MENUITEM "Apply Reducing Velocity Manually", ID_PROCESSING_REDUCEMANUAL
+        MENUITEM SEPARATOR
+        MENUITEM "Data Reduction and Filter",   ID_PROCESSING_DATAREDUCTIONANDFILTER
+        MENUITEM "Append a Segy File",          ID_PROCESSING_APPENDASEGYFILE
+        MENUITEM "Coherency &Mixing",           ID_PROCESSING_COHMIX
+        MENUITEM "Time-Depth &Conversion",      65535
+        MENUITEM "Post-stack Kirchhoff Depth Migration", ID_PROCESSING_KDMIGPOST
+        MENUITEM "Pre-Stack Kirchhoff Depth Migration", ID_PROCESSING_KDMIG
+        MENUITEM "Calculator: Lat/Long to Distance", ID_PROCESSING_LATLONGTODISTANCE
+    END
+    POPUP "&Modeling"
+    BEGIN
+        MENUITEM "Load Zelt's Model",           ID_PROCESSING_LOADZELTSMODEL
+        MENUITEM "Merge Models",                ID_MODELING_MERGEMODELS
+        MENUITEM "Check Model Integrity",       ID_PROCESSING_CHECKMODELINTEGRITY
+        MENUITEM "&Ray Trace",                  ID_PROCESSING_RAYTRACE
+        MENUITEM "Ray &Path",                   ID_PROCESSING_RAYPATH
+        MENUITEM "Extract Velocity-Depth Curve", ID_MODELING_EXTRACTVZCURVE
+        MENUITEM "Extract Layer Information",   ID_MODELING_EXTRACTLAYERINFOR
+        MENUITEM "Load Reid's Model",           ID_MODELING_LOADREIDSMODEL
+        MENUITEM SEPARATOR
+        MENUITEM "Pick or Update a Boundary/Layer", ID_TOOLBAR_PICK
+        MENUITEM "Delete Node",                 ID_TOOLBAR__REMOVE
+        MENUITEM "Move Nodes",                  ID_TOOBAR_MOVE
+        MENUITEM "Add Nodes",                   ID_TOOLBAR_ADD
+        MENUITEM "Add Layer",                   ID_TOOLBAR_NEWLINE
+        MENUITEM "Duplicate Boundary",          ID_TOOLBAR_DUPLICATE
+        MENUITEM "Delete Layer/Boundary",       ID_TOOLBAR_DELLINE
+        MENUITEM "New Model",                   ID_TOOLBAR_NEWMOD
+        MENUITEM "Resize Model",                ID_TOOLBAR_RESIZEMOD
+        MENUITEM "Save velocity",               ID_TOOLBAR_SAVEV
+        MENUITEM "Save velocity as",            ID_TOOLBAR_SAVEASV
+        MENUITEM SEPARATOR
+        MENUITEM "Flip Model in X-Axis",        ID_TOOLBAR_FLIPMOD
+    END
+    POPUP "&Digitizing"
+    BEGIN
+        MENUITEM "Start a New Digitizing File", ID_EDIT_DIGITIZE
+        MENUITEM "Load Existing Digitizing File", ID_DIGITIZING_LOADEXISTING
+        MENUITEM "Load Zelt TX.IN File",        ID_DIGITIZING_LOADZELT_TX
+        MENUITEM "Where an I?",                 ID_DIGITIZING_WHEREANI
+        MENUITEM "Undo Point\tCtrl+Z",          ID_DIGITIZE_UNDOPOINT
+        MENUITEM "New curve",                   ID_EDIT_NEWCURVE
+        MENUITEM "Save-digitize",               ID_EDIT_SAVEDIG
+        MENUITEM "&Finish Digitizing",          ID_DIGITIZE_FINISHDIGITIZING
+        MENUITEM "Shift Digited Points By ...", ID_DIGITIZING_SHIFTDIGITING
+        POPUP "Bar Properties"
+        BEGIN
+            MENUITEM "Re-Size",                     ID_DIGITIZING_CHANGECURVERES
+            MENUITEM "As Bar",                      ID_DIGITIZING_CHANGEERRORBAR_ASBAR
+            MENUITEM "As Open Circle",              ID_DIGITIZING_CHANGEERRORBAR_ASCIRCLE
+            MENUITEM "As Filled Circle",            ID_DIGITIZING_CHANGEERRORBAR_ASFILLCIRCLE
+            MENUITEM "As Cross",                    ID_DIGITIZING_CHANGEERRORBAR_ASSTAR
+        END
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM "SeisWide's Home Page",        IDC_BTN_HOMEPAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&About SeisWide...",          ID_APP_ABOUT
+    END
+END
+
+IDR_SEISWITYPE_SRVR_IP MENU 
+BEGIN
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "Paste &Special...",           ID_EDIT_PASTE_SPECIAL
+        MENUITEM SEPARATOR
+        MENUITEM "Insert &New Object...",       ID_OLE_INSERT_NEW
+        MENUITEM "Lin&ks...",                   ID_OLE_EDIT_LINKS
+        MENUITEM "<<OLE VERBS GO HERE>>",       ID_OLE_VERB_FIRST
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Time Section",               ID_VIEW_TIMESECTION
+        MENUITEM "&Conversion",                 ID_VIEW_CONV
+        MENUITEM "&Depth Section",              ID_VIEW_DEPTHSECTION
+        MENUITEM "&Velocity Color Map",         ID_VIEW_VELOCITYCOLORMAP
+        MENUITEM "&Both Velocity+Depth Section", ID_VIEW_BOTH
+        MENUITEM "Velocity Contours",           ID_VIEW_CONTOURS
+        MENUITEM "&Add Range to Segy",          ID_VIEW_ADDRANGETOSEGY
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+    END
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About SeisWide...",          ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_EDIT_DISPLAYTUNEUP_MODELPROPERTIES_LINEDRAWINGLABEL, VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_EDIT_NEWCURVE,       VIRTKEY, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_DIGITIZING_CHANGECURVERES, VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_EDIT_DISPLAYTUNEUP_CHANGCOLORTTCURVES, VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_EDIT_DISPLAYTUNEUP_REMOVETTOVERLAY, VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,    VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_DIGITIZE_UNDOPOINT,  VIRTKEY, CONTROL, NOINVERT
+END
+
+IDR_SEISWITYPE_CNTR_IP ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,    VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+IDR_SEISWITYPE_SRVR_IP ACCELERATORS 
+BEGIN
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT
+    VK_F1,          ID_HELP,                VIRTKEY 
+    VK_ESCAPE,      ID_CANCEL_EDIT_SRVR,    VIRTKEY, NOINVERT
+END
+
+IDR_SEISWITYPE_SRVR_EMB ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_UPDATE,         VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,    VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,7,0,0
+ PRODUCTVERSION 4,7,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Trial Edition"
+            VALUE "CompanyName", "Deping Chian"
+            VALUE "FileDescription", "SEISWIDE MFC Application"
+            VALUE "FileVersion", "4, 7, 0, 0"
+            VALUE "InternalName", "SEISWIDE"
+            VALUE "LegalCopyright", "Copyright 2002"
+            VALUE "LegalTrademarks", "sei"
+            VALUE "OriginalFilename", "SEISWIDE.EXE"
+            VALUE "ProductName", "SEISWIDE Application"
+            VALUE "ProductVersion", "4, 7, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_VELOCITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_TIMESEC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_PRINT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_LAYER_NODES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 190
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_DLGREORGANIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+
+    IDD_DLGRAYTRACING1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 299
+    END
+
+    IDD_DLGNEWVELFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_DLGNEWMODEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_DLGNEWLAYER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_DLGCOHMIX, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 323
+    END
+
+    IDD_DLG_SEGYPREVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_DLG_SEGYINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 365
+    END
+
+    IDD_DLG_LOADZELT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DLG_LATSHIFT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_DLG_FILTER1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 360
+    END
+
+    IDD_DIALOG_DIGITIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+
+    IDD_DEPTH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+
+    IDD_CHANGE_RANGES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 255
+    END
+
+    IDD_BOUND_NODES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_ADD_RANGES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 319
+    END
+
+    IDD_DLG_TIM2DPTH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 269
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_DLG_SOURCEPOS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 336
+        TOPMARGIN, 7
+    END
+
+    IDD_DLG_MODEL_RESIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_DLG_FILLAREA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_DLG_DIGRESOLUTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_DLG_SEGYCOLOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_DLG_SEGYAPPEND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_DLG_VRED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_DLG_NOLABLES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+
+    IDD_DLG_MERGEMODELS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_DLG_VZCURVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DLG_MIGPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_DLG_TTCURVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_DLD_INOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 176
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_DLG_KDMIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 344
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 361
+    END
+
+    IDD_DLG_KDMIGPOST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 351
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 320
+    END
+
+    IDD_DLG_TIMEBYTRC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 266
+    END
+
+    IDD_DLG_HYDRATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 361
+    END
+
+    IDD_DLG_SONOBOUY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_DLGRAYTRACING_AUTO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 291
+    END
+
+    IDD_DLG_TABLIZE_LAYER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 299
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 347
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_DLG_LOADREID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_DLG_LATLONG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 338
+    END
+
+    IDD_DLG_CONVERTDATSEGY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 162
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_TIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_DLG_LINEDRAWTIM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 249
+    END
+
+    IDD_DLG_LINEDRAWDEP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_DLG_VEL2DEN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_DLG_VEL2DEN1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_DLG_MIGLINEDRAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_DLG_DIGITIZE_SHIFT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_DLG_EXPORT_BITMAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_DLG_INITAMP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DLG_IMPORT_BITMAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_DLG_DIGLABEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 166
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_DLG_TIM2DPTH_BMP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 212
+    END
+
+    IDD_DLG_DISP_BITMAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+    END
+
+    IDD_DLG_UNIX2PC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_DLG_RESAMPLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_DLG_SHOWWIENER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_DLG_WIENER_FILTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        BOTTOMMARGIN, 268
+    END
+
+    IDD_DLG_DIGRESIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DLG_DIG_SETCURRENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_DLG_CHANGEREDUCE_BMP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_DLG_MODEL_SHIFTBOUNDARY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_DLG_LABEL_SIZES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_DLG_INPUTVALUE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_DLG_WIDE2DPTH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 269
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 291
+    END
+
+    IDD_DLG_VELOCITY_TWTT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 269
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_DLG_WIDE2VELOCITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 269
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 359
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_VELOCITY DIALOGEX 0, 0, 256, 258
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION
+CAPTION "Velocity Display"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "(km/s):",IDC_STATIC,37,111,25,8
+    EDITTEXT        IDC_CONVERSION_VMIN,36,122,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_VMAX,36,192,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_DV1,171,127,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_VMINR,89,122,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMING,116,122,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMINB,143,122,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMAXR,89,192,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMAXG,116,192,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMAXB,143,192,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Vmin:",IDC_STATIC,11,124,19,8
+    LTEXT           "Vmax:",IDC_STATIC,11,194,19,8
+    LTEXT           "Velocity Name:",IDC_STATIC,7,8,28,15
+    EDITTEXT        IDC_VELSECNAME,39,7,210,14,ES_AUTOHSCROLL
+    LTEXT           "V1:",IDC_STATIC,11,139,21,8
+    EDITTEXT        IDC_CONVERSION_VMIDR,89,136,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMIDG,116,136,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMIDB,143,136,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMID,36,136,26,14,ES_AUTOHSCROLL
+    LTEXT           "V2:",IDC_STATIC,11,153,21,8
+    EDITTEXT        IDC_CONVERSION_VMIDR2,89,150,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMIDG2,116,150,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMIDB2,143,150,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Show the Bar",IDC_VEL_COLBAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,42,65,14
+    LTEXT           "V3:",IDC_STATIC,11,167,20,8
+    EDITTEXT        IDC_CONVERSION_VMIDR3,89,164,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMIDG3,116,164,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMIDB3,143,164,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "V4:",IDC_STATIC,11,181,24,8
+    EDITTEXT        IDC_CONVERSION_VMIDR4,89,178,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMIDG4,116,178,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_VMIDB4,143,178,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Red:",IDC_STATIC,92,112,16,8
+    LTEXT           "Green:",IDC_STATIC,116,112,22,8
+    LTEXT           "Blue:",IDC_STATIC,146,112,17,8
+    GROUPBOX        "Color Bar",IDC_STATIC,7,30,242,41
+    CONTROL         "Vertical",IDC_VEL_VERT,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,56,39,10
+    LTEXT           "Contour Increment (in km/s)",IDC_STATIC,172,93,36,27
+    EDITTEXT        IDC_CONVERSION_VMID2,36,150,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_VMID3,36,164,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_VMID4,36,178,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_DV2,171,142,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_DV3,171,157,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_DV4,171,172,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_DV5,171,186,26,14,ES_AUTOHSCROLL
+    GROUPBOX        "Velocity-Color Mapping",IDC_STATIC,7,81,242,127
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEV,222,20,27,14
+    EDITTEXT        IDC_CONVERSIONDXV,137,97,25,14,ES_AUTOHSCROLL
+    LTEXT           "Horizontal Resolution of Colors (in km):",IDC_STATIC,12,101,118,8
+    LTEXT           "X-Y coordinate for Upper -left corner (in km):",IDC_STATIC,82,36,103,19
+    LTEXT           "Size of color bar (km):",IDC_STATIC,80,58,69,10
+    EDITTEXT        IDC_VEL_CXPOS,189,35,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VEL_CYPOS,220,35,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VEL_CXEXT,189,52,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VEL_CYEXT,220,52,29,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON1,77,124,11,11
+    PUSHBUTTON      "...",IDC_BUTTON3,77,138,11,11
+    PUSHBUTTON      "...",IDC_BUTTON4,77,152,11,11
+    PUSHBUTTON      "...",IDC_BUTTON5,77,165,11,11
+    PUSHBUTTON      "...",IDC_BUTTON6,77,179,11,11
+    PUSHBUTTON      "...",IDC_BUTTON7,77,193,11,11
+    CONTROL         "C0",IDC_BUTTON_MINC,"Button",BS_OWNERDRAW | WS_TABSTOP,63,122,13,14
+    CONTROL         "C1",IDC_BUTTON_MIDC,"Button",BS_OWNERDRAW | WS_TABSTOP,63,136,13,14
+    CONTROL         "C2",IDC_BUTTON_MIDC2,"Button",BS_OWNERDRAW | WS_TABSTOP,63,150,13,14
+    CONTROL         "C3",IDC_BUTTON_MIDC3,"Button",BS_OWNERDRAW | WS_TABSTOP,63,164,13,14
+    CONTROL         "C4",IDC_BUTTON_MIDC4,"Button",BS_OWNERDRAW | WS_TABSTOP,63,178,13,14
+    CONTROL         "C5",IDC_BUTTON_MIDC5,"Button",BS_OWNERDRAW | WS_TABSTOP,63,192,13,14
+    LTEXT           "Float Reflector (digitize format; Optional):",IDC_STATIC,7,214,72,20
+    EDITTEXT        IDC_FLOATNAME,87,215,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEV2,222,215,27,14
+    LTEXT           "Markers (X-Y in km; Optional):",IDC_STATIC,7,234,76,16
+    EDITTEXT        IDC_MARKERLOCNAME,87,236,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEV3,222,236,27,14
+END
+
+IDD_TIMESEC DIALOGEX 0, 0, 249, 222
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION
+CAPTION "Common Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT1,113,29,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT2,158,29,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_SHOTSTEP,202,29,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_XMIN,113,50,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_XMAX,158,50,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_GAIN,113,71,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_CLIP,159,71,38,14,ES_AUTOHSCROLL
+    LTEXT           "Xmin, Xmax, XTick:",IDC_STATIC,8,53,83,8
+    LTEXT           "Gain, Clip, MinAmp:",IDC_STATIC,7,73,85,8
+    GROUPBOX        "Display Methods:",IDC_STATIC,7,89,235,73
+    LTEXT           "Trace1,Trace2,Step:",IDC_STATIC,7,31,84,8
+    CONTROL         "Face &down",IDC_VIEW_FACEDOWN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,177,51,10
+    CONTROL         "Face &Up",IDC_VIEW_FACEUP,"Button",BS_AUTORADIOBUTTON,63,177,44,10
+    GROUPBOX        "Face Down or Up",IDC_STATIC,7,166,101,24,WS_GROUP
+    EDITTEXT        IDC_VIEW_UPDATE_XTICK,202,50,40,14,ES_AUTOHSCROLL
+    CONTROL         "Distance/Offset increases monotonically with trace (check to speed up loading)",IDC_SEGY_ORDER,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,7,197,235,18
+    LTEXT           "Title of plot:",IDC_STATIC,7,9,79,8
+    EDITTEXT        IDC_TIMESEC_TITLE,91,7,151,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_FILLOFF,203,71,39,14,ES_AUTOHSCROLL
+    CONTROL         "Wiggle",IDC_VIEW_WIGGLE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,101,36,10
+    CONTROL         "Area",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,11,114,30,10
+    CONTROL         "Wiggle+Area",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,55,114,57,10
+    CONTROL         "Color",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,11,129,35,10
+    CONTROL         "Background Fill",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,11,149,62,10
+
+    CONTROL         "Contour Plot",IDC_RADIO15,"Button",BS_AUTORADIOBUTTON,11,169,62,10
+
+    EDITTEXT        IDC_VIEW_UPDATE_DRIVENEW,221,174,21,14,ES_AUTOHSCROLL
+    LTEXT           "Change drive letter for all related files (i.e. C ... Z):",IDC_STATIC,125,172,94,20
+    EDITTEXT        IDC_VIEW_UPDATE_ILLUMINATION,221,144,21,14,ES_AUTOHSCROLL
+    LTEXT           "Illumination for background Fill \n(default: 1.0):",IDC_STATIC,101,141,114,18,0,WS_EX_RIGHT
+    CONTROL         "Check if area fill is for negative amplitudes",IDC_SEGY_AREAFILL_NEG,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,146,110,96,18
+    PUSHBUTTON      "<--Change",IDC_BUTTON_COLOR,51,128,50,14
+END
+
+IDD_PRINT DIALOG  0, 0, 257, 113
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "The Size of Your Print?"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,142,92,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,200,92,50,14
+    LTEXT           "Please specify the X-Y compression ratios of your printout.",IDC_STATIC,7,7,243,15
+    LTEXT           """1 1"" means stretching to full-page;",IDC_STATIC,7,23,243,8
+    LTEXT           """3.1 2.5"" means X compressed by 3.1, Y by 2.5;",IDC_STATIC,7,37,243,15
+    EDITTEXT        IDC_PRINTX,7,67,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PRINTY,57,67,40,14,ES_AUTOHSCROLL
+END
+
+IDD_LAYER_NODES DIALOGEX 0, 0, 197, 103
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Node editing for layer"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,80,82,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,140,82,50,14
+    LTEXT           "X-Y coordinate of your mouse-click (km):",-1,7,51,93,20
+    EDITTEXT        IDC_LAYERX,103,52,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_LAYERY,150,52,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Velocity at this node (m/s):",-1,7,9,90,8
+    EDITTEXT        IDC_LAYERNUM,150,29,40,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    LTEXT           "Layer number (counting from 0):",-1,7,31,136,8
+    EDITTEXT        IDC_LAYERV,132,7,49,14,ES_AUTOHSCROLL
+END
+
+IDD_DLGREORGANIZE DIALOGEX 0, 0, 227, 239
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Re-Organizing Trace "
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,115,218,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,170,218,50,14
+    LTEXT           "File name for Trace Reorganizing:",IDC_STATIC,7,10,109,8
+    EDITTEXT        IDC_PROCNAME_IN,7,19,168,14,ES_AUTOHSCROLL
+    LTEXT           "Output File name:",IDC_STATIC,7,38,56,8
+    EDITTEXT        IDC_PROCNAME_OUT,7,47,169,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,187,19,33,14
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSETCOH,187,47,33,14
+    LTEXT           "Existing traces randomly ordered with distance and you want trace number to increase monotonically with distance (may take a lot of CPU time)",IDC_STATIC,19,115,201,36,0,WS_EX_CLIENTEDGE
+    LTEXT           "Last trace output as the first, and first trace as the last; do not check for irregularities.",IDC_STATIC,19,81,201,19,0,WS_EX_CLIENTEDGE
+    LTEXT           "NOTE: All traces will be re-numbered to start from 1.",IDC_STATIC,7,196,213,16,0,WS_EX_STATICEDGE
+    CONTROL         "Reverse Trace Order",IDC_RADIO_REVERSE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,71,195,10
+    CONTROL         "Reorder Irregular Traces According to Distance",IDC_RADIO5,
+                    "Button",BS_AUTORADIOBUTTON,7,102,213,10
+    CONTROL         "Reorder Irregular Traces According to Offset",IDC_RADIO6,
+                    "Button",BS_AUTORADIOBUTTON,7,153,213,10
+    CONTROL         "Reorder Irregular Traces According to Longitude",IDC_RADIO7,
+                    "Button",BS_AUTORADIOBUTTON,7,172,213,10
+END
+
+IDD_DLGRAYTRACING1 DIALOGEX 0, 0, 253, 306
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ray-Tracing Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DLG_RAYTRACING,7,62,168,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSERIN,230,62,16,14
+    EDITTEXT        IDC_DLG_VELNAME,7,97,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEV,218,97,28,14
+    DEFPUSHBUTTON   "OK",IDOK,144,285,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,196,285,50,14
+    LTEXT           "The first 2 files will be copied to ""r.in"" and ""v.bin"" for raytracing. The 3rd file will be re-formatted and saved as f.in. NOTE: to use float reflectors, modify ""frbnd"" similar to ""irayt"" in ray parameter file..",IDC_STATIC,7,151,239,28
+    LTEXT           "Ray tracing parameter file name:",IDC_STATIC,7,51,172,8
+    LTEXT           "Velocity file name (binary format; auto saved for onscreen changes):",IDC_STATIC,7,84,239,10
+    LTEXT           "Raytracing using Zelt's Fortran program. Requires a ray parameter file, which can be editted by clicking the Edit button, or automatically generated by hitting the Auto button. You will need to  edit source locations, et al.",IDC_STATIC,7,7,239,41,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Auto",IDC_BUTTON_AUTO,203,62,26,14
+    LTEXT           "Float Reflector (digitize format; optional):",IDC_STATIC,7,118,239,9
+    EDITTEXT        IDC_FLOATNAME,7,130,210,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEV2,219,130,27,14
+    LTEXT           "Outputs will include ""tx.out"", ""p.out"" and ""rPath.out"" in the same directory as the velocity file if associated with a path.",IDC_STATIC,7,245,239,23,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "Edit",IDC_BUTTON_EDIT,177,62,26,14
+    EDITTEXT        IDC_TXNAME,7,220,210,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSE_TX,219,220,27,14
+    LTEXT           "tx.in file (picked travel-time points; modify i2pt, ivray to use it.  Note, changes to your onscreen digitizing needs to be saved manually for the raytracing program to use):",IDC_STATIC,7,191,239,27
+END
+
+IDD_DLGNEWVELFILE DIALOG  0, 0, 264, 111
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File For Velocity Model"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_VEL_NEWFILE,7,17,209,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEV,224,18,33,14
+    GROUPBOX        "Choose a format for this velocity data file",IDC_STATIC,7,41,250,40
+    CONTROL         "SeisWide Internal Binary Format",IDC_VEL_FORMAT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,52,234,10
+    CONTROL         "Zelt's ascii format (.in appended to the above file name)",IDC_RADIO2,
+                    "Button",BS_AUTORADIOBUTTON,11,65,246,10
+    DEFPUSHBUTTON   "OK",IDOK,153,90,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,207,90,50,14
+    LTEXT           "Save velocity data in a new file:",IDC_STATIC,7,7,101,8
+END
+
+IDD_DLGNEWMODEL DIALOG  0, 0, 181, 121
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Model"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_DLG_NLAYER,134,36,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DLG_XMIN,89,55,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DLG_XMAX,134,54,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DLG_ZMAX,134,72,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,63,100,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,123,100,50,14
+    LTEXT           "Number of layers:",IDC_STATIC,7,36,56,8
+    LTEXT           "Xmin and Xmax:",IDC_STATIC,7,57,52,8
+    LTEXT           "Zmin, Zmax:",IDC_STATIC,7,75,44,8
+    LTEXT           "If continue, existing model before will be over written!",IDC_STATIC,7,6,167,16
+    EDITTEXT        IDC_DLG_ZMIN,89,72,40,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DLGNEWLAYER DIALOGEX 0, 0, 218, 158
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "To Add a New Layer"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DLGV1MIN,93,82,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DLGV1MAX,171,82,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DLGV2MIN,93,102,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DLGV2MAX,171,102,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,107,137,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,161,137,50,14
+    LTEXT           "Velocity at top interface: ",IDC_STATIC,7,80,82,8
+    LTEXT           "Insert new boundary inside the selected Layer (the first layer is numbered as 0!):",IDC_STATIC,7,50,153,25
+    EDITTEXT        IDC_DLGNEWLAYER,171,49,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "For min and max distance",IDC_STATIC,7,88,77,8
+    LTEXT           "Velocity at bottom interface: ",IDC_STATIC,7,100,82,8
+    LTEXT           "For min and max distance",IDC_STATIC,7,108,77,8
+    LTEXT           "This will divide the currently selected layer into 2 layers. The velocity values of the first of these 2 layers will be specified below. You will need to modify those values later.",IDC_STATIC,7,7,204,40,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_DLGCOHMIX DIALOGEX 0, 0, 253, 330
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Start Coherency Mixing"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PROCNAME_IN,97,58,110,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,212,58,33,14
+    EDITTEXT        IDC_PROCNAME_OUT,97,74,109,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSETCOH,212,75,33,14
+    EDITTEXT        IDC_PROC_SHOT1,153,94,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PROC_SHOT2,185,94,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PROC_SHOTSTEP,217,94,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PROC_DXMIX,185,115,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_TWINDOW,217,115,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_TMIN,153,145,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_TMAX,185,145,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_VRED,217,145,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_VELMIN,185,162,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_VELMAX,217,162,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_NUMCOH,108,190,23,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Multiply by coherency for each sample (boosts S/N ratio but can distort signal)",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,6,214,187,21
+    CONTROL         "Offset",IDC_RADIO_OFFSETMIX,"Button",BS_AUTORADIOBUTTON | WS_GROUP,147,193,35,10
+    CONTROL         "Distance",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,197,194,40,10
+    DEFPUSHBUTTON   "OK",IDOK,106,309,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,195,309,50,14
+    LTEXT           "Mixing window in distance (km) and Time (sec); If >11 traces are in this window, the program uses 11 traces only:",IDC_STATIC,6,115,171,25
+    LTEXT           "Trace1, Trace2, TraceStep:",IDC_STATIC,6,95,136,8
+    LTEXT           "Input File Name:",IDC_STATIC,6,61,79,8
+    LTEXT           "Output File name:",IDC_STATIC,6,76,83,12
+    LTEXT           "Range of dips (in s/km) for  mixing (e.g. -1   1 for reflection, 0.125  0.5 for refraction.):",IDC_STATIC,6,161,172,23
+    LTEXT           "Tmin, Tmax, VRed:",IDC_STATIC,6,148,73,8
+    LTEXT           "Note: Run ""Trace Re-order"" in Processing menu before coherency mixing if distance/offsets do not monotonically increase with trace number (an assumption of this routine). ",IDC_STATIC,6,270,239,31,0,WS_EX_STATICEDGE
+    LTEXT           "Run this to ""sharpen"" you seismic data.  It amplifies signals coherent for its adjacent traces and discriminate against un-coherent noises. Multiple runs for more sharpening. Used in publications since 1992. Ref. Milkereit and Spencer 1989.",IDC_STATIC,6,7,239,47,0,WS_EX_DLGMODALFRAME
+    LTEXT           "Number of times to mix\n (if >1, TraceStep=1):",IDC_STATIC,6,188,88,17
+    GROUPBOX        "Mix Over Offset or Distance?",IDC_STATIC,135,184,110,23
+    LTEXT           "Maximum output amplitude (used for dealing with coherency instability):",IDC_STATIC,52,239,158,22
+    EDITTEXT        IDC_PROC_AMPMAX,217,241,28,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_SEGYPREVIEW DIALOG  0, 0, 224, 175
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Segy Preview"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,107,154,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,167,154,50,14
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT1,95,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT2,136,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_SHOTSTEP,177,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_GAIN,95,59,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_CLIP,137,59,38,14,ES_AUTOHSCROLL
+    CONTROL         "&Wiggle",IDC_VIEW_WIGGLE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,104,38,10
+    CONTROL         "&Area",IDC_VIEW_AREA,"Button",BS_AUTORADIOBUTTON,49,104,31,10
+    CONTROL         "&Both",IDC_VIEW_BOTH,"Button",BS_AUTORADIOBUTTON,79,104,31,10
+    LTEXT           "Gain, Clip, MinAmp:",IDC_STATIC,7,61,65,8
+    GROUPBOX        "Display Methods:",IDC_STATIC,7,93,105,24
+    LTEXT           "Trace1,Trace2,TraceStep:",IDC_STATIC,7,43,84,8
+    CONTROL         "Face &down",IDC_VIEW_FACEDOWN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,120,104,51,10
+    CONTROL         "Face &Up",IDC_VIEW_FACEUP,"Button",BS_AUTORADIOBUTTON,171,104,44,10
+    GROUPBOX        "Face Down or Up",IDC_STATIC,116,93,101,24,WS_GROUP
+    LTEXT           "Title of plot:",IDC_STATIC,7,9,38,8
+    EDITTEXT        IDC_TIMESEC_TITLE,62,7,155,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_FILLOFF,178,59,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMIN,94,75,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMAX,137,75,40,14,ES_AUTOHSCROLL
+    LTEXT           "Tmin, Tmax, TTick:",IDC_STATIC,7,78,65,8
+    EDITTEXT        IDC_VIEW_UPDATE_TTICK3,177,75,40,14,ES_AUTOHSCROLL
+    LTEXT           "File name for time section:",IDC_STATIC,7,24,82,8
+    EDITTEXT        IDC_TIMESECNAME,94,23,123,14,ES_AUTOHSCROLL
+    LTEXT           "Trace Header Information to Display:",IDC_STATIC,7,124,118,18
+    COMBOBOX        IDC_COMBO_HEADINFO,126,128,91,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DLG_SEGYINFO DIALOGEX 0, 0, 253, 372
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Segy Info"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_TIMESECNAME,59,32,152,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSETPRE,213,33,33,14
+    EDITTEXT        IDC_SEGYINFO_SAMPINT,206,55,40,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_TABSTOP
+    EDITTEXT        IDC_SEGYINFO_NUMSAMP,206,71,40,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_TABSTOP
+    GROUPBOX        "SEGY Data Format",IDC_STATIC,7,91,239,21
+    CONTROL         "Short Integer",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP,11,101,73,10
+    CONTROL         "Floating Point",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,120,101,76,10
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT1,105,177,31,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_TABSTOP
+    EDITTEXT        IDC_VIEW_FFID,195,178,31,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_TABSTOP
+    EDITTEXT        IDC_VIEW_UPDATE_XMIN,105,192,31,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_VIEW_CDP,195,196,31,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_TABSTOP
+    EDITTEXT        IDC_VIEW_UPDATE_TMIN,161,212,31,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_VIEW_UPDATE_TMAX,195,213,31,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_TOTNTRACE,82,112,32,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,196,351,50,14
+    LTEXT           "Trace no. in segy header:",IDC_STATIC,9,179,77,8
+    LTEXT           "Offsets (in km):",IDC_STATIC,10,195,72,12
+    LTEXT           "Segy File name:",IDC_STATIC,9,33,45,8
+    LTEXT           "Sample Interval (Micro Second):",IDC_STATIC,7,57,124,8
+    LTEXT           "Number of samples per Trace:",IDC_STATIC,7,71,124,8
+    LTEXT           "Total traces:",IDC_STATIC,9,115,65,11
+    LTEXT           "Tmin and Tmax (sec):",IDC_STATIC,10,214,91,10
+    GROUPBOX        "Trace Info",IDC_STATIC,7,146,239,123
+    LTEXT           "FFID:",IDC_STATIC,174,180,18,8
+    LTEXT           "CDP:",IDC_STATIC,174,199,18,8
+    LTEXT           "Average Amplitude:",IDC_STATIC,11,130,62,8
+    EDITTEXT        IDC_AVERAGEAMP,82,127,32,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "Click here to display header information of a SEGY file.",IDC_BUTTON1,7,7,239,18,BS_MULTILINE
+    LTEXT           "Water Depth (km) at Source:",IDC_STATIC,10,233,116,8
+    EDITTEXT        IDC_VIEW_UPDATE_SDEPTH,195,233,31,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Water Depth (km) at Receiver:",IDC_STATIC,10,251,125,8
+    EDITTEXT        IDC_VIEW_UPDATE_GDEPTH,195,250,31,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_VIEW_UPDATE_TRACEACTIVE,173,156,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Seq. trace number (starting from 1; can differ from that in trace header):",IDC_STATIC,10,155,146,16
+    PUSHBUTTON      "Show Ascii Header",IDC_BUTTON2,150,114,46,28,BS_MULTILINE
+    PUSHBUTTON      "Dump More Trace Info",IDC_BUTTON8,6,271,46,23,BS_MULTILINE
+    PUSHBUTTON      "Set",IDC_BUTTON3,217,156,29,14
+    PUSHBUTTON      "Show EBCDIC Header",IDC_BUTTON_EBCDIC,200,114,46,28,BS_MULTILINE
+    DEFPUSHBUTTON   "Dump Shot Table",IDC_BUTTON9,51,271,46,23,BS_MULTILINE
+    DEFPUSHBUTTON   "Test Clone delrt",IDC_BUTTON_TEST,7,305,46,23,BS_MULTILINE
+    DEFPUSHBUTTON   "Test Calc Refl",IDC_BUTTON_TEST2,52,305,46,23,BS_MULTILINE
+    DEFPUSHBUTTON   "Test Trc Combine",IDC_BUTTON_TEST_TRCCOMB,199,327,46,23,BS_MULTILINE
+    PUSHBUTTON      "Static Shift Many SGY",IDC_BUTTON10,7,328,46,23,BS_MULTILINE
+    PUSHBUTTON      "Dump FFID-Offset",IDC_BUTTON11,55,327,46,23,BS_MULTILINE
+    PUSHBUTTON      "Segy Stack",IDC_BUTTON_STACK,103,327,46,23,BS_MULTILINE
+    PUSHBUTTON      "Segy Gen From DOBS",IDC_BUTTON_SEGYGEN,151,327,46,23,BS_MULTILINE
+    CONTROL         "The following buttons are for specific usages, only useful when checking the C++ codes.",IDC_STATIC,
+                    "Static",SS_LEFTNOWORDWRAP | WS_GROUP,98,301,147,22,WS_EX_DLGMODALFRAME | WS_EX_RIGHT | WS_EX_STATICEDGE
+END
+
+IDD_DLG_LOADZELT DIALOGEX 0, 0, 230, 241
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Load Zelt's ASCII velocity model "
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DLG_ZELTNAME,7,64,181,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEVASCII,190,64,33,14
+    EDITTEXT        IDC_DLG_VELNAME,7,104,180,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEV,190,104,33,14
+    DEFPUSHBUTTON   "OK",IDOK,121,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,173,220,50,14
+    LTEXT           "Input file name: Zelt's ASCII velocity format (.in)",IDC_STATIC,7,54,157,8
+    LTEXT           "Output velocity file name: SeisWide binary format (.bin). A .BIN extension will be appended:",IDC_STATIC,7,84,216,17
+    LTEXT           "Note: Maximum limits for modeling: 50 layers, 999 points per boundary. In case this routine can not load your model, try modify GetMod.for source code (in fortran), located in the program directory.",IDC_STATIC,7,124,216,33
+    LTEXT           "Use this routine to load or convert a Zelt's model (in ascii text format) into SeisWide's internal binary (.BIN) format.  Its reverse operation can be found in ""Save Model as"", in ""Modeling"" menu. ",IDC_STATIC,7,7,216,37,0,WS_EX_DLGMODALFRAME
+    CONTROL         "For supported v.in file format, see the following example:\n 1   0.0000 30.0000\n 1   0.4029  0.4460\n\nor:\n%2d %8.4f%8.4f%8.4f%8.4f",IDC_STATIC,
+                    "Static",SS_LEFTNOWORDWRAP | WS_BORDER | WS_GROUP,7,163,216,52
+END
+
+IDD_DLG_LATSHIFT DIALOGEX 0, 0, 203, 207
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Trace Shifting in KM and Time"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_REFNAME,110,7,86,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REFKM,156,64,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REFSEC,156,105,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,94,186,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,146,186,50,14
+    LTEXT           "Time section file name:",IDC_STATIC,7,9,89,14,0,WS_EX_RIGHT
+    LTEXT           "Note: Click OK will overwrite distance/offset and start time of each trace as stored in the trace headers.\n\nTo change the soure/OBS position, please run ""Define Source Distance"" again.",IDC_STATIC,7,132,189,46
+    LTEXT           "Add to the time (in sec) by (plus if move to greater time):",IDC_STATIC,7,105,134,16,0,WS_EX_RIGHT
+    CONTROL         "Add to Existing Offset",IDC_RADIO_OFFSET,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,29,155,10
+    CONTROL         "Add to Existing Distance",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,7,40,189,10
+    CONTROL         "Add to Existing Offset and Distance",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,7,51,189,10
+    LTEXT           "By (in km):",IDC_STATIC,73,66,66,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT1,102,82,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT2,156,82,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Between Trace Numbers:\n(0 0 for all traces)",IDC_STATIC,7,80,91,19,0,WS_EX_RIGHT
+END
+
+IDD_DLG_FILTER1 DIALOGEX 0, 0, 264, 367
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Trace Re-Shape and Filter"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_PROCNAME_IN,31,19,226,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROCNAME_OUT,31,50,226,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_SHOT1,160,68,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PROC_SHOT2,197,68,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PROC_SHOTSTEP,229,68,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PROC_TMIN,160,94,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_TMAX,197,94,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_VRED,229,94,28,14,ES_AUTOHSCROLL
+    GROUPBOX        "3-Point Recursive Filter in Time Domain (Causal && Very Mild)",IDC_STATIC,7,114,250,26
+    CONTROL         "Check to apply filter at freq (hz):",IDC_PROC_FILTER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,126,171,10
+    EDITTEXT        IDC_PROC_FILTERF1,188,123,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_FILTERF2,222,123,29,14,ES_AUTOHSCROLL
+    GROUPBOX        "Spherical Dispersion Compensation",IDC_STATIC,7,198,250,31
+    CONTROL         "Multiply by time to the order of (For spherical correction use 2.0): ",IDC_PROC_SPHERICGAIN,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,13,211,192,15
+    EDITTEXT        IDC_PROC_SPHERORDER,217,211,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,153,346,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,207,346,50,14
+    LTEXT           "Trace1, Trace2, TraceStep:",IDC_STATIC,7,70,141,8
+    LTEXT           "Input File Name:",IDC_STATIC,7,7,108,8
+    LTEXT           "Output File name (if blank, the input file will be worked on instead):",IDC_STATIC,7,37,250,13
+    LTEXT           "Tmin, Tmax, VRed:",IDC_STATIC,7,97,73,8
+    GROUPBOX        "Trace Normalization",IDC_STATIC,7,274,250,26
+    CONTROL         "Check to normalize the maximum amplitude of each trace to:",IDC_PROC_NORM,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,13,281,192,18
+    EDITTEXT        IDC_PROC_NORMVALUE,211,284,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Manual Trace Scale (Not applied if 1.0)",IDC_STATIC,7,306,250,31
+    CONTROL         "Multiply the amplitude of each sample by:",IDC_PROC_MULTIPLY,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,13,316,192,18
+    EDITTEXT        IDC_PROC_MULTIPLYVALUE,211,319,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET,7,19,23,14
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET2,7,49,23,14
+    GROUPBOX        "Frequency Filter (Non-Causal But Cut Freq Precisely)",IDC_STATIC,7,148,250,47
+    CONTROL         "Check to apply filter:",IDC_PROC_FILTER2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,160,73,10
+    EDITTEXT        IDC_PROC_FILTERF10,151,158,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_FILTERF11,179,158,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_FILTERF12,207,158,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_FILTERF13,234,158,23,14,ES_AUTOHSCROLL
+    LTEXT           "These are filter freq in Hz: cut, min, max and cut. Cosine function (Hann Window) will be used for each side.",IDC_STATIC,15,175,242,16
+    CONTROL         "Stop processing when a trace number > Trace2",IDC_PROC_STOP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,82,232,10
+    LTEXT           "Note: Output will always be in floating point format.",IDC_STATIC,7,341,95,20
+    EDITTEXT        IDC_PROC_ATTENUATIONCORR,199,238,40,14,ES_AUTOHSCROLL
+    LTEXT           "Correction dB and starting time (sec) for attenuation correction (0dB=None; 6dB=Amplitude doubled for every second; recommended value: 4)",IDC_STATIC,14,241,183,24
+    EDITTEXT        IDC_PROC_ATTENUATIONSEAFLOOR,199,254,40,14,ES_AUTOHSCROLL
+    CONTROL         "dB",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,243,241,14,11
+    CONTROL         "sec",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,243,255,14,11
+    GROUPBOX        "Attenuation Compensation",IDC_STATIC,7,230,250,39
+END
+
+IDD_DIALOG_DIGITIZE DIALOGEX 0, 0, 238, 266
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Digitizing Points"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_DIGITIZE,7,19,224,14,ES_AUTOHSCROLL
+    CONTROL         "X-Y Type Numbers (3 collumns of data; others ignored. Please use .TXT as file extension. Note: if you digitize across an OBS, add a point near the OBS to avoid display mis-match caused by linear interpolation)",IDC_DIG_FILEFORMAT,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP | WS_TABSTOP,15,77,209,44
+    CONTROL         "Zelt's TX.IN Format (For wide-angle: reduction time will be counted for if reduction velocity is non-zero. Please use .IN as file extension).",IDC_RADIO2,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_TABSTOP,15,129,210,28
+    DEFPUSHBUTTON   "OK",IDOK,127,245,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,181,245,50,14
+    LTEXT           "Digitizing file name:",IDC_STATIC,7,7,88,8
+    GROUPBOX        "Format?",IDC_STATIC,7,72,224,167
+    LTEXT           "Max points per curve:",IDC_STATIC,7,41,84,13
+    EDITTEXT        IDC_EDIT1,96,41,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Max curves:",IDC_STATIC,7,57,61,8
+    EDITTEXT        IDC_EDIT2,95,57,32,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(These limits will be automatically adjusted once you save and reload the saved points)",IDC_STATIC,131,38,100,32
+    LTEXT           "For Zelt's format only: source/OBS Distance in Model (km).",IDC_STATIC,50,164,131,21,0,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_OBSDIST,191,166,40,14,ES_AUTOHSCROLL
+    LTEXT           "For Zelt's format only: Comments for the current profile (OBS):",IDC_STATIC,30,195,201,12
+    EDITTEXT        IDC_DIG_COMMENTS,29,211,202,14,ES_AUTOHSCROLL
+END
+
+IDD_DEPTH DIALOGEX 0, 0, 251, 243
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION
+CAPTION "Time or Depth Sections"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_TIMESECNAME,55,7,163,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET,220,7,25,14
+    EDITTEXT        IDC_VIEW_UPDATE_TMIN,90,23,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMAX,131,23,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TTICK2,172,23,22,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_HEADINFO,90,41,154,30,CBS_DROPDOWN | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_VIEW_UPDATE_VRED,62,106,23,14,ES_AUTOHSCROLL
+    CONTROL         "Overlay Computed Rays (Cntl+T)",IDC_TRAVELTIME2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,97,106,139,10
+    CONTROL         "Offset",IDC_VIEW_OFFSET2,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,81,34,10
+    CONTROL         "Distance",IDC_VIEW_DIST,"Button",BS_AUTORADIOBUTTON,53,81,45,10
+    CONTROL         "Variable Gain:",IDC_TIME_GAINDIST,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,13,125,51,17
+    EDITTEXT        IDC_TIME_BASEGAIN,144,125,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TIME_BASEPOWER,209,125,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEPTHSECNAME,82,180,136,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSED,219,180,25,14
+    EDITTEXT        IDC_CONVERSION_ZMIN,82,208,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZMAX,124,208,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZTICK,166,208,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_DZ2,208,208,36,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Display as?",IDC_STATIC,7,70,98,25,WS_GROUP
+    LTEXT           "Zmin, Zmax, zTick, dz (in km):",IDC_STATIC,7,207,70,16
+    LTEXT           "File name for depth section:",IDC_STATIC,7,183,67,15
+    LTEXT           "Tmin, Tmax, TTick:",IDC_STATIC,7,26,75,8
+    LTEXT           "Reduction Velocity (km/s):",IDC_STATIC,11,108,43,8
+    LTEXT           "File name for time section:",IDC_STATIC,7,7,44,17
+    LTEXT           "Trace Header Info:",IDC_STATIC,8,43,80,11
+    GROUPBOX        "Wide-Angle Only",IDC_STATIC,7,96,237,81
+    EDITTEXT        IDC_VIEW__DIST1,144,80,30,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_VIEW__DIST2,175,80,30,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_VIEW__DIST3,207,80,30,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Trace (km):  First:",IDC_STATIC,108,67,56,8
+    LTEXT           "Second:",IDC_STATIC,177,67,28,8
+    LTEXT           "Third:",IDC_STATIC,218,67,19,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | WS_DISABLED,111,83,23,1
+    LTEXT           "Min. Offset in km to apply variable gain:",IDC_STATIC,77,124,61,16
+    LTEXT           "Gain power:",IDC_STATIC,184,124,20,16
+    PUSHBUTTON      "Zero Traces",IDC_BUTTON_ZEROTRC,195,23,49,14,BS_FLAT
+    EDITTEXT        IDC_DLG_RAYTRACING,82,154,136,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSERIN2,219,154,25,14
+    LTEXT           "Ray tracing parameter file name:",IDC_STATIC,7,152,71,16
+END
+
+IDD_CHANGE_RANGES DIALOGEX 0, 0, 188, 262
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Reverse Sign of Offsets"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_REFNAME,52,35,129,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REFSHOT,97,100,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,80,241,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,131,241,50,14
+    LTEXT           "Time section file name:",IDC_STATIC,7,33,44,17
+    LTEXT           "Note: Click OK will overwrite the signs of distance or offsets stored in the segy header. When this is followed by Trace-Reorder routine, your traces are in seq. order with distance, ready for coherency mixing.",IDC_STATIC,7,182,174,52
+    CTEXT           "Reverse Existing Distance or Offset Values in SEGY Header",IDC_STATIC,21,7,117,22,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         "offset ",IDC_CHECK_OFFSET,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,59,60,31,10
+    CONTROL         "distance",IDC_CHECK_DISTANCE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,102,61,73,10
+    CONTROL         "When trace numbers are in between (inclusive):",IDC_RADIO1,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,7,76,174,20
+    CONTROL         "When Azimuth is not within (-90 to 90 degrees)",IDC_RADIO2,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,7,121,174,19
+    LTEXT           "Reverse sign of",IDC_STATIC,7,60,50,8
+    LTEXT           "This last option is added to deal with GSC segy which uses azimuth to determine the sign of shot-receiver offset.",IDC_STATIC,19,145,162,28,0,WS_EX_STATICEDGE
+    EDITTEXT        IDC_REFSHOT2,141,100,40,14,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_BOUND_NODES DIALOG  0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Node editing for boundary"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_MOUSE_DOWN_X,97,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MOUSE_DOWNY,139,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MOUSE_UPX,97,27,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MOUSE_UPY,139,27,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,76,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,74,50,14
+    LTEXT           "Mouse down at:",IDC_STATIC,7,7,52,8
+    LTEXT           "Mouse up at:",IDC_STATIC,7,23,42,8
+    LTEXT           "Used for move, add, delete",IDC_STATIC,7,31,86,8
+    EDITTEXT        IDC_BOUND_NUM,139,50,40,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    LTEXT           "Work in boundary no.: ",IDC_STATIC,7,52,73,8
+END
+
+IDD_ADD_RANGES DIALOGEX 0, 0, 232, 326
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Associate Trace Distance"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_REFNAME,7,16,190,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET,202,17,23,14
+    EDITTEXT        IDC_REFRANGE,190,91,35,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REFDX,190,106,35,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,125,305,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,175,305,50,14
+    GROUPBOX        "Reference Method for Adding Distance",IDC_STATIC,7,35,218,33
+    LTEXT           "The distance (in km) for the first trace:",IDC_STATIC,17,93,168,12
+    LTEXT           "Increment (in km) for Successive Traces:",IDC_STATIC,18,109,166,8
+    LTEXT           "Time section file name:",IDC_STATIC,7,5,73,8
+    CONTROL         "Check to also assign km to dead traces.",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,40,135,185,10
+    LTEXT           "(You can adjust this number to account for tilted lines.)",IDC_STATIC,38,121,187,14
+    PUSHBUTTON      "...",IDC_BUTTON1_OFFSET,202,214,23,14,WS_DISABLED
+    LTEXT           "(2-collumn ascii file, each line with only trace number && offset in m, free integer format)",IDC_STATIC,17,193,208,17
+    EDITTEXT        IDC_EDIT1,120,214,80,14,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "CDP",IDC_REFCDPTRUE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,13,49,30,10
+    CONTROL         "FFID",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,46,49,31,10
+    CONTROL         "Sequential Trace Number",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,80,49,134,10
+    CONTROL         "Assign Trace Distance",IDC_ASSIGN_METHOD,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,76,174,10
+    CONTROL         "Distance equals offset.",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,7,153,174,10
+    CONTROL         "Assign offset from file:",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,7,180,116,10
+    CONTROL         "Assign Distance from file:",IDC_RADIO14,"Button",BS_AUTORADIOBUTTON,7,233,116,10
+    LTEXT           "(2-collumn ascii file, each line with only trace number && distance in m, free integer format)",IDC_STATIC,17,247,208,17
+    LTEXT           "If this file has an extension of .sht, is is treated as a shot table, and the distance will be used based on the SHOT-FFID values.",IDC_STATIC,15,274,210,22
+END
+
+IDD_DLG_TIM2DPTH DIALOGEX 0, 0, 276, 272
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Reflection data to Depth Conversion"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TIMESECNAME,98,26,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,236,26,33,14
+    EDITTEXT        IDC_VELSECNAME,98,46,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEV,236,46,33,14
+    EDITTEXT        IDC_DEPTHSECNAME,98,69,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSED,236,69,33,14
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT1,182,96,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT2,229,96,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_XMIN,182,119,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_XMAX,229,119,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZMIN,155,148,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZMAX,195,148,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_DZ2,235,148,34,14,ES_AUTOHSCROLL
+    CONTROL         "Distance/Offset increases monotonically with trace (check to speed up loading)",IDC_SEGY_ORDER,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,13,169,256,19
+    CONTROL         "Multiply amplitude by depth to the order of: ",IDC_PROC_SPHERICGAIN,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,13,199,206,15
+    EDITTEXT        IDC_PROC_SPHERORDER,225,200,34,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,163,251,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,219,251,50,14
+    LTEXT           "Zmin, Zmax, dz (in km; Minimum, Maximum Depth, and Depth Interval for Processing):",IDC_STATIC,7,139,139,26
+    LTEXT           "File name for depth section:",IDC_STATIC,7,71,88,8
+    LTEXT           "File name for time section:",IDC_STATIC,7,28,90,15
+    LTEXT           "Velocity file name:",IDC_STATIC,7,50,63,8
+    LTEXT           "Xmin, Xmax (Minimum and Maximum Distance for Processing:",IDC_STATIC,7,119,172,19
+    LTEXT           "Trace1,Trace2 (First and Last Trace for Processing:",IDC_STATIC,7,98,170,17
+    GROUPBOX        "Spherical Dispersion Compensation: For Time-Depth Conversion",IDC_STATIC,7,190,262,27
+    CTEXT           "For Reflection Data Only",IDC_STATIC,33,7,189,16,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "This conversion may take a while. Please wait and the resulting depth section will be shown automatically on top of the colored model.",IDC_STATIC,7,221,262,28
+END
+
+IDD_DLG_SOURCEPOS DIALOGEX 0, 0, 344, 337
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Define Source/Receiver Positions"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,7,40,33,14
+    EDITTEXT        IDC_REFNAME,44,40,292,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XSHOT,291,60,45,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Refresh existing sx (in km):",IDC_BUTTON_REFRESH,228,57,61,22,BS_MULTILINE
+    DEFPUSHBUTTON   "OK",IDOK,235,323,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,286,323,50,14
+    LTEXT           "Time section file name:",IDC_STATIC,7,30,73,8
+    CONTROL         "Single OBS/Source for Wide-angle Data   (***NOTE: sx field will be overwritten with distance in km given on the right!***)",IDC_RADIO_OPTIONS,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP,7,60,215,22
+    CONTROL         "Near-Offset (Stacked) Reflection Data (for simulating prestack Kircholf migration on post-stack data",IDC_RADIO_OPTIONS3,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,7,172,329,15
+    CONTROL         "Assign Src/Rec positions for pre-stack Kircholf migration (header accessed: FFID, sx, gx, offset)",IDC_RADIO_OPTIONS4,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,7,223,329,21
+    LTEXT           "Require ascii file for FFID and sx (source distance) pairs (two numbers per row, model distance in km; free text format):",IDC_STATIC,23,244,313,19
+    EDITTEXT        IDC_DLG_XYFILENAME,74,266,262,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSETXT,40,266,33,14
+    GROUPBOX        "Receiver Distance (gx) Based on Offset",IDC_STATIC,39,287,297,25
+    CONTROL         "gx=sx+offset;",IDC_RADIO_RECPLUS,"Button",BS_AUTORADIOBUTTON | WS_GROUP,50,298,74,10
+    CONTROL         "gx=sx-offset.",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,265,298,71,10
+    CONTROL         "Overwrite src/rec to equal to distance",IDC_RADIO_CALC,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,36,186,151,10
+    CONTROL         "Calculate src/rec/distance from src coordinates (only UTM  is implimented)",IDC_RADIO6,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,35,202,301,17
+    EDITTEXT        IDC_DLG_PROCESSING_SX,288,102,48,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DLG_PROCESSING_SY,288,118,48,14,ES_AUTOHSCROLL
+    LTEXT           "Longitude",IDC_STATIC,253,104,32,8
+    LTEXT           "Latitude",IDC_STATIC,255,122,26,8
+    CTEXT           "_________________________________________________________________________________",IDC_STATIC,7,159,329,8
+    CONTROL         "Set distance to sx+offset (in km) assuming trace offset already defined in header as meter.",IDC_RADIO_SXSY_OVERWRITE,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP,34,86,302,15
+    CONTROL         "Set trace offset assuming (gx,gy) header fields already properly assigned in geographical degrees multipled by 10,000, and source is located at (degrees):",IDC_RADIO3,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,34,103,214,32
+    CONTROL         "For the second option, check here if negative offset is calculated  from latitude instead of longitude",IDC_CHECK_ISNEGTIVE_FROMLAT,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,97,139,239,19
+    LTEXT           "This function will try to assign proper positions for the segy header fields of sx,gx, offset, and distance. ",IDC_STATIC,13,7,308,17,SS_CENTERIMAGE,WS_EX_DLGMODALFRAME | WS_EX_TRANSPARENT
+END
+
+IDD_DLG_MODEL_RESIZE DIALOGEX 0, 0, 189, 121
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Model Resize"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_XMIN,139,40,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_XMAX,139,59,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,43,100,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,100,50,14
+    LTEXT           "This routine resize the currently active model",IDC_STATIC,7,7,172,15,0,WS_EX_DLGMODALFRAME
+    LTEXT           "Minimum distance (in km) desired:",IDC_STATIC,7,43,106,8
+    LTEXT           "Maximum distance (in km) desired:",IDC_STATIC,7,61,108,8
+END
+
+IDD_DLG_FILLAREA DIALOGEX 0, 0, 267, 247
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options for Clipboard"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Compact to One Object Per Trace (Fast when pasted and ungruped in other softwares.)",IDC_RAD_ONEOBJECT,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP,12,40,242,26
+    CONTROL         "Do not Compact (Each amplitude block is one object; Slow especially when ungrouped)",IDC_RADIO4,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,12,68,241,18
+    CONTROL         "Remove All Lables",IDC_CHECK_NOLABELS,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,12,117,90,15
+    DEFPUSHBUTTON   "OK",IDOK,210,229,50,14
+    GROUPBOX        "For Digital Seismic Data Only (Fill-Area Options)",IDC_STATIC,7,30,253,60
+    LTEXT           "Note: This copys the current screen to clipboard as metafile. For seismic data, you may alternatively (1) File> Export to Bitmap at a high resolution; (2) print to PDF or Postcript file for use with other softwares.",IDC_STATIC,7,137,253,58,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    CONTROL         "Copy to Clipboard as Bitmap (under development)",IDC_CHECK_BITMAP,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,101,248,10
+    LTEXT           "Image Size on X, Y axes (in mm):",IDC_STATIC,7,7,160,8
+    EDITTEXT        IDC_EDIT_X,177,7,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_Y,218,7,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Do not show Seismic in clipboard (slow for large seismic section",IDC_CHECK_NOSEISMIC,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,115,117,145,15
+END
+
+IDD_DLG_DIGRESOLUTION DIALOG  0, 0, 203, 140
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Curve Resolution for the new curve (for Zelt's format only):"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,146,119,50,14
+    LTEXT           "Resolution (in sec) ",IDC_STATIC,8,60,126,12
+    EDITTEXT        IDC_DIG_RESOLUTION,156,58,40,14,ES_AUTOHSCROLL
+    LTEXT           "Curve Number :",IDC_STATIC,8,41,54,8
+    EDITTEXT        IDC_DIG_NCURVE,156,39,40,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    LTEXT           "ivray (Ray Integer Label) :",IDC_STATIC,8,82,126,12
+    EDITTEXT        IDC_DIG_IVRAY,156,79,40,14,ES_AUTOHSCROLL
+    LTEXT           "Curve Resolution for the new curve (for Zelt's format only)",IDC_STATIC,7,10,181,8
+END
+
+IDD_DLG_SEGYCOLOR DIALOG  0, 0, 229, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Colors for Seismic Section"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,118,101,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,172,101,50,14
+    LTEXT           "RGB Color for positive amplitude (0-255):",IDC_STATIC,7,19,76,24
+    EDITTEXT        IDC_COL_MAXAMP_R,88,25,25,16,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER
+    EDITTEXT        IDC_COL_MAXAMP_G,121,25,25,16,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER
+    EDITTEXT        IDC_COL_MAXAMP_B,154,25,25,16,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER
+    LTEXT           "Red",IDC_STATIC,94,13,14,8
+    LTEXT           "Green",IDC_STATIC,121,13,20,8
+    LTEXT           "Blue",IDC_STATIC,154,13,15,8
+    LTEXT           "RGB Color for negative amplitude (0-255):",IDC_STATIC,7,52,77,26
+    EDITTEXT        IDC_COL_NEGAMP_R,88,52,25,14,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER
+    EDITTEXT        IDC_COL_NEGAMP_G,121,52,25,14,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER
+    EDITTEXT        IDC_COL_NEGAMP_B,154,52,25,14,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER
+    PUSHBUTTON      "...",IDC_BUTTON1,204,26,18,14
+    PUSHBUTTON      "...",IDC_BUTTON2,204,52,18,14
+    CONTROL         "posC",IDC_BUTTON_POS,"Button",BS_OWNERDRAW | WS_TABSTOP,180,25,20,16
+    CONTROL         "negC",IDC_BUTTON_NEG,"Button",BS_OWNERDRAW | WS_TABSTOP,180,51,20,16
+END
+
+IDD_DLG_SEGYAPPEND DIALOG  0, 0, 189, 131
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Segy File Concatenate Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_TIMESECNAME,7,26,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,146,26,33,14
+    EDITTEXT        IDC_2NDSECNAME,7,62,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSED,146,60,33,14
+    CONTROL         "Renumber appended CDP number",IDC_CHK_RENUMCDP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,82,125,10
+    DEFPUSHBUTTON   "OK",IDOK,73,110,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,132,110,50,14
+    LTEXT           "Second Segy file to be appended to the above file:",IDC_STATIC,7,50,161,8
+    LTEXT           "First Segy file name (traces will be appended at the end of this file):",IDC_STATIC,7,7,175,15
+END
+
+IDD_DLG_VRED DIALOGEX 0, 0, 186, 154
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Apply Reduction Velocity"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,133,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,133,50,14
+    LTEXT           "Current Segy Data: ",IDC_STATIC,7,47,63,8
+    EDITTEXT        IDC_TIMESECNAME,80,44,99,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_VRED,7,62,40,14,ES_AUTOHSCROLL
+    LTEXT           "Reduction data by this velocity (km/s) to apply manually.",IDC_STATIC,52,60,127,18
+    LTEXT           "NOTE: Existing Trace Initial Time Will be Ignored. Backup the Segy file if necessary. You can get the same data by apply +8 km/s first and -8 km/s second.",IDC_STATIC,7,84,172,34,0,WS_EX_STATICEDGE
+    LTEXT           "Use this routine if you know that the data is already reduced by a certain velocity and yet SeisWide does not know this.",IDC_STATIC,7,7,172,31,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_DLG_NOLABLES DIALOG  0, 0, 226, 69
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Clipboard Option"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,169,48,50,14
+    CONTROL         "Remove All Lables (Check to copy to CorelDraw; Do not check to copy to most other softwares",IDC_CHECK_NOLABELS,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,7,15,202,29
+END
+
+IDD_DLG_MERGEMODELS DIALOGEX 0, 0, 186, 148
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_VELSECNAME,7,63,133,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,146,63,33,14,WS_DISABLED
+    EDITTEXT        IDC_VELSECNAME2,7,102,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET2,146,102,33,14
+    DEFPUSHBUTTON   "OK",IDOK,75,127,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,127,50,14
+    LTEXT           "File name for the First model to merge:",IDC_STATIC,7,52,120,8,WS_DISABLED
+    LTEXT           "File name for the second model to merge:",IDC_STATIC,7,90,130,8
+    LTEXT           "Please display the first model onscreen, and run this to select a second model to append to the right side. The models must have the same number of layer.",IDC_STATIC,7,10,172,36,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_DLG_VZCURVE DIALOG  0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Velocity-Depth Curve"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    LTEXT           "Specify the distance in km (usually the source or OBS position) where the velocity-depth curve is to be calculated:",IDC_STATIC,7,7,110,62
+    EDITTEXT        IDC_XSHOT,7,74,40,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_MIGPS DIALOGEX 0, 0, 301, 237
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Phase Shift Migration"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TIMESECNAME,124,30,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,261,30,33,14
+    EDITTEXT        IDC_VELSECNAME,124,50,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEV,261,50,33,14
+    EDITTEXT        IDC_DEPTHSECNAME,124,73,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSED,261,73,33,14
+    EDITTEXT        IDC_CONVERSION_DZ,260,96,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIGRATION_NX,260,118,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIGRATION_NXPAD,260,142,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIGRATION_LTAPER,260,163,34,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,189,216,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,244,216,50,14
+    LTEXT           "Output name for migrated section:",IDC_STATIC,7,78,107,8
+    LTEXT           "File name for time section to migrate:",IDC_STATIC,7,32,115,8
+    LTEXT           "Velocity file name:",IDC_STATIC,7,54,63,8
+    LTEXT           "Migration via Phase-Shift Method for Common-Midpoint Stacked Data",IDC_STATIC,7,7,287,15,0,WS_EX_DLGMODALFRAME
+    LTEXT           "Depth sampling interval for computing velocity-depth curve:",IDC_STATIC,7,99,187,8
+    LTEXT           "Number of traces across which diffraction is to be migrated:",IDC_STATIC,7,121,250,10
+    LTEXT           "Number of zero traces to pad before FFT:",IDC_STATIC,7,144,221,8
+    LTEXT           "Length of linear taper for left and right edges:",IDC_STATIC,7,167,241,8
+    LTEXT           "NOTE: Input traces must be sorted by increasing distance; Velocity model does not have to cover the range of traces.",IDC_STATIC,7,186,287,21,0,WS_EX_CLIENTEDGE
+END
+
+IDD_DLG_TTCURVE DIALOG  0, 0, 186, 78
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "For Your Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,63,57,50,14
+    LTEXT           "SeisWide just un-checked the option for displaying travel-time curves;  To display them, you could either ""Define Source Position"" in segy header or ""Ray Tracing"" again!",IDC_STATIC,7,7,172,45
+END
+
+IDD_DLD_INOUT DIALOGEX 0, 0, 183, 175
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Input and Output Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,69,154,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,126,154,50,14
+    EDITTEXT        IDC_TIMESECNAME,7,18,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,143,18,33,14
+    EDITTEXT        IDC_2NDSECNAME,7,51,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSED,143,51,33,14
+    LTEXT           "Input file name:",IDC_STATIC,9,8,49,8
+    LTEXT           "Output file name:",IDC_STATIC,7,42,54,8
+    LTEXT           "Traces to Process:",IDC_STATIC,7,83,132,8
+    LTEXT           "Trace 1:",IDC_STATIC,7,100,28,8
+    EDITTEXT        IDC_EDIT_TRACE1,45,98,40,14,ES_AUTOHSCROLL
+    LTEXT           "Trace 2:",IDC_STATIC,7,117,28,8
+    EDITTEXT        IDC_EDIT_TRACE2,45,115,40,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_KDMIG DIALOGEX 0, 0, 351, 366
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pre-stack Kirchoff Depth Migration"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TIMESECNAME,140,22,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,278,22,33,14
+    EDITTEXT        IDC_VELSECNAME,140,39,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEV,278,41,33,14
+    EDITTEXT        IDC_DEPTHSECNAME,140,57,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSED,278,57,33,14
+    EDITTEXT        IDC_MIG_FXO,270,74,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_XMAX,310,74,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_FZO,270,89,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_ZMAX,310,89,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DZV,270,104,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DZO,309,104,35,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Update from Data",IDC_BUTTON_DXO,10,130,120,11
+    EDITTEXT        IDC_MIG_APERX,320,128,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DXV,270,146,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DXO,295,146,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DXM,320,146,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_OFF0,296,161,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_OFFMAX,320,161,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DT,292,193,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_TMAXRAY,317,193,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_FA,267,209,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DA,292,209,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_NA,317,209,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_AMIN,291,224,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_AMAX,317,224,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_ANGMAX,86,243,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_FAC,10,222,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_V0,190,285,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DVZ,218,285,24,14,ES_AUTOHSCROLL
+    CONTROL         "Implement eikonal in shadow zones",IDC_CHECK_MIGEK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,331,166,10
+    CONTROL         "Use Existing Raytracing Results",IDC_CHECK_USEEXIST,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,235,331,107,10
+    EDITTEXT        IDC_MIG_MEMMAX,318,315,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_FMAX,318,284,24,14,ES_AUTOHSCROLL
+    CONTROL         "Spherical Source",IDC_RADIO_SPHERICSRC,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,306,112,10
+    CONTROL         "Line Source",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,7,318,93,10
+    DEFPUSHBUTTON   "OK",IDOK,239,347,50,14
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,294,347,50,14
+    LTEXT           "Input Segy File Name",IDC_STATIC,7,25,125,8
+    LTEXT           "Output Segy File Name:",IDC_STATIC,7,60,126,8
+    LTEXT           "Velocity file name:",IDC_STATIC,7,42,126,8
+    GROUPBOX        "Raytracing",IDC_STATIC,7,186,337,95
+    LTEXT           "dxv, dxo, dxm (interval for gridding, output, midpoint; km):",IDC_STATIC,9,147,250,11,0,WS_EX_RIGHT
+    LTEXT           "aperx (Migration aperture; km):",IDC_STATIC,190,130,124,10,0,WS_EX_RIGHT
+    LTEXT           "fa,da,na (First,increment,num of take-off angle; -90 to 90):",IDC_STATIC,73,211,192,12,0,WS_EX_RIGHT
+    LTEXT           "amin, amax (Min&&max emergence agnles for raytracing; 0-180):",IDC_STATIC,69,226,220,10,0,WS_EX_RIGHT
+    LTEXT           "fac (extrapolation radius):",IDC_STATIC,11,201,61,18
+    LTEXT           "xmin,xmax (Min and max. distance in km for migration output):",IDC_STATIC,10,76,256,10,0,WS_EX_RIGHT
+    LTEXT           "angmax (migration angle aperture; 0-90):",IDC_STATIC,10,240,72,22,0,WS_EX_RIGHT
+    LTEXT           "v0, dvz (Reference velocity in km/s and vertical gradient at surface; 0  0 to get from velocity model):",IDC_STATIC,9,285,172,16,0,WS_EX_RIGHT
+    LTEXT           "fmax (High-cut Hz):",IDC_STATIC,247,286,69,11,0,WS_EX_RIGHT
+    LTEXT           "zmin,zmax (Min and max. depth in km for migration output):",IDC_STATIC,15,91,251,10,0,WS_EX_RIGHT
+    LTEXT           "dt, tmax (time increment and max time; one-way time in sec):",IDC_STATIC,75,194,215,12,0,WS_EX_RIGHT
+    LTEXT           "Max. memory for this operation (in MB):",IDC_STATIC,151,317,162,10
+    LTEXT           "Trace Headers Accessed: ns, dt, tDelay, sx, gx",IDC_STATIC,7,351,222,10
+    GROUPBOX        "Automaticly Updated Parameters (Assuming Shot Gathers)",IDC_STATIC,7,117,337,65
+    LTEXT           "off0, offmax (Min, max offsets to migrate):",IDC_STATIC,9,163,253,15,0,WS_EX_RIGHT
+    LTEXT           "dzv,dzo (Depth interval for model gridding && output; km):",IDC_STATIC,16,106,250,10,0,WS_EX_RIGHT
+    PUSHBUTTON      "Click here to ""Define Source/Receiver Distance"" for each prestack trace",IDC_BUTTON_DISTSG,16,7,320,14
+    EDITTEXT        IDC_MIG_DXS,320,242,24,14,ES_AUTOHSCROLL
+    LTEXT           "fs,ds (source start position && interval):",IDC_STATIC,210,240,78,17,0,WS_EX_RIGHT
+    EDITTEXT        IDC_MIG_DZT,319,263,24,14,ES_AUTOHSCROLL
+    LTEXT           "dxt,dzt (horiz. distance && depth samping interval  for raytracing; km; courser than dz):",IDC_STATIC,7,267,281,11,0,WS_EX_RIGHT
+    EDITTEXT        IDC_MIG_SRCDEPTH,178,243,24,14,ES_AUTOHSCROLL
+    LTEXT           "Source Depth (0 for surface):",IDC_STATIC,123,241,52,21,0,WS_EX_RIGHT
+    EDITTEXT        IDC_MIG_DXT,292,263,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_FS,292,242,24,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_KDMIGPOST DIALOGEX 0, 0, 358, 327
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Post-Stack Kirchhoff Depth Migration"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TIMESECNAME,125,34,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,263,34,33,14
+    EDITTEXT        IDC_VELSECNAME,125,51,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEV,263,52,33,14
+    EDITTEXT        IDC_DEPTHSECNAME,125,68,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSED,263,68,33,14
+    EDITTEXT        IDC_MIG_FXO,229,85,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DXO,273,85,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_XMAX,317,85,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_FZO,229,102,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DZO,273,102,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_ZMAX,317,102,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_FMAX,163,124,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_APERX,323,119,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_ANGMAX,259,140,23,14,ES_AUTOHSCROLL
+    CONTROL         "Spherical src",IDC_RADIO_SPHERICSRC,"Button",BS_AUTORADIOBUTTON | WS_GROUP,285,138,68,10
+    CONTROL         "Line src",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,285,148,48,10
+    EDITTEXT        IDC_MIG_V0,281,160,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DVZ,317,160,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_MEMMAX,227,182,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DXV,101,209,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DZV,131,209,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DT,299,225,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_TMAXRAY,325,225,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_FA,271,240,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_DA,299,240,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_NA,325,240,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_AMIN,187,274,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_AMAX,213,274,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIG_FAC,315,273,34,14,ES_AUTOHSCROLL
+    CONTROL         "Implement eikonal in shadow zones",IDC_CHECK_MIGEK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,294,180,10
+    DEFPUSHBUTTON   "OK",IDOK,303,34,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,303,51,50,14
+    LTEXT           "Input Segy File Name",IDC_STATIC,9,36,102,8,0,WS_EX_RIGHT
+    LTEXT           "Output Segy File Name:",IDC_STATIC,9,73,108,8,0,WS_EX_RIGHT
+    LTEXT           "Velocity file name:",IDC_STATIC,9,55,103,8,0,WS_EX_RIGHT
+    GROUPBOX        "Define Travel-Time Table",IDC_STATIC,7,197,345,92
+    LTEXT           "dxv, dzv (sampling interval in km for velocity gridding):",IDC_STATIC,11,208,87,17
+    LTEXT           "dt,tmax (time increment && max time; one-way time in sec):",IDC_STATIC,75,227,220,11,0,WS_EX_RIGHT
+    LTEXT           "Migration X-aperture (km):",IDC_STATIC,211,121,107,10,0,WS_EX_RIGHT
+    LTEXT           "fa,da,na (First,increment,num of take-off angle; -90 to 90):",IDC_STATIC,66,243,200,10,0,WS_EX_RIGHT
+    LTEXT           "amin, amax (Min&&max emergence agnles for raytracing; 0-180):",IDC_STATIC,9,270,172,18,0,WS_EX_RIGHT
+    LTEXT           "fac (Factor for extrapolation radius):",IDC_STATIC,247,271,65,16,0,WS_EX_RIGHT
+    LTEXT           "xmin,dxo,xmax (Minimum, increment, last distance \nin km for migration output):",IDC_STATIC,9,85,217,17,0,WS_EX_RIGHT
+    LTEXT           "angmax (max. migration angle aperture in degree from vertical):",IDC_STATIC,9,142,244,10,0,WS_EX_RIGHT
+    LTEXT           "v0, dvz (Reference velocity in km/s and vertical gradient for amplitude calculation; \nif 0  0, first layer will be used ):",IDC_STATIC,9,160,266,21,0,WS_EX_RIGHT
+    LTEXT           "fmax (Frequency high-cut for input traces; \nIf not sure, use 9999):",IDC_STATIC,9,124,152,15,0,WS_EX_RIGHT
+    LTEXT           "zmin,dzo,zmax (Minimum, increment, maximum depth \nin km for migration output):",IDC_STATIC,9,103,215,16,0,WS_EX_RIGHT
+    LTEXT           "Maximum memory allowed migration (in MBytes):",IDC_STATIC,9,184,211,8,0,WS_EX_RIGHT
+    PUSHBUTTON      "Auto Parameterize",IDC_BUTTON1,9,228,55,24,BS_LEFT | BS_MULTILINE
+    EDITTEXT        IDC_MIG_DXS,319,205,34,14,ES_AUTOHSCROLL
+    LTEXT           "dxs (source interval in km for raytracing",IDC_STATIC,229,205,87,19,0,WS_EX_RIGHT
+    CONTROL         "Use Existing Raytracing Results",IDC_CHECK_USEEXIST,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,295,155,10
+    LTEXT           "Required fields in Segy data: sx, gx, dt, ns. You may set them in the Processing | Define Source/Receiver Distance",IDC_STATIC,39,7,288,20,0,WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_MIG_DZT,325,254,24,14,ES_AUTOHSCROLL
+    LTEXT           "dxt,dzt (horiz. distance && depth samping interval  for raytracing; km; courser than dz):",IDC_STATIC,15,258,281,11,0,WS_EX_RIGHT
+    EDITTEXT        IDC_MIG_DXT,300,254,24,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_TIMEBYTRC DIALOGEX 0, 0, 255, 273
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "View Section Trace by Trace"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_TIMESEC_TITLE,70,7,178,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TIMESECNAME,70,22,178,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET,227,35,21,14
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT1,95,50,33,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT2,132,50,33,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_SHOTSTEP,169,50,33,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_TMIN,95,68,33,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMAX,132,68,33,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TTICK3,169,68,33,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Auto Sense",IDC_BUTTON_AUTO,221,51,27,29,BS_MULTILINE
+    COMBOBOX        IDC_COMBO_HEADINFO,154,87,94,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_VIEW_UPDATE_GAIN,95,111,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_CLIP,144,111,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_FILLOFF,209,111,39,14,ES_AUTOHSCROLL
+    CONTROL         "Wiggle",IDC_VIEW_WIGGLE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,9,138,38,10
+    CONTROL         "Area",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,48,138,31,10
+    CONTROL         "Wiggle+Area",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,79,138,57,10
+    CONTROL         "Color",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,137,138,32,10
+    CONTROL         "Wiggle+Color",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,137,156,68,10
+    CONTROL         "Background Fill",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,9,156,65,10
+    CONTROL         "Face &down",IDC_VIEW_FACEDOWN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,191,51,10
+    CONTROL         "Face &Up",IDC_VIEW_FACEUP,"Button",BS_AUTORADIOBUTTON,63,191,44,10
+    CONTROL         "Reset starting time to (ms) (Caution: This changes trace headers; Check only if trace start time is surely wrong):",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,11,223,194,22
+    EDITTEXT        IDC_VIEW_UPDATE_TSTART,209,228,39,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,130,252,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,198,252,50,14
+    LTEXT           "Gain, Clip, MinAmp:",IDC_STATIC,7,113,82,8
+    GROUPBOX        "Display Methods:",IDC_STATIC,7,128,241,44
+    LTEXT           "Trace1,Trace2,Step:",IDC_STATIC,7,52,84,8
+    GROUPBOX        "Face Down or Up",IDC_STATIC,7,177,101,31,WS_GROUP
+    LTEXT           "Title of plot:",IDC_STATIC,7,9,38,8
+    LTEXT           "Tmin, Tmax, TTick:",IDC_STATIC,7,71,65,8
+    LTEXT           "File name for time section:",IDC_STATIC,7,27,59,17
+    LTEXT           "Trace Header Infor to Display:",IDC_STATIC,7,90,126,11
+    PUSHBUTTON      "<--Change Color",IDC_BUTTON_COLOR,178,138,61,14
+END
+
+IDD_DLG_HYDRATE DIALOGEX 0, 0, 289, 367
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog for NMO-Corrected Display"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,181,347,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,232,347,50,14
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT1,130,64,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT2,177,64,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_SHOTSTEP,224,64,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_XMIN,130,83,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_XMAX,177,83,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_GAIN,132,193,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_CLIP,180,193,38,14,ES_AUTOHSCROLL
+    LTEXT           "Xmin, Xmax, XTick:",IDC_STATIC,8,86,113,8
+    LTEXT           "Gain, Clip, MinAmp:",IDC_STATIC,7,195,112,8
+    GROUPBOX        "Display Methods:",IDC_STATIC,7,211,275,49
+    LTEXT           "Trace1,Trace2,TraceStep:",IDC_STATIC,7,67,119,8
+    CONTROL         "Face &down",IDC_VIEW_FACEDOWN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,231,294,51,10
+    CONTROL         "Face &Up",IDC_VIEW_FACEUP,"Button",BS_AUTORADIOBUTTON,231,304,44,10
+    EDITTEXT        IDC_VIEW_UPDATE_XTICK,224,83,40,14,ES_AUTOHSCROLL
+    CONTROL         "Distance/Offset increases monotonically with trace (check to speed up loading)",IDC_SEGY_ORDER,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,7,294,196,17
+    LTEXT           "Title of plot:",IDC_STATIC,7,9,74,8
+    EDITTEXT        IDC_TIMESEC_TITLE,86,7,196,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_FILLOFF,227,193,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TIMESECNAME,46,23,212,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET,260,22,22,14
+    EDITTEXT        IDC_VIEW_UPDATE_TMIN,130,99,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMAX,178,99,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TTICK3,224,99,40,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_HEADINFO,230,272,52,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_VIEW_VRED,115,124,26,14,ES_AUTOHSCROLL
+    LTEXT           "Tmin, Tmax, TTick:",IDC_STATIC,7,102,117,8
+    LTEXT           "NMO Average Velocity (km/s):",IDC_STATIC,8,128,102,10
+    LTEXT           "Time section:",IDC_STATIC,7,20,33,18
+    LTEXT           "Header to Display:",IDC_STATIC,160,270,48,18
+    EDITTEXT        IDC_VIEW_OBSDEP,246,144,36,14,ES_AUTOHSCROLL
+    LTEXT           "NMO Correction Depth (km):",IDC_STATIC,125,147,101,8
+    GROUPBOX        "NMO Display Specific",IDC_STATIC,7,115,275,74
+    CONTROL         "Offset",IDC_VIEW_OFFSET2,"Button",BS_AUTORADIOBUTTON | WS_GROUP,17,278,34,10
+    CONTROL         "Distance",IDC_VIEW_DIST,"Button",BS_AUTORADIOBUTTON,79,278,55,10
+    GROUPBOX        "Display as Offset or Distance?",IDC_STATIC,7,267,135,22,WS_GROUP
+    CONTROL         "Overlay Traveltime Curve",IDC_TRAVELTIME3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,315,143,10
+    CONTROL         "Variable Gain:",IDC_TIME_GAINDIST,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,7,328,51,20
+    EDITTEXT        IDC_TIME_BASEGAIN,153,330,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TIME_BASEPOWER,255,330,27,14,ES_AUTOHSCROLL
+    LTEXT           "Min. Offset in km to apply variable gain:",IDC_STATIC,72,330,76,16
+    LTEXT           "Gain power:",IDC_STATIC,204,328,33,16
+    EDITTEXT        IDC_VIEW_GUNDEP,78,144,26,14,ES_AUTOHSCROLL
+    LTEXT           "Airgun Depth (km):",IDC_STATIC,7,147,64,8
+    CONTROL         "Wiggle",IDC_VIEW_WIGGLE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,224,38,10
+    CONTROL         "Area",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,70,224,31,10
+    CONTROL         "Wiggle+Area",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,126,224,57,10
+    CONTROL         "Color",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,14,244,32,10
+    CONTROL         "Wiggle+Color",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON,52,244,58,10
+    CONTROL         "Background Fill",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON,217,247,65,10
+    EDITTEXT        IDC_VIEW_WATERDEP,246,120,36,14,ES_AUTOHSCROLL
+    LTEXT           "Water Depth (km):",IDC_STATIC,151,123,72,8
+    LTEXT           "Note: for OBS data, set NMO depth equal water depth. For sonobuoy data, NMO depth is the actual sonobuoy depth. Airgun depth is usually small at ~0.011km.",IDC_STATIC,7,163,275,23,0,WS_EX_STATICEDGE
+    EDITTEXT        IDC_VELNAME,46,44,212,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET2,260,44,22,14
+    LTEXT           "Velocity (optional):",IDC_STATIC,7,41,37,18
+    PUSHBUTTON      "<--Change Color",IDC_BUTTON_COLOR,115,241,61,14
+END
+
+IDD_DLG_SONOBOUY DIALOGEX 0, 0, 209, 174
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Assign km for Sonobouy Traces"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,102,153,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,153,50,14
+    EDITTEXT        IDC_VIEW_VRED,148,7,54,14,ES_AUTOHSCROLL
+    LTEXT           "Average water Velocity  (km/s):",IDC_STATIC,7,9,118,14
+    EDITTEXT        IDC_VIEW_SRCDEPTH,148,27,54,14,ES_AUTOHSCROLL
+    LTEXT           "Source Depth (km):",IDC_STATIC,7,27,88,8
+    EDITTEXT        IDC_VIEW_BUOYDEPTH,147,45,54,14,ES_AUTOHSCROLL
+    LTEXT           "Sonobuoy Depth (km):",IDC_STATIC,7,46,88,8
+    EDITTEXT        IDC_VIEW_GUNDELAY,147,62,54,14,ES_AUTOHSCROLL
+    LTEXT           "Signal Delay for Segy's Zero Time (sec):\n(Digitized water wave time will be deducted by this amount)",IDC_STATIC,7,65,131,28
+    LTEXT           "***Important: the last box is needed since actual shooting is commonly ~51 ms later than trigger pulse. We use this value for distance calculation w/ static shifted in time. In case you do this twice, you will need to shift back by minus this same amount.",IDC_STATIC,7,101,195,45,0,WS_EX_CLIENTEDGE
+END
+
+IDD_DLGRAYTRACING_AUTO DIALOGEX 0, 0, 217, 298
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Parameters for Auto Raytracing"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_VIEW_UPDATE_XMIN,123,95,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_XMAX,170,95,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZMIN,123,116,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZMAX,170,117,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMIN,123,140,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMAX,170,140,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XSHOT,123,179,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ZSHOT,170,179,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,103,277,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,160,277,50,14
+    LTEXT           "Xmin, Xmax (in km):",IDC_STATIC,7,95,107,8
+    LTEXT           "Zmin, Zmax (in km):",IDC_STATIC,7,119,107,8
+    LTEXT           "Tmin, Tmax (in sec):",IDC_STATIC,7,143,96,8
+    LTEXT           "xShot, zShot (in km):",IDC_STATIC,7,176,103,8
+    LTEXT           "(Source coordinates in the model; resolution: meter)",IDC_STATIC,7,187,107,18
+    EDITTEXT        IDC_VIEW_UPDATE_VRED,170,159,40,14,ES_AUTOHSCROLL
+    LTEXT           "Reduction Velocity (km/s):",IDC_STATIC,7,161,115,8
+    LTEXT           "New file name for these ray parameters:",IDC_STATIC,7,68,125,8
+    EDITTEXT        IDC_EDIT_NEWNAME,7,78,203,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TIMESECNAME,68,215,72,14,ES_AUTOHSCROLL
+    LTEXT           "File name for time section (optional):",IDC_STATIC,7,213,58,16
+    LTEXT           "This routine only helps you construct a ray parameter file. For sure you will need to modify it yourself based on the output of this routine. For more info, see the Zelt's help file RayInvr.Txt.",IDC_STATIC,7,7,203,46,0,WS_EX_DLGMODALFRAME
+    LTEXT           "If this name is supplied, SeisWide will modify, if necessary, this Segy section to make sure its xShot is consistent with ray parameter.",IDC_STATIC,7,236,203,33,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,177,215,33,14
+END
+
+IDD_DLG_TABLIZE_LAYER DIALOGEX 0, 0, 214, 306
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Layer Mapping & Contouring"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,285,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,157,285,50,14
+    LTEXT           "This routine maps the (X, Z) nodes of a 2D model onto a map (X, Y, Z).  First define a coordinate system (in Cartician, use a ruler to measure from a map) for mapping. In output, you get (X, Y, Z) numbers.",IDC_STATIC,7,7,200,35,0,WS_EX_DLGMODALFRAME
+    LTEXT           "For the first point of the model, enter X, Y coordinates:",IDC_STATIC,7,45,200,8
+    EDITTEXT        IDC_EDIT_X1,7,56,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Y1,50,56,40,14,ES_AUTOHSCROLL
+    LTEXT           "For the last point of the model, enter X, Y coordinates:",IDC_STATIC,7,77,200,8
+    EDITTEXT        IDC_EDIT_X2,7,88,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Y2,50,88,40,14,ES_AUTOHSCROLL
+    LTEXT           "All nodes will be linearly interpolated based on the coordinate system given above.",IDC_STATIC,7,107,200,18
+    CONTROL         "Output boundary nodes",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,183,102,10
+    CONTROL         "Output velocity nodes",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,7,194,99,10
+    LTEXT           "Which layer to output (the currently selected layer will be prompted; Note: 1st layer numbered as 0):",IDC_STATIC,7,132,157,26
+    CONTROL         "At top of layer",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | WS_GROUP,117,187,80,10
+    CONTROL         "At bottom of layer",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,117,200,89,10
+    GROUPBOX        "For velocity nodes only",IDC_STATIC,113,177,94,36
+    EDITTEXT        IDC_EDIT_LAYERNO,167,140,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Tips: For contouring of basement velocity (V), I usualy get the X, Y, V lists of this layer for all models in the study area (using this routine), append them together and put into a contouring software (e.g., Surfer) for contouring/mapping.",IDC_STATIC,7,221,200,52
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 354, 220
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About SeisWide"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "Version 5.5",IDC_STATIC,32,15,41,13,SS_NOPREFIX
+    LTEXT           "Copyright 2009",IDC_STATIC,7,39,77,14
+    DEFPUSHBUTTON   "OK",IDOK,7,199,32,14,WS_GROUP
+    LTEXT           "SeisWide is intended to ease your work in combined, graphical manipulation of any (segy) seismic data (MCS, wide-angle and sonobuoy), with their interactive velocity modeling.  Written by Dr. Deping Chian.  Last Update: Jan. 29, 2009",IDC_STATIC,7,67,76,120
+    PUSHBUTTON      "This program is continuously being updated (no final release planned). To obtain the most recent free updates, please e-mail to: qiand@ns.sympatico.ca.",IDC_BTN_HOMEPAGE,94,7,253,51,BS_MULTILINE | WS_DISABLED
+    LTEXT           "Figure Caption: MCS Data Converted to Depth: Basement and S-Reflector off Iberia",IDC_STATIC,94,185,253,19
+    CONTROL         147,IDC_ABOUT_PIC,"Static",SS_BITMAP,90,65,257,134,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    PUSHBUTTON      "Test (pls ignore)",IDC_BUTTON1,287,199,60,14,WS_DISABLED
+END
+
+IDD_DLG_LOADREID DIALOGEX 0, 0, 202, 158
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Load Reid's velocity model "
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,67,137,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,123,137,50,14
+    EDITTEXT        IDC_DLG_ZELTNAME,7,46,135,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEVASCII,162,46,33,14
+    EDITTEXT        IDC_DLG_VELNAME,7,86,135,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEV,162,86,33,14
+    LTEXT           "Input file name: Reid's ASCII velocity format (.mod)",IDC_STATIC,7,36,188,8
+    LTEXT           "Output velocity file name: SeisWide binary format (.bin).  A .BIN extension will be appended:",IDC_STATIC,7,66,188,17
+    LTEXT           "Note: Maximum limits for modeling: 40 layers, 400 points per boundary.",IDC_STATIC,7,106,188,22
+    LTEXT           "Use this routine to load or convert a Reid's model into SeisWide's internal binary (.BIN) format.",IDC_STATIC,7,7,188,23,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_DLG_LATLONG DIALOGEX 0, 0, 244, 345
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog for Distance Calculation"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,119,324,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,187,324,50,14
+    CTEXT           "Distance Calculator from Latitude and Longitude",IDC_STATIC,7,7,230,13,0,WS_EX_DLGMODALFRAME
+    LTEXT           "First point",IDC_STATIC,7,41,31,8
+    EDITTEXT        IDC_EDIT_LAT1,56,38,63,14,ES_AUTOHSCROLL
+    LTEXT           "Latitude (degree)",IDC_STATIC,58,27,54,8
+    LTEXT           "Longitude (degree)",IDC_STATIC,177,27,60,8
+    EDITTEXT        IDC_EDIT_LONG1,174,38,63,14,ES_AUTOHSCROLL
+    LTEXT           "Last point",IDC_STATIC,7,60,32,8
+    EDITTEXT        IDC_EDIT_LAT2,56,58,63,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LONG2,174,58,63,14,ES_AUTOHSCROLL
+    LTEXT           "Computed Distance in km:",IDC_STATIC,7,84,93,8
+    EDITTEXT        IDC_EDIT1,121,81,116,14,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "This function performs a geodectic inverse computation for ellipsodial arc distances between two points by the Forsythe-Andover-Lambert method.",IDC_STATIC,7,273,230,31,SS_SUNKEN,WS_EX_CLIENTEDGE
+    LTEXT           "Or you may paste latitudes and longitudes pairs below (1 coordinate pair per line, using the First point above as the reference):",IDC_STATIC,7,117,230,22
+    EDITTEXT        IDC_EDIT_LATLONG_MULTI,7,143,230,57,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_NOHIDESEL | WS_VSCROLL
+    CONTROL         "Check if longitude is listed before latitude in the above",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,238,185,10
+    CONTROL         "Check if longitude and latitude will be included in the output",IDC_CHECK_OUTPUT_NOLATLONG,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,34,255,203,10
+    EDITTEXT        IDC_LATLONGNAME,7,220,206,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET,215,220,23,14
+    LTEXT           "Or specify a file name instead (useful  when data is large):",IDC_STATIC,7,208,213,10
+END
+
+IDD_DLG_CONVERTDATSEGY DIALOG  0, 0, 169, 178
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog for Datafiles- to-Segy Conversion"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,63,157,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,112,157,50,14
+    EDITTEXT        IDC_DLG_TABNAME,7,17,98,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,129,17,33,14
+    EDITTEXT        IDC_DLG_OUTNAME,7,104,98,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEO,129,104,33,14
+    LTEXT           "Input file name for shot table:",IDC_STATIC,7,7,155,8
+    LTEXT           "Output file name for segy data:",IDC_STATIC,7,92,155,11
+    EDITTEXT        IDC_EDIT_TMIN,65,35,40,14,ES_AUTOHSCROLL
+    LTEXT           "Minimum time:",IDC_STATIC,7,37,43,8
+    LTEXT           "Maximum time:",IDC_STATIC,7,59,45,8
+    EDITTEXT        IDC_EDIT_TMAX,65,58,40,14,ES_AUTOHSCROLL
+END
+
+IDD_TIP DIALOG  0, 0, 231, 164
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tip of the Day"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,12,11,207,123
+    LTEXT           "Some String",IDC_TIPSTRING,28,63,177,60
+    CONTROL         "&Show Tips on StartUp",IDC_STARTUP,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,146,85,10
+    PUSHBUTTON      "&Next Tip",IDC_NEXTTIP,109,143,50,14,WS_GROUP
+    DEFPUSHBUTTON   "&Close",IDOK,168,143,50,14,WS_GROUP
+    CONTROL         "",IDC_BULB,"Static",SS_BITMAP,20,17,190,111
+END
+
+IDD_DLG_LINEDRAWTIM DIALOGEX 0, 0, 258, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Format of input data"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,139,235,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,201,235,50,14
+    LTEXT           "3 collumns of ascii digits, free format (separated by spaces or tabs), with no extra lines of text at begining and end of file. The 4th collumn 7-character texts.",IDC_STATIC,7,48,244,27,0,WS_EX_STATICEDGE
+    LTEXT           "e.g.  46.9    5.49   1 ANY",IDC_STATIC,7,84,86,8
+    LTEXT           "43.13   5.49   1 LN1",IDC_STATIC,20,93,55,8
+    LTEXT           "20.3    5.45   1",IDC_STATIC,20,101,39,8
+    LTEXT           "56.4    5.9    2 LN2",IDC_STATIC,20,110,51,8
+    LTEXT           "53.6    5.9    2",IDC_STATIC,20,119,37,8
+    LTEXT           "50.7    5.85   2",IDC_STATIC,20,128,39,8
+    LTEXT           "56.4    6.55   3 LN3",IDC_STATIC,20,135,53,8
+    LTEXT           "49.0    6.21   3",IDC_STATIC,20,143,39,8
+    LTEXT           "Columns 1 and 2 are floating point numbers for X (km or trace number) and time (sec, reduction velocity ignored). The 3rd-column is usually line sequence: changing it to indicate a new line. The 4th column can be any texts <8 characters long",IDC_STATIC,109,83,142,67
+    LTEXT           "Import Line-drawings assuming data are in time. If the current display is in depth, convert the TWTT time values to depth using the currently displayed velocity model.",IDC_STATIC,7,7,244,28,0,WS_EX_DLGMODALFRAME
+    LTEXT           "Note: No limits on no. of points or lines.",IDC_STATIC,129,200,122,24,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    CONTROL         "Input Data of ""Digitize"" Format",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,38,105,10
+    CONTROL         "Input Data of ""GSCA"" Format",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,7,158,166,10
+    LTEXT           "2 collumns of ascii digits, with no extra lines of text at the begining and end. Separate lines by ""9999.0  9999.0"".",IDC_STATIC,7,169,244,17,0,WS_EX_STATICEDGE
+    LTEXT           "e.g.  46.9  5.49      SEDIMENT",IDC_STATIC,7,188,86,8
+    LTEXT           "43.13 5.49",IDC_STATIC,20,197,30,8
+    LTEXT           "9999.0  9999.0",IDC_STATIC,20,205,42,8
+    LTEXT           "56.4  5.9         CRUST",IDC_STATIC,20,213,62,8
+    LTEXT           ".....",IDC_STATIC,21,222,9,8
+END
+
+IDD_DLG_LINEDRAWDEP DIALOGEX 0, 0, 216, 167
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Line Drawings in Depth"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,106,146,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,146,50,14
+    LTEXT           "Input must be 3 columns of ascii; 4th column 7-character text, free format (separated by spaces or tabs), no extra lines of text at begining and end of file. ",-1,7,7,202,39,0,WS_EX_DLGMODALFRAME
+    LTEXT           "e.g.  46.9    5.49   1 TXT",-1,7,50,85,8
+    LTEXT           "43.13   5.49   1 TXT",-1,20,59,72,8
+    LTEXT           "20.3    5.45   1 TX",-1,20,67,67,8
+    LTEXT           "56.4    5.9    2 TX2",-1,20,76,75,8
+    LTEXT           "53.6    5.9    2",-1,20,85,66,8
+    LTEXT           "50.7    5.85   2",-1,20,94,39,8
+    LTEXT           "56.4    6.55   3",-1,20,101,39,8
+    LTEXT           "49.0    6.21   3",-1,20,109,39,8
+    LTEXT           "The 1st and 2nd columns are floating point numbers for distance and depth (km). The 3rd column usually indicates line sequence: changing this number to indicate a new line.  No limits on no. of points or lines.",-1,106,50,103,87,0,WS_EX_TRANSPARENT
+END
+
+IDD_DLG_VEL2DEN DIALOGEX 0, 0, 194, 246
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select velocity-density relations"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,137,207,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,225,50,14
+    LTEXT           "Velocity (km/s)",IDC_STATIC,9,76,46,8
+    LTEXT           "Density (g/cm^3)",IDC_STATIC,58,76,52,8
+    EDITTEXT        IDC_EDIT_V1,9,87,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D1,56,87,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V2,9,104,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D2,56,104,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V3,9,121,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D3,56,121,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V4,9,138,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D4,56,138,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V5,9,155,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D5,56,155,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V6,9,171,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D6,56,171,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V7,9,188,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D7,56,188,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V8,9,205,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D8,56,205,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V9,9,225,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D9,56,225,40,14,ES_AUTOHSCROLL
+    LTEXT           "The following suggested v-rho reflationship was generated from Ludwig [1971]: rho=c5*v^4 + c4*v^3 + c3*v*v + c2*v + c1, where c1=-.6997, c2=2.2302, c3=-.598, c4=.07036, c5=-.0028311. With linear interpolation, the current model will be converted.",IDC_STATIC,7,7,180,58,0,WS_EX_DLGMODALFRAME
+    LTEXT           "NOTE: these numbers will be saved into a file ""vel2den.txt"" in the directory of the lastly-saved velocity model.",IDC_STATIC,110,93,77,70
+END
+
+IDD_DLG_VEL2DEN1 DIALOGEX 0, 0, 221, 209
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change vel-density relation"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,164,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,164,188,50,14
+    LTEXT           "Velocity (km/s)",IDC_STATIC,7,42,46,8
+    LTEXT           "Density (g/cm^3)",IDC_STATIC,57,42,52,8
+    EDITTEXT        IDC_EDIT_V1,7,53,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D1,54,53,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V2,7,70,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D2,54,70,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V3,7,87,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D3,54,87,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V4,7,104,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D4,54,104,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V5,7,121,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D5,54,121,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V6,7,137,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D6,54,137,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V7,7,154,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D7,54,154,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V8,7,171,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D8,54,171,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_V9,7,188,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_D9,54,188,40,14,ES_AUTOHSCROLL
+    LTEXT           "The listed v-rho reflationship on the left was loaded from a file ""vel2den.txt"" in the same directory of the current velocity model (note: SeisWide suggests values only if this file does not exist).",IDC_STATIC,100,7,114,81,0,WS_EX_DLGMODALFRAME
+    LTEXT           "With linear interpolation, the lastly-saved model will be converted to density.",IDC_STATIC,101,96,113,65
+END
+
+IDD_DLG_MIGLINEDRAW DIALOG  0, 0, 266, 234
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Parameters for Migrating Line-Drawing"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Velocity file name:",IDC_STATIC,7,7,55,8
+    EDITTEXT        IDC_VELSECNAME,70,7,113,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEV,232,7,27,14
+    LTEXT           "Output file name:",IDC_STATIC,7,25,50,11
+    EDITTEXT        IDC_MIGSECNAME,70,23,113,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEV2,232,23,27,14
+    EDITTEXT        ID_DIGITIZE_MIGNLAYER,221,61,38,14,ES_AUTOHSCROLL
+    EDITTEXT        ID_DIGITIZE_MIGDV,221,79,38,14,ES_AUTOHSCROLL
+    EDITTEXT        ID_DIGITIZE_MIGSDIST,180,106,38,14,ES_AUTOHSCROLL
+    EDITTEXT        ID_DIGITIZE_MIGSDEPTH,221,106,38,14,ES_AUTOHSCROLL
+    EDITTEXT        ID_DIGITIZE_MIGDXV,221,124,38,14,ES_AUTOHSCROLL
+    EDITTEXT        ID_DIGITIZE_MIGXERR,181,143,38,14,ES_AUTOHSCROLL
+    EDITTEXT        ID_DIGITIZE_MIGTERR,221,143,38,14,ES_AUTOHSCROLL
+    EDITTEXT        ID_DIGITIZE_MIGAAMIN,181,164,38,14,ES_AUTOHSCROLL
+    EDITTEXT        ID_DIGITIZE_MIGAAMAX,221,164,38,14,ES_AUTOHSCROLL
+    EDITTEXT        ID_DIGITIZE_MIGMAXTRC,221,183,38,14,ES_AUTOHSCROLL
+    LTEXT           "Horiz. Resolution (For vel interpolation; in km):",IDC_STATIC,7,127,211,12
+    LTEXT           "Migrate from this layer down (Count from 1):",IDC_STATIC,7,61,209,12
+    LTEXT           "Velocity Contour Step \n(in km/s; Rays of 2 adjacent contours always straight):",IDC_STATIC,7,78,207,16
+    LTEXT           "Source X- and Z-Coordinate (km):",IDC_STATIC,8,108,160,11
+    LTEXT           "Resolution of Observed Data Points \n(X, T) in (km, sec):",IDC_STATIC,7,142,172,17
+    LTEXT           "aamin, aamax \n(min and max take-off angles in degrees):",IDC_STATIC,8,162,171,19
+    LTEXT           "Max Num of Raytracing Allowed:",IDC_STATIC,7,186,165,8
+    DEFPUSHBUTTON   "OK",IDOK,157,213,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,209,213,50,14
+    CONTROL         "Append new migrated results (Uncheck to overwrite the above file!)",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,7,41,252,16
+END
+
+IDD_DLG_DIGITIZE_SHIFT DIALOGEX 0, 0, 132, 115
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Shift digitized points by"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,23,94,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,75,94,50,14
+    LTEXT           "km or Trace Number",IDC_STATIC,50,9,75,8
+    EDITTEXT        IDC_EDIT1,7,6,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,7,25,40,14,ES_AUTOHSCROLL
+    LTEXT           "sec or km",IDC_STATIC,49,27,76,8
+    EDITTEXT        IDC_EDIT3,7,63,40,14,ES_AUTOHSCROLL
+    CONTROL         "Shift only for X between:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,49,109,10,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT4,49,62,40,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_EXPORT_BITMAP DIALOG  0, 0, 237, 185
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Option For Exporting Bitmap"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,60,164,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,180,164,50,14
+    EDITTEXT        IDC_TIMESECNAME,7,58,223,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,7,74,33,14
+    LTEXT           "Number of pixels for X- and Y-axes:",IDC_STATIC,8,8,222,8
+    EDITTEXT        IDC_EDIT1,7,22,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT2,48,22,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "File name for output bitmap:",IDC_STATIC,7,46,223,8
+    CONTROL         "Monochrome Bitmap",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,93,223,10
+    CONTROL         "Full Color (24-bit) Bitmap (24 times larger in size)",IDC_RADIO2,
+                    "Button",BS_AUTORADIOBUTTON,7,105,223,10
+    LTEXT           "Notes: This will convert your current display into a BMP file (no compresssion). Parameters for the current display will be used. Resolution can be superior if enough X- and Y-pixels given.",IDC_STATIC,7,123,223,32
+END
+
+IDD_DLG_INITAMP DIALOG  0, 0, 187, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,74,50,14
+    LTEXT           "Some amplitudes are too high. Please set a limit here for gain control; this limit shall not used in actually display:",IDC_STATIC,7,7,173,23
+    EDITTEXT        IDC_EDIT1,7,45,57,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_IMPORT_BITMAP DIALOG  0, 0, 206, 185
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Bitmap Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,61,164,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,149,164,50,14
+    EDITTEXT        IDC_TIMESECNAME,7,95,149,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,166,95,33,14
+    LTEXT           "Bitmap file to import (uncompressed BMP only):",IDC_STATIC,7,83,192,8
+    EDITTEXT        IDC_VIEW_UPDATE_TMIN,167,9,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMAX,167,33,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_XMIN,132,9,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_XMAX,132,33,32,14,ES_AUTOHSCROLL
+    LTEXT           "X1, Y1 (Coordinates for upper left corner; km):",IDC_STATIC,7,7,120,17
+    LTEXT           "X2, Y2 (Coordinates for lower right corner; sec or km):",IDC_STATIC,7,31,121,20
+    EDITTEXT        IDC_VIEW_UPDATE_ZPROP,167,54,32,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Vertical Axis (1: time, or 0: depth): ",IDC_STATIC,7,56,151,8
+    LTEXT           "Tip:  If your bitmap is very large (e.g. a long seismic section) , consider convert to monochrome BMP format, which is 24 times smaller than a 24-bit BMP.",IDC_STATIC,7,120,192,38
+END
+
+IDD_DLG_DIGLABEL DIALOG  0, 0, 173, 87
+STYLE DS_SETFONT | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,116,66,50,14
+    LTEXT           "Curve Label \n(7 characters maximum)",IDC_STATIC,7,32,99,21
+    EDITTEXT        IDC_DIG_LABEL,109,33,57,14,ES_AUTOHSCROLL
+    LTEXT           "Curve Number \n(count from 0):",IDC_STATIC,7,9,98,16
+    EDITTEXT        IDC_DIG_NCURVE,109,7,57,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    CONTROL         "Don't show this again",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,79,10
+END
+
+IDD_DLG_TIM2DPTH_BMP DIALOG  0, 0, 260, 219
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Time-Depth Conversion For Bitmap"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_VELSECNAME,98,27,119,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEV,220,27,33,14
+    EDITTEXT        IDC_DEPTHSECNAME,98,50,119,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSED,220,50,33,14
+    EDITTEXT        IDC_VIEW_UPDATE_COL,183,76,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_ROW,219,76,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_XMIN,183,100,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_XMAX,219,100,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZMIN,183,123,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZMAX,219,123,34,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,203,167,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,203,198,50,14
+    EDITTEXT        IDC_BMPSECNAME,98,7,155,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Zmin, Zmax (in km; Min, Max Depth):",IDC_STATIC,7,123,147,13
+    LTEXT           "File name for output section:",IDC_STATIC,7,52,88,8
+    LTEXT           "File name for bitmap section:",IDC_STATIC,7,9,89,8
+    LTEXT           "Velocity file name:",IDC_STATIC,7,31,63,8
+    LTEXT           "Xmin, Xmax (Min and Max Distance:",IDC_STATIC,7,103,144,10
+    LTEXT           "1-bit output will be 24 times smaller than 24-bit. Please wait and the resulting depth section will be shown automatically on top of the colored model.",IDC_STATIC,7,181,191,31
+    LTEXT           "Col, Row (number of pixels for output; any positive no.):",IDC_STATIC,7,76,168,19
+    CONTROL         "1-Bit",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,13,156,41,10
+    CONTROL         "24-Bit",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,64,156,50,10
+    GROUPBOX        "Output BMP data format",IDC_STATIC,7,143,132,26
+END
+
+IDD_DLG_DISP_BITMAP DIALOGEX 0, 0, 213, 270
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog For Bitmap Display"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,103,249,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,156,249,50,14
+    EDITTEXT        IDC_VIEW_UPDATE_XMIN,82,25,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_XMAX,124,25,40,14,ES_AUTOHSCROLL
+    LTEXT           "Xmin, Xmax, XTick:",IDC_STATIC,10,28,69,8
+    EDITTEXT        IDC_VIEW_UPDATE_XTICK,166,25,40,14,ES_AUTOHSCROLL
+    LTEXT           "Title of plot:",IDC_STATIC,7,7,57,8
+    EDITTEXT        IDC_TIMESEC_TITLE,70,7,136,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMIN,82,43,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMAX,124,43,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TTICK2,166,43,40,14,ES_AUTOHSCROLL
+    LTEXT           "Ymin, Ymax, YTick:",IDC_STATIC,10,47,69,8
+    CONTROL         "Face &down",IDC_VIEW_FACEDOWN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,79,51,10
+    CONTROL         "Face &Up",IDC_VIEW_FACEUP,"Button",BS_AUTORADIOBUTTON,63,79,44,10
+    GROUPBOX        "Face Down or Up",IDC_STATIC,7,68,101,24,WS_GROUP
+    CONTROL         "Offset",IDC_VIEW_OFFSET2,"Button",BS_AUTORADIOBUTTON | WS_GROUP,118,79,34,10
+    CONTROL         "Distance",IDC_VIEW_DIST,"Button",BS_AUTORADIOBUTTON,157,79,49,10
+    GROUPBOX        "Display as?",IDC_STATIC,108,68,98,24,WS_GROUP
+    LTEXT           "Note: To reposition the bitmap, use File | Import | Resize Bitmap",IDC_STATIC,7,225,199,21
+    EDITTEXT        IDC_VIEW_UPDATE_VRED,166,116,40,14,ES_AUTOHSCROLL
+    LTEXT           "Reduction Velocity of the bitmap (km/s):",IDC_STATIC,7,118,151,8
+    LTEXT           "Velocity Name (note: raytracing for bitmap requires a velocity file with complete path specified):",IDC_STATIC,7,161,199,21
+    EDITTEXT        IDC_VELSECNAME,7,185,169,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEV,178,185,27,14
+    EDITTEXT        IDC_VIEW_UPDATE_SRCPOS,166,132,40,14,ES_AUTOHSCROLL
+    LTEXT           "Source position for calculating reduction",IDC_STATIC,7,134,154,8
+    GROUPBOX        "For Wide-angle raytracing only",IDC_STATIC,7,105,199,102
+END
+
+IDD_DLG_UNIX2PC DIALOG  0, 0, 220, 236
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options for Unix to PC Conversion"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,110,214,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,162,214,50,14
+    CONTROL         "Use the reduced time defined at trace header bytes #208-211 (e.g. refraction segy format of GSCA).",IDC_CHK_GSCA,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,26,95,186,36
+    CONTROL         "Renumber traces (in case some data traces are not numbered properly",IDC_CHK_RENUMBER,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,26,140,186,20
+    CONTROL         "Retain reduced time at trace header bytes #210-213 (SeisWide's internal convention for refraction data).",IDC_CHK_USE_REDUCEDTIME,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,26,64,186,32
+    CONTROL         "Dead traces are not activated (check if you are sure that some traces are not valid and properly marked in the header; if not checked, all traces will be marked valid in the output)",IDC_CHK_CONV_ISDEADTRC_EXIST,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,26,172,186,37
+    CONTROL         "Use distance (SeisWide's internal convention for trace distance in km.). This option has no effect now.",IDC_CHK_USE_CDPDISTANCE,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,26,24,186,32
+END
+
+IDD_DLG_RESAMPLE DIALOG  0, 0, 207, 146
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Trace Resample"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,95,124,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,150,124,50,14
+    EDITTEXT        IDC_PROCNAME_IN,61,7,139,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROCNAME_OUT,62,24,139,14,ES_AUTOHSCROLL
+    LTEXT           "Input File:",IDC_STATIC,7,9,31,8
+    LTEXT           "Output File:",IDC_STATIC,7,26,33,8
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET,45,7,16,14
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET2,45,23,16,14
+    EDITTEXT        IDC_PROC_TMIN,107,44,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_TMAX,139,44,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_VRED,172,44,28,14,ES_AUTOHSCROLL
+    LTEXT           "Tmin, Tmax, VRed:",IDC_STATIC,7,47,73,8
+    LTEXT           "Existing and new sampling rate (micro sec):",IDC_STATIC,7,66,129,16
+    EDITTEXT        IDC_PROC_SAMPRATENEW,172,64,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PROC_SAMPRATEOLD,139,64,28,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    LTEXT           "Note: An 8-point interpolation will be conducted. Output will always be in floating point format.",IDC_STATIC,7,88,193,26
+END
+
+IDD_DLG_SHOWWIENER DIALOG  0, 0, 263, 218
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,131,197,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,206,197,50,14
+    EDITTEXT        IDC_EDIT_SHOWWIENER,7,7,249,180,ES_MULTILINE | ES_AUTOHSCROLL | WS_VSCROLL
+END
+
+IDD_DLG_WIENER_FILTER DIALOGEX 0, 0, 231, 275
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,121,254,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,174,254,50,14
+    LTEXT           "Input File Name:",IDC_STATIC1,7,65,69,8
+    LTEXT           "Output File Name:",IDC_STATIC2,7,84,70,8
+    LTEXT           "Trace1, Trace2, TraceStep:",IDC_STATIC3,7,117,118,8
+    EDITTEXT        IDC_PROCNAME_IN,87,63,104,14,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSER1,196,63,28,14
+    EDITTEXT        IDC_PROCNAME_OUT,87,82,104,14,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSER2,196,81,28,14
+    EDITTEXT        IDC_PROC_SHOT1,129,113,29,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_SHOT2,162,113,29,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_SHOTSTEP,195,113,29,16,ES_AUTOHSCROLL
+    LTEXT           "Tmin, Tmax, Vred:",IDC_STATIC4,7,139,116,8
+    EDITTEXT        IDC_PROC_TMIN,129,137,29,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_TMAX,162,137,29,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_VRED,195,137,29,15,ES_AUTOHSCROLL
+    GROUPBOX        "Wiener Predictive Error Filter",IDC_STATIC,7,161,217,86
+    LTEXT           "Dt:",IDC_STATIC5,29,176,11,12
+    EDITTEXT        IDC_PROC_DT,49,173,51,15,ES_AUTOHSCROLL
+    LTEXT           "Pnoise:",IDC_STATIC6,135,176,24,8
+    EDITTEXT        IDC_PROC_PNOISE,173,173,48,15,ES_AUTOHSCROLL
+    LTEXT           "Mincorr, Maxcorr:",IDC_STATIC7,21,206,88,8
+    EDITTEXT        IDC_PROC_MINCORR,118,202,52,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_MAXCORR,173,202,48,15,ES_AUTOHSCROLL
+    LTEXT           "Minlag, Maxlag:",IDC_STATIC8,21,230,88,8
+    EDITTEXT        IDC_PROC_MINLAG,118,226,52,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILE_MAXLAG,173,226,48,15,ES_AUTOHSCROLL
+    CTEXT           "Minlag/Maxlag: lag of prediction filter (sec)\nPnoise: relative additive noise level\nMincorr/Maxcorr: autocorrelation window (sec)\nRef.: A. Ziolkowski, ""Deconvolution"".",IDC_STATIC,7,1,217,42,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_DLG_DIGRESIZE DIALOG  0, 0, 187, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,74,50,14
+    LTEXT           "This will modify the width of the currently selected line segment (1=no change). Please enter the ratio to expand/shrink the width of line-drawing  segments:",IDC_STATIC,7,7,173,29
+    EDITTEXT        IDC_EDIT_EXPAND_RATIO,7,45,57,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_DIG_SETCURRENT DIALOG  0, 0, 187, 102
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,81,50,14
+    LTEXT           "Which line segment do you want to make active?\n(Note: to select the first, enter numbered 0).",IDC_STATIC,7,7,173,26
+    EDITTEXT        IDC_EDIT_DIG_SELECTSEGMENT,7,39,57,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DIG_TOTALSEGMENTS,7,81,57,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Total number to existing curves:",IDC_STATIC,7,66,101,8
+END
+
+IDD_DLG_CHANGEREDUCE_BMP DIALOG  0, 0, 260, 177
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change Reducing Velocuty for Bitmap"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_DEPTHSECNAME,98,26,119,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSED,220,26,33,14
+    EDITTEXT        IDC_VIEW_UPDATE_COL,183,52,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_ROW,219,52,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_REDUCEVELOCITY_OLD,183,73,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REDUCEVELOCITY_NEW,219,73,34,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,203,138,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,203,156,50,14
+    EDITTEXT        IDC_BMPSECNAME,98,7,155,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Reducing Velocities (Existing and Output):",IDC_STATIC,7,75,156,13
+    LTEXT           "File name for output section:",IDC_STATIC,7,28,88,8
+    LTEXT           "File name for bitmap section:",IDC_STATIC,7,9,89,8
+    LTEXT           "1-bit output will be 24 times smaller than 24-bit. Please wait and the resulting depth section will be shown automatically on top of the colored model.",IDC_STATIC,7,139,191,31
+    LTEXT           "Col, Row (pixels for output; any positive no.):",IDC_STATIC,7,54,168,12
+    CONTROL         "1-Bit",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,13,114,41,10
+    CONTROL         "24-Bit",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,64,114,50,10
+    GROUPBOX        "Output BMP data format",IDC_STATIC,7,101,132,26
+    EDITTEXT        IDC_REDUCEVELOCITY_SOURCEKM,219,91,34,14,ES_AUTOHSCROLL
+    LTEXT           "Source Position (km):",IDC_STATIC,143,94,72,8
+END
+
+IDD_DLG_MODEL_SHIFTBOUNDARY DIALOG  0, 0, 186, 124
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog for Static Shift Model Boundary"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    LTEXT           "This vertical shift only affects part of boundary between xmin and xmax (in km; 0 0 for the complete boundary):",IDC_STATIC,7,71,172,31
+    EDITTEXT        IDC_MODEL_ZINC,7,46,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MODEL_XMIN,7,103,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MODEL_XMAX,51,103,40,14,ES_AUTOHSCROLL
+    LTEXT           "For the current boundary, please specify the depth increment in km (plus to shift deeper depth):",IDC_STATIC,7,7,114,34
+END
+
+IDD_DLG_LABEL_SIZES DIALOGEX 0, 0, 230, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog for adjusting the label sizes"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,121,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,173,109,50,14
+    CTEXT           "Adjusting Label Sizes.\nNote: The digits below have no units and are internally used in divisions only. Reduce values to increase label sizes.",IDC_STATIC,7,7,216,29,0,WS_EX_DLGMODALFRAME
+    LTEXT           "Axis Label Width:",IDC_STATIC,7,52,56,8
+    EDITTEXT        IDC_EDIT_LABEL_NUMWIDTH,74,50,63,14,ES_AUTOHSCROLL
+    LTEXT           "Axis Label Heigth:",IDC_STATIC,7,71,58,8
+    EDITTEXT        IDC_EDIT_LABEL_NUMHEIGTH,74,68,63,14,ES_AUTOHSCROLL
+    LTEXT           "Other Label Size:",IDC_STATIC,7,92,55,8
+    EDITTEXT        IDC_EDIT_LABEL_SIZE,74,87,63,14,ES_AUTOHSCROLL
+    LTEXT           "(default: 68)",IDC_STATIC,145,52,38,8
+    LTEXT           "(default: 33)",IDC_STATIC,145,71,38,8
+    LTEXT           "(default: 25)",IDC_STATIC,145,92,38,8
+END
+
+IDD_DLG_INPUTVALUE DIALOG  0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog for One Input Value"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    EDITTEXT        IDC_EDIT1,7,18,40,14,ES_AUTOHSCROLL
+    LTEXT           "Input value for splitting",IDC_STATIC,7,7,72,8
+END
+
+IDD_DLG_WIDE2DPTH DIALOGEX 0, 0, 276, 298
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Apply True NMO Correction to Wide-Angle Data"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TIMESECNAME,98,26,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSET,236,26,33,14
+    EDITTEXT        IDC_VELSECNAME,98,46,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSEV,236,46,33,14
+    EDITTEXT        IDC_DEPTHSECNAME,98,69,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSED,236,69,33,14
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT1,182,96,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT2,229,96,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_XMIN,175,119,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_XMAX,206,119,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZMIN,155,151,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZMAX,195,151,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_DZ2,235,151,34,14,ES_AUTOHSCROLL
+    CONTROL         "Distance/Offset increases monotonically with trace (check to speed up loading)",IDC_SEGY_ORDER,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,13,219,256,19
+    EDITTEXT        IDC_PROC_SPHERORDER,225,196,34,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,163,277,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,219,277,50,14
+    LTEXT           "Zmin, Zmax, dz (in km; Minimum, Maximum Depth, and Depth Interval for Processing):",IDC_STATIC,7,142,139,26
+    LTEXT           "File name for depth section:",IDC_STATIC,7,71,88,8
+    LTEXT           "File name for time section:",IDC_STATIC,7,28,90,15
+    LTEXT           "Velocity file name:",IDC_STATIC,7,50,63,8
+    LTEXT           "Xmin, Xmax, dx (Min, Maximum Distance, and Stacking Aperture, in km):",IDC_STATIC,7,119,159,19
+    LTEXT           "Trace1,Trace2 (First and Last Trace for Processing:",IDC_STATIC,7,98,170,16
+    GROUPBOX        "Spherical Dispersion Compensation",IDC_STATIC,7,186,262,27
+    CTEXT           "For Wide-Angle Reflection Data Only",IDC_STATIC,33,7,189,16,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "This conversion may take a while. Please wait and the resulting depth section will be shown automatically on top of the colored model.",IDC_STATIC,7,245,262,21
+    EDITTEXT        IDC_VIEW_OBSDEP,235,169,34,14,ES_AUTOHSCROLL
+    LTEXT           "Source Depth (km; can be sonobuoy or OBS depth):",IDC_STATIC,7,172,201,8
+    LTEXT           "Multiply by time to the order of (0 means no apply):",IDC_STATIC,7,199,201,8
+    EDITTEXT        IDC_VIEW_UPDATE_DX,237,119,31,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_VELOCITY_TWTT DIALOGEX 0, 0, 276, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Parameters for Displaying Velocity Model in TWTT"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_VELSECNAME,84,30,158,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEV,244,30,25,14
+    DEFPUSHBUTTON   "OK",IDOK,167,129,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,219,129,50,14
+    LTEXT           "Velocity file name:",IDC_STATIC,7,34,63,8
+    EDITTEXT        IDC_VIEW_OBSDEP,229,96,40,14,ES_AUTOHSCROLL
+    LTEXT           "Source Depth (km; can be sonobuoy or OBS depth):",IDC_STATIC,7,99,201,8
+    EDITTEXT        IDC_VIEW_UPDATE_XMIN,140,55,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_XMAX,184,55,40,14,ES_AUTOHSCROLL
+    LTEXT           "Xmin, Xmax, XTick:",IDC_STATIC,8,58,83,8
+    EDITTEXT        IDC_VIEW_UPDATE_XTICK,228,54,40,14,ES_AUTOHSCROLL
+    LTEXT           "Title of plot:",IDC_STATIC,7,9,65,8
+    EDITTEXT        IDC_TIMESEC_TITLE,84,7,185,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMIN,139,76,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TMAX,184,76,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VIEW_UPDATE_TTICK3,229,76,40,14,ES_AUTOHSCROLL
+    LTEXT           "Tmin, Tmax, TTick:",IDC_STATIC,7,81,65,8
+END
+
+IDD_DLG_WIDE2VELOCITY DIALOGEX 0, 0, 276, 366
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NMO Velocity Analysis for Wide-Angle Data"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TIMESECNAME,98,26,149,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSET,249,26,20,14
+    EDITTEXT        IDC_VELSECNAME,98,41,149,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEV,250,41,20,14
+    EDITTEXT        IDC_DEPTHSECNAME,98,56,149,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSED,250,56,20,14
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT1,189,100,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VIEW_UPDATE_SHOT2,229,100,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERSION_ZMIN,149,208,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_ZMAX,189,208,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_DZ,229,208,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROC_SPHERORDER,229,289,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,169,345,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,219,345,50,14
+    LTEXT           "Zmin, Zmax, dz (Min, Max and Interval for Depth in km; dz<=0.065km):",IDC_STATIC,7,207,139,20
+    LTEXT           "File name for depth section:",IDC_STATIC,7,58,88,8
+    LTEXT           "File name for time section:",IDC_STATIC,7,28,90,13
+    LTEXT           "Velocity file name:",IDC_STATIC,7,45,63,8
+    LTEXT           "Trace1,Trace2 (First and Last Trace for Processing, not used):",IDC_STATIC,7,101,170,16
+    GROUPBOX        "Spherical Dispersion Compensation",IDC_STATIC,7,281,262,27
+    CTEXT           "For Wide-Angle Reflection Data Only",IDC_STATIC,33,7,189,16,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "This conversion may take a while. Please wait and the resulting section will be shown automatically. Make sure the working  directory has enough free space to store raytracing results (can be typically 5GB)!",IDC_STATIC,7,308,262,35
+    LTEXT           "Multiply by time to the order of (0 means no apply):",IDC_STATIC,7,294,201,8
+    EDITTEXT        IDC_DLG_RAYTRACING,7,84,211,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSERIN,249,84,20,14
+    LTEXT           "Ray tracing parameter file name:",IDC_STATIC,7,72,172,8
+    PUSHBUTTON      "Edit",IDC_BUTTON_EDIT,221,84,26,14
+    EDITTEXT        IDC_CONVERSION_VMIN,151,234,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_VMAX,191,234,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONVERSION_DV,231,234,40,14,ES_AUTOHSCROLL
+    LTEXT           "Vmin, Vmax, dv (Min, max, and interval for velocity perturbation, in km/s:",IDC_STATIC,7,233,137,19
+    LTEXT           "Which layer to pertub the velocity (the currently selected layer will be prompted; Note: 1st layer numbered as 1):",IDC_STATIC,7,258,211,24
+    EDITTEXT        IDC_EDIT_LAYERNO,229,259,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PROC_TWINDOW,187,153,40,14,ES_AUTOHSCROLL
+    LTEXT           "If checked, need to specify the mixing Time window size (in num samples; default 11), and output trace skip (default 0):",IDC_STATIC,33,149,144,26
+    CONTROL         "Whether to perform velocity analysis via coherency computation? If not checked, only 1 perturbation will be performed to give NMO-corrected section for display.",IDC_ISCOH,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,7,119,262,30
+    EDITTEXT        IDC_EDIT_NUMDISPLAY,229,177,40,14,ES_AUTOHSCROLL
+    LTEXT           "If not checked, perturbation number to display (the first is 1):",IDC_STATIC,33,178,190,16
+    EDITTEXT        IDC_PROC_NVSKIP,229,153,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Raytracing Parameters",IDC_STATIC,7,197,262,81
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DLG_SEGYPREVIEW DLGINIT
+BEGIN
+    IDC_COMBO_HEADINFO, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_COMBO_HEADINFO, 0x403, 10, 0
+0x7254, 0x6361, 0x2065, 0x6f4e, 0x002e, 
+    IDC_COMBO_HEADINFO, 0x403, 5, 0
+0x4646, 0x4449, "\000" 
+    IDC_COMBO_HEADINFO, 0x403, 4, 0
+0x4443, 0x0050, 
+    IDC_COMBO_HEADINFO, 0x403, 15, 0
+0x7254, 0x6361, 0x2b65, 0x4646, 0x4449, 0x432b, 0x5044, "\000" 
+    0
+END
+
+IDD_DEPTH DLGINIT
+BEGIN
+    IDC_COMBO_HEADINFO, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_COMBO_HEADINFO, 0x403, 10, 0
+0x7254, 0x6361, 0x2065, 0x6f4e, 0x002e, 
+    IDC_COMBO_HEADINFO, 0x403, 5, 0
+0x4646, 0x4449, "\000" 
+    IDC_COMBO_HEADINFO, 0x403, 4, 0
+0x4443, 0x0050, 
+    IDC_COMBO_HEADINFO, 0x403, 4, 0
+0x6c41, 0x006c, 
+    0
+END
+
+IDD_DLG_TIMEBYTRC DLGINIT
+BEGIN
+    IDC_COMBO_HEADINFO, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_COMBO_HEADINFO, 0x403, 10, 0
+0x7254, 0x6361, 0x2065, 0x6f4e, 0x002e, 
+    IDC_COMBO_HEADINFO, 0x403, 5, 0
+0x4646, 0x4449, "\000" 
+    IDC_COMBO_HEADINFO, 0x403, 4, 0
+0x4443, 0x0050, 
+    IDC_COMBO_HEADINFO, 0x403, 4, 0
+0x6c41, 0x006c, 
+    0
+END
+
+IDD_DLG_HYDRATE DLGINIT
+BEGIN
+    IDC_COMBO_HEADINFO, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_COMBO_HEADINFO, 0x403, 10, 0
+0x7254, 0x6361, 0x2065, 0x6f4e, 0x002e, 
+    IDC_COMBO_HEADINFO, 0x403, 5, 0
+0x4646, 0x4449, "\000" 
+    IDC_COMBO_HEADINFO, 0x403, 4, 0
+0x4443, 0x0050, 
+    IDC_COMBO_HEADINFO, 0x403, 4, 0
+0x6c41, 0x006c, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_SEISWIDE            REGISTRY                "SeisWide.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    ID_INDICATOR_COORD      "X      Z      VelocityDisp    "
+    IDP_FAILED_TO_CREATE    "Failed to create object.  Make sure the object is entered in the system registry."
+    CG_IDS_TIPOFTHEDAY      "Displays a Tip of the Day."
+    CG_IDS_TIPOFTHEDAYMENU  "Ti&p of the Day..."
+    CG_IDS_DIDYOUKNOW       "Did you know..."
+    CG_IDS_FILE_ABSENT      "Tips file does not exist in the prescribed directory"
+    CG_IDP_FILE_CORRUPT     "Trouble reading the tips file"
+    CG_IDS_TIPOFTHEDAYHELP  "&Help"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "SeisWide"
+    IDR_SEISWITYPE          "\nSeisWi\nSeisWide\nSeisWide Files (*.sei)\n.SEI\nSeisWide.Document\nSeisWide Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "SeisWide"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+    ID_FILE_UPDATE          "Update the container to show any changes\nUpdate"
+    ID_FILE_SAVE_COPY_AS    "Save a copy of the active document with a new name\nSave Copy"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_PASTE_LINK      "Insert Clipboard contents and a link to its source\nPaste Link"
+    ID_EDIT_PASTE_SPECIAL   "Insert Clipboard contents with options\nPaste Special"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OLE_INSERT_NEW       "Insert new embedded object\nNew Object"
+    ID_OLE_EDIT_LINKS       "Edit linked objects\nEdit Links"
+    ID_OLE_EDIT_CONVERT     "Convert object to different type\nConvert Object"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OLE_VERB_FIRST       "Activate embedded or linked object"
+    57873                   "Activate embedded or linked object"
+    57874                   "Activate embedded or linked object"
+    57875                   "Activate embedded or linked object"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PROCESSING_RAYPATH   "Plot ray path as CGM metafile\nPlot raypath"
+    ID_VIEW_SEGYINFO        "Peek some segy information"
+    ID_PROCESSING_DEFINESOURCEPOSITION 
+                            "Define source/receiver position in model distance (in meters) \nDefine Source Position "
+    ID_TOOLBAR_PICK         "Pick a boundary or layer, or update its display\nPick"
+    ID_TOOLBAR__REMOVE      "Delete nodes for a boundary or a velocity layer\nDelete Node"
+    ID_TOOBAR_MOVE          "Move nodes on selected boundary or layer\nEdit/Show/Move Nodes"
+    ID_TOOLBAR_ADD          "Add nodes on selected boundary or layer\nAdd Nodes"
+    ID_TOOLBAR_NEWLINE      "All a new boundary or layer\nAdd Layer"
+    ID_TOOLBAR_DELLINE      "Delete a new layer\nDelete Layer/Boundary"
+    ID_TOOLBAR_SAVEV        "Save velocity data\nSave velocity"
+    ID_TOOLBAR_SAVEASV      "Save velocity data as a New File\nSave velocity as"
+    ID_EDIT_NOLABLES        "Add or remove all labels for display"
+    ID_EDIT_DISPLAYTUNEUP_ADDREMOVENODESANDBOUNDARIESINDISPLAY 
+                            "Add/Remove Color Mapping in Display (so on removing, only nodes and boundaries will be shown)"
+    ID_EDIT_TUNEUP_NOBOUNDARY "Add/Remove Nodes and Boundaries in Display"
+    ID_EDIT_TUNEUP_NOCOLORMAP "Add/Remove Color Mapping in Display"
+    ID_EDIT_DISPLAYTUNEUP_ADDREMOVEOBSPOSITIONS 
+                            "Toggle between display of OBS position in model or depth sections"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TIMESECTION     "Display a segy section in time (traces must have distance in km associated)"
+    ID_VIEW_DEPTHSECTION    "Display a segy section in depth (traces must have distance in km associated)"
+    ID_VIEW_VELOCITYCOLORMAP "Display a velocity model in color mapping"
+    ID_VIEW_ADDRANGETOSEGY  "Associate distance to trace"
+    ID_VIEW_BOTH            "Display a depth section overlain with a velocity model"
+    ID_EDIT_TRAVELTIME      "Include travel-time curves with time section"
+    ID_VIEW_CONTOURS        "Display a velocity model with color mapping and contours"
+    ID_VIEW_RAYTRACE        "Compute raytracing "
+    ID_EDIT_DIGITIZE        "Start a new digitizing file"
+    ID_EDIT                 "Start a new curve to digitize"
+    ID_EDIT_SAVEDIG         "Save all the digitized data into a given file"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_NEWCURVE        "Digitize a new curve (hot-key: N)"
+    ID_DIGITIZE_FINISHDIGITIZING "Finish digitizing and do other jobs"
+    ID_PROCESSING_TRACEREORDER 
+                            "Re-order traces in increasing ranges (km)\nReorder"
+    ID_PROCESSING_COHMIX    "Data reduction and coherency mixing\nCohmix"
+    ID_TOOLBAR_NEWMOD       "Create a New Model\nNew Model"
+    ID_EDIT_BOUNDARY        "Display and edit boundary nodes"
+    ID_PROCESSING_RAYTRACING "Raytracing\nRaytracing"
+    ID_EDIT_VELOCITY        "Reverse Ranges as Stored in Segy Header"
+    ID_PROCESSING_REVERSERANGE2 "Reverse Ranges as Stored in Segy Header"
+    ID_EDIT_NONODES         "Do not display nodes for a velocity color map"
+    ID_PROCESSING_REVERSERANGE 
+                            "Reverse the sign of shot-receiver offsets based on trace number or azymuth\nReverse sign"
+    ID_PROCESSING_LOADZELTSMODEL 
+                            "Load Collin Zelt's velocity model and convert to SeisWide binary format\nConvert Zelt's"
+    ID_PROCESSING_DATAREDUCTIONANDFILTER "Data reduction and filtering"
+    ID_PROCESSING_LATERALSHIFT 
+                            "Increment the ranges/distance by a certain amount\nLateral Shifting"
+    ID_PROCESSING_RAYTRACE  "Raytrace your active OBS\nRaytrace"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_CONV            "Time to Depth Conversion for MCS Reflection Data"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_TUNEUP_OBSPOSITIONS "Remove OBS Positions"
+    ID_TOOLBAR_DUPLICATE    "Duplicate a boundary for editing\nDuplicate Boundary"
+    ID_PROCESSING_CHECKMODELINTEGRITY 
+                            "Check current velocity model to see if it's suitable for raytracing"
+    ID_TOOLBAR_RESIZEMOD    "Expand or Shrink the model (this will affect its xmin and xmax)\nExpand/Shrink"
+    ID_EDIT_DISPLAYTUNEUP_FILLAREASMALL 
+                            "Perform fill areas once per trace, or many fills per trace; Once ungrouped, each fill will be one object in CorelDraw/Freelance."
+    ID_EDIT_DISPLAYTUNEUP_FILLAREAONCE 
+                            "Toggle between fill area for each amplitude block  and  one fill for each trace (usefil only if you want to ungroup in CorelDraw/Freelance to edit trace details."
+    ID_DIGITIZE_UNDOPOINT   "Undo a lastly-digitized point\tCtrl+Z"
+    ID_PROCESSING_APPENDASEGYFILE "Append a segy file to another file"
+    ID_PROCESSING           "Manually reduce the time of trace by a given velocity"
+    ID_PROCESSING_REDUCEMANUAL 
+                            "Manually reduce trace time by a given reduction velocity"
+    ID_VIEW_SEGYPREVIEW     "Preview segy data trace by trace without distance information"
+    ID_MODELING_MERGEMODELS "Merge two models into one"
+    ID_PROCESSING_MIGRATION "Migration via T-K domain method for common-midpoint stacked data"
+    ID_MODELING_EXTRACTVELOCITYDEPTHCURVE 
+                            "Extract a velocity-depth curve at any given distance in a model"
+    ID_MODELING_EXTRACTVZCURVE 
+                            "Extract velocity-depth curve for at any model locations."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MENUITEM32834        "Convert from PC Segy to Unix Segy by Byte Swap"
+    ID_MENUITEM_PC2UNIX     "Convert from PC Segy to Unix Segy by Byte Swap"
+    ID_PROCESSING_PC2UNIX   "Convert Segy data from little-endian (PC) to big-endian (UNIX)"
+    ID_PROCESSING_UNIX2PC   "Convert Segy data from big-endian (UNIX) to little-endian (PC)"
+    ID_PROCESSING_KDMIG     "Pre-Stack Kircholf Depth Migration "
+    ID_PROCESSING_KDMIGPOST "Post Stack Migration via T-K domain method for common-midpoint stacked data"
+    ID_MENUITEM32841        "View time section trace by trace"
+    ID_MENU_TIMESECTRC      "View time section by trace number; for data without km associated or for pre-stacked data."
+    ID_VIEW_TIMESECTRC      "View time section by trace number; for data without km associated or for pre-stacked data."
+    ID_PROCESSING_KDMIGSIMPLE 
+                            " Pre-stack Kircholf depth migration using SeisWide's velocity model"
+    ID_MENUITEM32845        "Display segy data in hydro-display format"
+    ID_MENU_VIEW_HYDRO      "View a time section reduced by NMO corrected time (source can be at depth)."
+    ID_MENUITEM32847        "Associate km to Sonobuoy Traces based on water wave"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PROCESSING_SB        "Select Water Wave for Sonobuoy Data"
+    ID_MENUITEM32849        "Associate km to Sonobuoy Traces based on your digitized "
+    ID_PROCESSING_SB_KM     "Associate km to Sonobuoy Traces based on your digitized water wave"
+    ID_PROCESSING_CONV      "Time to depth conversion for MCS reflection data"
+    ID_MODELING_EXTRACTLAYERINFORMATION 
+                            "Extract Layer Information to tablet form for mapping purposes"
+    ID_MODELING_EXTRACTLAYERINFOR 
+                            "Extract Layer Information in tablet form for mapping purposes"
+    ID_TOOLBAR_REFRESH      "Refresh the display without loading seismic data. Cntl+R to change ray colors.\nRefresh Drawing"
+    ID_MODELING_LOADREIDSMODEL 
+                            "Load Ian Reid's velocity model and convert to SeisWide binary format"
+    ID_PROCESSING_CALCULATORLATLONGTODISTANCE 
+                            "Convert latitude/longitude spacing to distance"
+    ID_EDIT_DISPLAYTUNEUP_BIGMODELNODES 
+                            "Use large model nodes for better viewing"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_BTN_HOMEPAGE        "SeisWide's Home Page at http://shan2.no-ip.org/seisweb"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_DISPLAYTUNEUP_CHANGINGCOLOROFTRAVELTIMECURVES 
+                            "Switch between red and blue for computed travel-time curves"
+    ID_EDIT_DISPLAYTUNEUP_CHANGCOLORTTCURVES 
+                            "Switch between different colors for computed rays\tCtrl+R"
+    ID_PROCESSING_UNIX2PCBATCH 
+                            "Batch convert segy data from big-endian (UNIX) to little-endian (PC)"
+    ID_PROCESSING_PC2UNIXBATCH 
+                            "Batch convert segy data from little-endian (PC) to big-endian (UNIX)"
+    ID_PROCESSING_RAWTOSEGY "Convert many Datafile.### of Dal DOBS data into Segy, assuming shooting 150 m apart every 60 s."
+    ID_VIEW_TRACEANALYSIS   "Graph a trace and/or spectrum analysis"
+    ID_PROCESSING_CONVERTDOBSDATATOSEGYUSINGSHOTTABLE 
+                            "Convert raw DOBS data files into segy using a shottable"
+    ID_PROCESSING_CONVERTDATATOSEGY 
+                            "Convert many raw DOBS data to segy using a shot table"
+    ID_PROCESSING_GENERATESHOTTABLEFROMNAVIGATIONLOGS 
+                            "Generate Shottable from Navigation Logs"
+    ID_PROCESSING_NAVLOGTOTAB "Generate Shottable from Navigation Logs"
+    ID_DIGITIZING_LOADEXISTINGDIGITIZINGFILE "Load Existing Digitizing File"
+    ID_DIGITIZING_LOADEXISTING 
+                            "Load an existing digitizing file (ascii format)"
+    ID_EDIT_DISPLAYTUNEUP_OVERLAYEXTERNALLINEDRAWINGS 
+                            "Overlay Line-Drawings Stored in an External Ascii File"
+    ID_EDIT_DISPLAYTUNEUP_EXTERNAL_DRAWINGS 
+                            "Overlay Line-Drawings in Depth (km) Stored in an External Ascii File"
+    ID_EDIT_DISPLAYTUNEUP_EXTERNAL_DRAWINGS_TIM 
+                            "Overlay Line-Drawings in time (sec); Convert to depth if necessary"
+    ID_PROCESSING_DUMPCDPDISTANCE 
+                            "Dump distance based on FFID (or shot point)"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MODELING_CONVERTMODELTOVELOCITYASDENSITYBLOCKS 
+                            "Convert Model to Velocity as Density Blocks"
+    ID_MODELING_DENBLOCKS   "Convert velocity model to density blocks for gravity modeling"
+    ID_DIGITIZING_MIGRATELINEDRAWINGS 
+                            "NOT WORKING: Migrate line-drawings during on-screen digitizing"
+    ID_DIGITIZING_CHANGECURVERESOLUTION "Change Curve Resolution"
+    ID_DIGITIZING_CHANGECURVERES 
+                            "Wide-angle: change resolution for the current curve being digitized"
+    ID_DIGITIZING_LOADZELT_TX "Load an existing file in Zelt's TX.IN format"
+    ID_DIGITIZING_WHEREANI  "Show digitizing status"
+    ID_EDIT_DISPLAYTUNEUP_SKIPCOMPLAININGTRACETOODENSE 
+                            "Toggle: skip complaining trace too dense"
+    ID_EDIT_DISPLAYTUNEUP_SKIPTOODENSE 
+                            "Toggle: skip complaining trace too dense"
+    ID_DIGITIZING_SHIFTDIGITING 
+                            "Shift all or part of digitized points by horizontally or vertically"
+    ID_DIGITIZING_CHANGEERRORBAR_ASBAR 
+                            "Wide-angle: Display points as error bars"
+    ID_DIGITIZING_CHANGEERRORBAR_ASCIRCLE 
+                            "Wide-angle: Display points as open circles"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_DIGITIZING_CHANGEERRORBAR_ASSTAR 
+                            "Wide-angle: Display points as crosses"
+    ID_DIGITIZING_CHANGEERRORBAR_ASFILLCIRCLE 
+                            "Wide-angle: Display points as filled circles"
+    ID_EDIT_DISPLAYTUNEUP_REMOVEOUTSIDERAYPOINTS 
+                            "Toggle display of all ray points outside the model"
+    ID_TOOLBAR_FLIPMOD      "Flip a model in x axis (xmin->xmax, and xmax->xmin)"
+    ID_MODELING_SUBSIDENCEBEFORESEDIMENTLOADING 
+                            "Calculate subsidence corrected for sediment loading"
+    ID_FILE_EXPORTBITMAP    "Export the current display to a bitmap file at (very) high resolution"
+    ID_FILE_IMPORTBITMAP    "Import a bitmap file into the current display"
+    ID_FILE_IMPORTBITMAP_RESIZEBITMAP "Resize loaded bitmap"
+    ID_FILE_RESIZEBITMAP    "Resize a loaded bitmap"
+    ID_PROCESSING_TDCONVBMP "Time to depth conversion for MCS reflection data in a bitmap file"
+    ID_PROCESSING_DATARESAMPLE "Change data sample rate to a different value"
+    ID_TOOLBAR_REFRESH_ALL  "Reload all files on disk, recalculate and refresh the display. Shift+Click to change ray colors.\nRecalculate Drawing"
+    ID_EDIT_DISPLAYTUNEUP_MODELPROPERTIES_REMOVEOVERLAYOFTTCURVES 
+                            "Point\tCtrl+Z"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_DISPLAYTUNEUP_REMOVETTOVERLAY 
+                            "Toggle overlay of computed Travel-Time Curves\tCtrl+T"
+    ID_TOOLBAR_ZOOM         "Zoom. After this click, Shift+Click in the DOC-window to zoom the same amount (X-axis only) among different windows.\nZoom"
+    ID_TOOLBAR_UNZOOM       "Unzoom and restore all pre-zoom parameters\nUnzoom"
+    ID_PROCESSING_DEBIAS    "Debias data"
+    ID_PROCESSING_WIENER    "Wiener Predictive Error Filter"
+    ID_DIGITIZING_EXPAND_SEGMENTS "Expand/Shrink Line Drawing Segments "
+    ID_DIGITIZING_RESIZE_SEGMENTS 
+                            "Expand/Shrink Line-drawing Segments by a ratio"
+    ID_MODEL_SHIFTXZ        "Shift velocity model in distance and/or depth by a constant"
+    ID_DIGITIZING_SELECT_CURRENT "Pick a digitized curve to work with ..."
+    ID_DIGITIZING_ZELTSFORMAT_REDEFINESOURCEPOSITION 
+                            "Re-define source position during digitizing"
+    ID_DIGITIZING_CHANGEERRORBAR_REDEFINESOURCE 
+                            "Re-define Source Position during digitizing"
+    ID_DIGITIZING_ZELTSFORMAT_TOGGLEZPLOTSUPPORT "isZplot"
+    ID_DIGITIZING_ZELTSFORMAT_TOGGLEZPLOT "Toggle ZPLOT support for output "
+    ID_MODELING_MOVEBOUNDARY "Move Boundary Vertically"
+    ID_PROCESSING_CHOPWIDEANGLEDATA 
+                            "Chop wide-angle data from any selected area to remove undesired noise or some features"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STACKINGVELOCITYMAP "Display Stacking Velocity Map From File"
+    ID_TOOLBAR_BIGGER       "Increase gain for display\nIncrease gain for display"
+    ID_TOOLBAR_LESS         "Decrease gain for display\nDecrease gain for display"
+    ID_DIGITIZING_REVISELINELABEL 
+                            "Revise Line Label for the currently activated curve"
+    ID_EDIT_DISPLAYTUNEUP_MODELPROPERTIES_LINEDRAWINGLABEL 
+                            "Toggle label display for line details"
+    ID_TOOLBAR_HAND         "Move around when zooming\nMove when zooming"
+    ID_DIGITIZING_SAVEDIGFFID 
+                            "Save all the digitized data into a given file with trace FFID append"
+    ID_TIME_FORWIDE         "Time to depth conversion for single source wide-angle reflection data"
+    ID_VIEW_VELOCITYCOLORTWTT 
+                            "Displays a 2D velocity model (Zelt's format) in two-way travel time"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TIME_FORWIDE_SEMB    "Time to depth conversion for Wide-angle segy data with slowness stack"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\SeisWide.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#include "afxolecl.rc"       // OLE container resources
+#include "afxolesv.rc"       // OLE server resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

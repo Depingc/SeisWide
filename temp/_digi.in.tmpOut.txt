@@ -1,0 +1,4 @@
+# Current digitized dump
+#        X         Y      TRACE      FFID     DISTANCE   OFFSET  RES/VAL 
+   250.580    33.445       3681      3681   250.580   250.580     0.040  
+   250.580   -56.665       3681      3681   250.580   250.580     0.040  

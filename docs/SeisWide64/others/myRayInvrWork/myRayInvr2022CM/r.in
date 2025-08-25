@@ -1,0 +1,37 @@
+&pltpar iroute=1,iseg=0,iray=2,ibnd=0,irays=0,ivel=0,
+	  itx=1,itxout=1,idump=0,iszero=0,idash=0,isum=1,iplot=0,
+ 
+	  idata=1,vred= 7.000,nrskip=3,nskip=0,velht=0.05,
+          symht=0.1,itxbox=1,isep=0,istep=0,ircol=3,irayps=0,itcol=3,ifcol=6,ibcol=0,
+          mcol=8,14,1,4,14,  colour=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,
+&end
+
+&axepar  xmin=   0.0,xmax=  35.0,xtmin=  0.0,xtmax=35.000,xmm=200,ntickx=0,ndecix=-1,
+           zmin=   0.0,zmax=  25.0,ztmin=   0.0,ztmax=25.000,zmm=85,ntickz=0,ndeciz=-1,
+           tmin=   0.0,tmax=  12.0,ttmin=   0.0,ttmax=  12.0,tmm=85,ntickt=0,ndecit=-1,
+           xmint=  0.0,xmaxt=  35.0,xtmint=  0.0,xtmaxt=  35.0,xmm=200,ntickx=0,ndecix=-1,
+           iaxlab=1,itrev=0, sep=15, orig=15,
+&end
+&trapar imodf=1, ibsmth=0, nbsmth=0, istop=0, crit=0., hws=1.0, iraysl=1,ifast=1,isrch=1,is_anisotropy=1,
+  ishot=  -1,
+  xshot= 35.000, 
+  zshot= 0.049,
+  irayt=1,   1,   1,   1,   1,   
+        1,   1,   1,   1,   1,   
+  ray = 10.1,11.1,12.1,13.1,14.1,
+  iturn=0,   0,   0,   0,   0,   
+  nray =20,  20,  20,  20,  20,  
+  xsmax=0.,nsmax=45,
+  space=2.0, 2.0, 2.0, 2.0, 2.0,
+  aamin=0.10, aamax=89, step=0.003,
+  i2pt=1,n2pt=30,
+  pois=0.5,0.45,0.41,0.37,0.34,0.30,0.26, 0.26,0.26,0.26,0.26,  nhray=30,
+&end
+
+&invpar  invr=1,
+  ivray=10,  11,  12,  13,  14,  
+&end
+
+
+
+

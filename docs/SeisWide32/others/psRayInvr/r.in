@@ -1,0 +1,31 @@
+ &pltpar iroute=1,iseg=0,iray=2,ibnd=0,irays=0,ivel=0,
+	  itx=1,itxout=1,idump=0,iszero=0,idash=0,isum=1,iplot=0,
+ 
+	  idata=0,vred= 7.000,nrskip=3,nskip=0,velht=0.05,
+          symht=0.1,itxbox=1,isep=0,istep=0,ircol=3,irayps=0,  itcol=3,ifcol=6,ibcol=0,
+          mcol=8,14,1,4,14,  colour=12,  3,  2,  2,  2,  6,  2,  9,  2,  4,  2,  4,  7, 14, 10, 13,
+  /
+  &axepar  xmin=-8.000,xmax=90.,xtmin=-8.000,xtmax=90.0,xmm=200,  ntickx=0, ndecix=-1,
+           zmin= 0.000, zmax= 40.000, ztmin=  0.000,ztmax= 40.000,zmm=85, ntickz=0, ndeciz=-1,
+           tmin= 0.000,tmax=  6.000,ttmin= 0.000,ttmax=  6.000, tmm=85, ntickt=0, ndecit=-1,
+           xmint=-8.000,xmaxt=90.,xtmint=-8.000,xtmaxt=90.0,xmm=200,  ntickx=0, ndecix=-1,
+           iaxlab=1,itrev=0, sep=15, orig=15,
+  /
+  &trapar imodf=1, ibsmth=0, nbsmth=0, istop=0, crit=0., hws=1.0, iraysl=1,ifast=1,
+  ishot=   2,
+  xshot= 0.000,
+  zshot= 0.137,
+  irayt= 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
+         1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
+  ray = 1.1, 1.2, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2, 5.1, 5.2, 6.1, 6.2, 7.1, 7.2, 8.1, 8.2, 9.1, 9.2,
+  nray =30,  20,  30,  35,  20,  15,  20,  15,  20,  30,  15,  20,  30,  15,  20,  30,  15,  30,
+  ncbnd = 1, cbnd=2,
+  xsmax=0.,nsmax=45,
+  space=1.0, 1.0, 2.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0,
+  aamin=0.00, aamax=90., step=0.005,
+  pois=0.5,0.25,0.25,0.25,0.25,0.25,0.25, 0.25,0.25,  nhray=30,
+  /
+  &invpar  invr=0,
+  ivray= 2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  8,  0,
+           bndunc=0.08,   velunc=0.05,  ximax=2.0,
+  /

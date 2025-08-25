@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{B4E3C55E-0752-4079-99DD-169D51A2F4B4}</ProjectGuid>
+    <RootNamespace>SeisWide</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.31919.74</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/SeisWide.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/SeisWide.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>.\Release/SeisWide.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/SeisWide.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/SeisWide.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/SeisWide.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/SeisWide.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>.\Debug/SeisWide.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/SeisWide.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>rpcrt4.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/SeisWide.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="bmp24.cpp" />
+    <ClCompile Include="BoundNodes.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="CntrItem.cpp" />
+    <ClCompile Include="ColorButton.cpp" />
+    <ClCompile Include="compare.cpp" />
+    <ClCompile Include="coords.cpp" />
+    <ClCompile Include="CShellFileOp.cpp" />
+    <ClCompile Include="DIB.cpp" />
+    <ClCompile Include="digitize.cpp" />
+    <ClCompile Include="dlgAddData.cpp" />
+    <ClCompile Include="dlgAddRange.cpp" />
+    <ClCompile Include="dlgAgc.cpp" />
+    <ClCompile Include="dlgAttenuationCorr.cpp" />
+    <ClCompile Include="dlgChangeRanges.cpp" />
+    <ClCompile Include="dlgChangeReducingBMP.cpp" />
+    <ClCompile Include="dlgCohMix.cpp" />
+    <ClCompile Include="dlgConvertRawSgy.cpp" />
+    <ClCompile Include="dlgDEPTH1.cpp" />
+    <ClCompile Include="dlgDesimate.cpp" />
+    <ClCompile Include="dlgDespiking.cpp" />
+    <ClCompile Include="dlgDigitize.cpp" />
+    <ClCompile Include="dlgDigitizeShift.cpp" />
+    <ClCompile Include="dlgDigOption.cpp" />
+    <ClCompile Include="dlgDigResize.cpp" />
+    <ClCompile Include="dlgDigResolution.cpp" />
+    <ClCompile Include="dlgDigSelectCurrent.cpp" />
+    <ClCompile Include="dlgDispBitmap.cpp" />
+    <ClCompile Include="dlgDistanceAdjust.cpp" />
+    <ClCompile Include="dlgExportBitmap.cpp" />
+    <ClCompile Include="dlgFillArea.cpp" />
+    <ClCompile Include="dlgFilter1.cpp" />
+    <ClCompile Include="dlgFilterOffset.cpp" />
+    <ClCompile Include="dlgGainAdjust.cpp" />
+    <ClCompile Include="dlgHardwareId.cpp" />
+    <ClCompile Include="dlgHydrateDisp.cpp" />
+    <ClCompile Include="dlgImportbitmap.cpp" />
+    <ClCompile Include="dlgInitAmp.cpp" />
+    <ClCompile Include="dlgInOut.cpp" />
+    <ClCompile Include="dlgInputValie.cpp" />
+    <ClCompile Include="dlgKdmig.cpp" />
+    <ClCompile Include="dlgKDMigPost.cpp" />
+    <ClCompile Include="dlgLabelOverwrite.cpp" />
+    <ClCompile Include="dlgLabelSizes.cpp" />
+    <ClCompile Include="dlgLatLong.cpp" />
+    <ClCompile Include="dlgLatShift.cpp" />
+    <ClCompile Include="dlgLayerNodes.cpp" />
+    <ClCompile Include="dlgLineDrawDep.cpp" />
+    <ClCompile Include="dlgLineDrawTim.cpp" />
+    <ClCompile Include="dlgLoadReid.cpp" />
+    <ClCompile Include="dlgLoadZelt.cpp" />
+    <ClCompile Include="dlgMergeModels.cpp" />
+    <ClCompile Include="dlgMigLineDraw.cpp" />
+    <ClCompile Include="dlgMigPS.cpp" />
+    <ClCompile Include="dlgModelResize.cpp" />
+    <ClCompile Include="dlgModelShiftBoundary.cpp" />
+    <ClCompile Include="dlgNewLayer.cpp" />
+    <ClCompile Include="DlgNewModel.cpp" />
+    <ClCompile Include="dlgNewVelFile.cpp" />
+    <ClCompile Include="dlgPrint.cpp" />
+    <ClCompile Include="dlgRayAuto.cpp" />
+    <ClCompile Include="dlgRaytrace1.cpp" />
+    <ClCompile Include="dlgRayTracing.cpp" />
+    <ClCompile Include="dlgRegionalModel.cpp" />
+    <ClCompile Include="dlgReorganize.cpp" />
+    <ClCompile Include="dlgResample.cpp" />
+    <ClCompile Include="dlgRmsVelocityAnalysis.cpp" />
+    <ClCompile Include="dlgSegyAppend.cpp" />
+    <ClCompile Include="dlgSegyColor.cpp" />
+    <ClCompile Include="dlgSegyColor2.cpp" />
+    <ClCompile Include="dlgSegyInfo.cpp" />
+    <ClCompile Include="dlgSegyPreview.cpp" />
+    <ClCompile Include="dlgSineModulate.cpp" />
+    <ClCompile Include="dlgSonobouy.cpp" />
+    <ClCompile Include="dlgSonobuoyAutoOffset.cpp" />
+    <ClCompile Include="dlgSonobuoyPoly.cpp" />
+    <ClCompile Include="dlgSourcePos.cpp" />
+    <ClCompile Include="dlgTablizeLayer.cpp" />
+    <ClCompile Include="dlgTim2Dpth.cpp" />
+    <ClCompile Include="dlgTimDepthBMP.cpp" />
+    <ClCompile Include="dlgTimeByTrc.cpp" />
+    <ClCompile Include="dlgTIMESEC1.cpp" />
+    <ClCompile Include="dlgToolPoly.cpp" />
+    <ClCompile Include="dlgTraceBalanceXT.cpp" />
+    <ClCompile Include="dlgTraceDub.cpp" />
+    <ClCompile Include="dlgTTCurve.cpp" />
+    <ClCompile Include="dlgUnix2PC.cpp" />
+    <ClCompile Include="dlgVel2Den.cpp" />
+    <ClCompile Include="dlgVel2Den1.cpp" />
+    <ClCompile Include="dlgVELOCITY1.cpp" />
+    <ClCompile Include="dlgVelocityPerturb.cpp" />
+    <ClCompile Include="dlgVelocityTwtt2.cpp" />
+    <ClCompile Include="dlgVred.cpp" />
+    <ClCompile Include="dlgVZCurve.cpp" />
+    <ClCompile Include="dlgWide2Depth.cpp" />
+    <ClCompile Include="dlgWide2Velocity.cpp" />
+    <ClCompile Include="dlgWienerFilter.cpp" />
+    <ClCompile Include="ealloc_d.cpp" />
+    <ClCompile Include="IniReader.cpp" />
+    <ClCompile Include="IniWriter.cpp" />
+    <ClCompile Include="IpFrame.cpp" />
+    <ClCompile Include="LicenseCheck.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="ScrollHelper.cpp" />
+    <ClCompile Include="SegyWrapper.cpp" />
+    <ClCompile Include="SegyWrapperEx.cpp" />
+    <ClCompile Include="seiContour.cpp" />
+    <ClCompile Include="SeisWide.cpp" />
+    <ClCompile Include="SeisWideDoc.cpp" />
+    <ClCompile Include="SeisWideView.cpp" />
+    <ClCompile Include="SrvrItem.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sumig.cpp" />
+    <ClCompile Include="suSwapByte.cpp" />
+    <ClCompile Include="TipDlg.cpp" />
+    <ClCompile Include="util.cpp" />
+    <ClCompile Include="VelMod.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="bmp24.h" />
+    <ClInclude Include="BoundNodes.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="CntrItem.h" />
+    <ClInclude Include="ColorButton.h" />
+    <ClInclude Include="compare.h" />
+    <ClInclude Include="coords.h" />
+    <ClInclude Include="CShellFileOp.h" />
+    <ClInclude Include="DIB.h" />
+    <ClInclude Include="digitize.h" />
+    <ClInclude Include="dlgAddData.h" />
+    <ClInclude Include="dlgAddRange.h" />
+    <ClInclude Include="dlgAgc.h" />
+    <ClInclude Include="dlgAttenuationCorr.h" />
+    <ClInclude Include="dlgChangeRanges.h" />
+    <ClInclude Include="dlgChangeReducingBMP.h" />
+    <ClInclude Include="dlgCohMix.h" />
+    <ClInclude Include="dlgConvertRawSgy.h" />
+    <ClInclude Include="dlgDEPTH1.h" />
+    <ClInclude Include="dlgDesimate.h" />
+    <ClInclude Include="dlgDespiking.h" />
+    <ClInclude Include="dlgDigitize.h" />
+    <ClInclude Include="dlgDigitizeShift.h" />
+    <ClInclude Include="dlgdigoption.h" />
+    <ClInclude Include="dlgDigResize.h" />
+    <ClInclude Include="dlgDigResolution.h" />
+    <ClInclude Include="dlgDigSelectCurrent.h" />
+    <ClInclude Include="dlgDispBitmap.h" />
+    <ClInclude Include="dlgDistanceAdjust.h" />
+    <ClInclude Include="dlgExportBitmap.h" />
+    <ClInclude Include="dlgFillArea.h" />
+    <ClInclude Include="dlgFilter1.h" />
+    <ClInclude Include="dlgFilterOffset.h" />
+    <ClInclude Include="dlgGainAdjust.h" />
+    <ClInclude Include="dlgHardwareId.h" />
+    <ClInclude Include="dlgHydrateDisp.h" />
+    <ClInclude Include="dlgImportbitmap.h" />
+    <ClInclude Include="dlgInitAmp.h" />
+    <ClInclude Include="dlgInOut.h" />
+    <ClInclude Include="dlgInputValie.h" />
+    <ClInclude Include="dlgKdmig.h" />
+    <ClInclude Include="dlgKDMigPost.h" />
+    <ClInclude Include="dlgLabelOverwrite.h" />
+    <ClInclude Include="dlgLabelSizes.h" />
+    <ClInclude Include="dlgLatLong.h" />
+    <ClInclude Include="dlgLatShift.h" />
+    <ClInclude Include="dlgLayerNodes.h" />
+    <ClInclude Include="dlgLineDrawDep.h" />
+    <ClInclude Include="dlgLineDrawTim.h" />
+    <ClInclude Include="dlgLoadReid.h" />
+    <ClInclude Include="dlgLoadZelt.h" />
+    <ClInclude Include="dlgMergeModels.h" />
+    <ClInclude Include="dlgMigLineDraw.h" />
+    <ClInclude Include="dlgMigPS.h" />
+    <ClInclude Include="dlgModelResize.h" />
+    <ClInclude Include="dlgModelShiftBoundary.h" />
+    <ClInclude Include="dlgNewLayer.h" />
+    <ClInclude Include="DlgNewModel.h" />
+    <ClInclude Include="dlgNewVelFile.h" />
+    <ClInclude Include="dlgPrint.h" />
+    <ClInclude Include="dlgRayAuto.h" />
+    <ClInclude Include="dlgRaytrace1.h" />
+    <ClInclude Include="dlgRayTracing.h" />
+    <ClInclude Include="dlgRegionalModel.h" />
+    <ClInclude Include="dlgReorganize.h" />
+    <ClInclude Include="dlgResample.h" />
+    <ClInclude Include="dlgRmsVelocityAnalysis.h" />
+    <ClInclude Include="dlgSegyAppend.h" />
+    <ClInclude Include="dlgSegyColor.h" />
+    <ClInclude Include="dlgSegyColor2.h" />
+    <ClInclude Include="dlgSegyInfo.h" />
+    <ClInclude Include="dlgSegyPreview.h" />
+    <ClInclude Include="dlgSineModulate.h" />
+    <ClInclude Include="dlgSonobouy.h" />
+    <ClInclude Include="dlgSonobuoyAutoOffset.h" />
+    <ClInclude Include="dlgSonobuoyPoly.h" />
+    <ClInclude Include="dlgSourcePos.h" />
+    <ClInclude Include="dlgTablizeLayer.h" />
+    <ClInclude Include="dlgTim2Dpth.h" />
+    <ClInclude Include="dlgTimDepthBMP.h" />
+    <ClInclude Include="dlgTimeByTrc.h" />
+    <ClInclude Include="dlgTIMESEC1.h" />
+    <ClInclude Include="dlgToolPoly.h" />
+    <ClInclude Include="dlgTraceBalanceXT.h" />
+    <ClInclude Include="dlgTraceDub.h" />
+    <ClInclude Include="dlgTTCurve.h" />
+    <ClInclude Include="dlgUnix2PC.h" />
+    <ClInclude Include="dlgVel2Den.h" />
+    <ClInclude Include="dlgVel2Den1.h" />
+    <ClInclude Include="dlgVELOCITY1.h" />
+    <ClInclude Include="dlgVelocityPerturb.h" />
+    <ClInclude Include="dlgVelocityTwtt2.h" />
+    <ClInclude Include="dlgVred.h" />
+    <ClInclude Include="dlgWide2Depth.h" />
+    <ClInclude Include="dlgWide2Velocity.h" />
+    <ClInclude Include="dlgWienerFilter.h" />
+    <ClInclude Include="ealloc_d.h" />
+    <ClInclude Include="IniReader.h" />
+    <ClInclude Include="IniWriter.h" />
+    <ClInclude Include="IpFrame.h" />
+    <ClInclude Include="LicenseCheck.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ScrollHelper.h" />
+    <ClInclude Include="SegyWrapper.h" />
+    <ClInclude Include="SegyWrapperEx.h" />
+    <ClInclude Include="seiContour.h" />
+    <ClInclude Include="SeisWide.h" />
+    <ClInclude Include="SeisWideDoc.h" />
+    <ClInclude Include="SeisWideView.h" />
+    <ClInclude Include="SrvrItem.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="sumig.h" />
+    <ClInclude Include="suSwapByte.h" />
+    <ClInclude Include="TipDlg.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="VelMod.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram11.cd" />
+    <None Include="ClassDiagram12.cd" />
+    <None Include="ClassDiagram13.cd" />
+    <None Include="dlgHardwareId.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="dlgRegionalModel.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="dlgRegionalVelocity.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="dlgSonobuoyPoly.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="dlgVelocityPerturb.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="filter.rct" />
+    <CustomBuild Include="hlp\SeisWide.hpj">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Making help file...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(ProjectDir)makehelp.bat"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)$(TargetName).hlp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Making help file...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(ProjectDir)makehelp.bat"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)$(TargetName).hlp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\SeisWide.rc2" />
+    <None Include="SeisWide.rgs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SeisWide.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap2.bmp" />
+    <Image Include="RES\bitmap4.bmp" />
+    <Image Include="res\darrow.bmp" />
+    <Image Include="res\Deping3.BMP" />
+    <Image Include="RES\dlgDecimate.ico" />
+    <Image Include="RES\icon1.ico" />
+    <Image Include="res\IToolbar.bmp" />
+    <Image Include="RES\litebulb.bmp" />
+    <Image Include="res\SeisWide.ico" />
+    <Image Include="res\SeisWideDoc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="SeisWide.idl">
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Win32</TargetEnvironment>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateStublessProxies>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SeisWide_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SeisWide_i.c</InterfaceIdentifierFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Win32</TargetEnvironment>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateStublessProxies>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SeisWide_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SeisWide_i.c</InterfaceIdentifierFileName>
+    </Midl>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="SeisWide.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

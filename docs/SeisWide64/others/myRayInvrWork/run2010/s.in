@@ -1,0 +1,14 @@
+ &pltpar  iplot=2, iconv=0, iscale=0, ishade=1, vred=5,
+          iroute=2, scalef=5.3,ifill=1, clip=1.9, sps=300.,iwavlt=1,nptsw=29,
+          scaleXmin=5.5,rcor=1.,
+          inmo=0,depthOBS=0.03,depthWater=3.8,depthGUN=0.011,
+          ibcol=0, ifcol=1,
+          xwndow=270., ywndow=175.,
+
+
+ &end
+ &axepar 
+          albht=3.5, orig=20., itrev=0,
+          xmin=0., xmax=40., xmm=230.,
+          tmin=4.0, tmax=10., tmm=135.,
+ &end

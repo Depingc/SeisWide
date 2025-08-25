@@ -1,0 +1,19 @@
+
+	// SeisWide.idl : IDL source for SeisWide.exe
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (SeisWide.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+[
+	uuid(7645DBD9-FB61-11D2-98F5-00C04FAE94E9),
+	version(1.0),
+	helpstring("SeisWide 1.0 Type Library")
+]
+library SeisWideLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+};
+
+	

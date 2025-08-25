@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{7645DBDA-FB61-11D2-98F5-00C04FAE94E9} = s 'SeisWide'
+		'SeisWide.EXE'
+		{
+			val AppID = s {7645DBDA-FB61-11D2-98F5-00C04FAE94E9}
+		}
+	}
+}

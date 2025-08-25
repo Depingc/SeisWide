@@ -1,0 +1,14 @@
+It has been found that very occasionally all printing pages from SeisWide are vertically shrinked. The exact reason is unknown. In this case, please reboot your PC and SeisWide prints normal again.
+You can use onscreen line drawing functions to help your complicated modeling process; see File | Import | Import Line-Drawing in Depth.
+You may open demo files that are installed in the "demo" folder, typically under C:\Program Files\Seiswide4 .
+You can copy any SeisWide's display to clipboard. To paste in CorelDraw, usually use "Paste Special" to be able to edit each of the objects.
+You can use BMP-scanned Seismic data in ways similar to segy data in SeisWide. Use File | Import BMP, and define corner coordinates. For each bitmap, you should keep 2 file versions: 1 cropped at the axes, and 1 without labels.
+You can digitize onscreen with the Zoom, Pick, Delete, Move, Add buttons.
+You can view any segy files within SeisWide (remember to convert to PC format)
+If you move all your files into another computer drive, you can globally change drive letter from the "Common Parameter List" .
+During modeling, you may find it convenient to open many windows in SeisWide
+Updated velocity models are now automatically saved to disk. Try saving models to different file names since you may revert back to previous models
+Raytracing results are stored in the same directory as the velocity model, and shared by different sub-windows inside SeisWide. Therefore, it is recommended that the velocity model of one line is stored in one directory only, which is not to be shared by other lines. In this way, if you change the raytracing  from one sub-window, all other windows will change upon refreshing.
+When a travel-time curve has a segment going outside the display rectangle on screen, the segment is NOT displayed. In this case, you may either increase the number of rays, or widen the display rectangle.
+You can easily create a new velocity model or use an existing one from Zelt format (see Modeling menu)
+If you move a node across an adjacent boundary, you have option to let 2 boundaries merge.

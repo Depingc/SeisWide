@@ -1,0 +1,385 @@
+// dlgRaytrace1.cpp : implementation file
+//
+
+#include "stdafx.h"
+#include "SeisWide.h"
+#include "dlgRaytrace1.h"
+#include "dlgRayAuto.h"
+#include "segy.h"
+#include "util.h"
+#include "MainFrm.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// CdlgRaytrace1 dialog
+
+
+CdlgRaytrace1::CdlgRaytrace1(CWnd* pParent /*=NULL*/)
+	: CDialog(CdlgRaytrace1::IDD, pParent)
+	, m_isTraceAuto(FALSE)
+	, m_isAnisotropy(FALSE)
+{
+	//{{AFX_DATA_INIT(CdlgRaytrace1)
+	m_rayTracing = _T("");
+	m_velName = _T("");
+	m_floatName = _T("");
+	m_txName = _T("");
+	//}}AFX_DATA_INIT
+}
+
+
+void CdlgRaytrace1::DoDataExchange(CDataExchange* pDX)
+{
+	CDialog::DoDataExchange(pDX);
+	//{{AFX_DATA_MAP(CdlgRaytrace1)
+	DDX_Text(pDX, IDC_DLG_RAYTRACING, m_rayTracing);
+	DDX_Text(pDX, IDC_DLG_VELNAME, m_velName);
+	DDX_Text(pDX, IDC_FLOATNAME, m_floatName);
+	DDX_Text(pDX, IDC_TXNAME, m_txName);
+	//}}AFX_DATA_MAP
+	DDX_Check(pDX, IDC_TRACE_AUTO, m_isTraceAuto);
+	DDX_Check(pDX, IDC_TRACE_AUTO2, m_isAnisotropy);
+}
+
+
+BEGIN_MESSAGE_MAP(CdlgRaytrace1, CDialog)
+	//{{AFX_MSG_MAP(CdlgRaytrace1)
+	ON_BN_CLICKED(IDC_BUTTON_BROWSERIN, OnButtonBrowserin)
+	ON_BN_CLICKED(IDC_BUTTON_BROWSEV, OnButtonBrowsev)
+	ON_BN_CLICKED(IDC_BUTTON_AUTO, OnButtonAuto)
+	ON_BN_CLICKED(IDC_BUTTON_BROWSEV2, OnButtonBrowseFloat)
+	ON_BN_CLICKED(IDC_BUTTON_EDIT, OnButtonEdit)
+	ON_BN_CLICKED(IDC_BUTTON_BROWSE_TX, OnButtonBrowseTx)
+	//}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CdlgRaytrace1 message handlers
+
+void CdlgRaytrace1::OnButtonBrowserin() 
+{
+#ifndef _MAC
+	CFileDialog dlg( TRUE,_T("in"),_T("*.in"),
+	                 OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT,
+	                 _T("Zelt's Ray Parameter File (*.in)|*.in|"));
+#else
+	CFileDialog dlg( TRUE,NULL,NULL,
+	                 OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT,
+	                 _T("Zelt's Ray Parameter File |in |"));
+#endif
+
+
+	int pathLen = m_rayTracing.ReverseFind( '\\' );
+
+	CString t = m_rayTracing.Left(pathLen);
+	LPCTSTR lpszFileName = t.GetBufferSetLength(t.GetLength());
+	if(pathLen>(-1))
+	{
+		dlg.m_ofn.lpstrInitialDir = lpszFileName;
+	}
+
+	if( dlg.DoModal()==IDOK )
+	{
+		m_rayTracing = dlg.GetPathName();
+		CEdit *pEdit = static_cast<CEdit*> (GetDlgItem(IDC_DLG_RAYTRACING));
+		pEdit->SetWindowText(m_rayTracing);
+	}
+	
+	t.ReleaseBuffer();
+}
+
+void CdlgRaytrace1::OnButtonBrowsev() 
+{
+#ifndef _MAC
+	CFileDialog dlg( TRUE,_T("bin"),_T("*.bin"),
+	                 OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT,
+	                 _T("SeisWide Binary Velocity Format (*.bin)|*.bin|"));
+#else
+	CFileDialog dlg( TRUE,NULL,NULL,
+	                 OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT,
+	                 _T("SeisWide Binary Velocity Format |bin |"));
+#endif
+	int pathLen = m_velName.ReverseFind( '\\' );
+	CString t = m_velName.Left(pathLen);
+	LPCTSTR lpszFileName = t.GetBufferSetLength(t.GetLength());
+	if(pathLen>(-1))
+	{
+		dlg.m_ofn.lpstrInitialDir = lpszFileName;
+	}
+
+	if( dlg.DoModal()==IDOK )
+	{
+		m_velName = dlg.GetPathName();
+		CEdit *pEdit = static_cast<CEdit*> (GetDlgItem(IDC_DLG_VELNAME));
+		pEdit->SetWindowText(m_velName);
+	}
+	t.ReleaseBuffer();
+	
+}
+
+void CdlgRaytrace1::OnButtonBrowseFloat() 
+{
+#ifndef _MAC
+	CFileDialog dlg( TRUE,_T("txt"),_T("*.txt"),
+	                 OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT,
+	                 _T("SeisWide Digitize Format (*.txt)|*.txt|"));
+#else
+	CFileDialog dlg( TRUE,NULL,NULL,
+	                 OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT,
+	                 _T("SeisWide Digitize Format |txt |"));
+#endif
+	int pathLen = this->m_floatName.ReverseFind( '\\' );
+	CString t = m_floatName.Left(pathLen);
+	LPCTSTR lpszFileName = t.GetBufferSetLength(t.GetLength());
+	if(pathLen>(-1))
+	{
+		dlg.m_ofn.lpstrInitialDir = lpszFileName;
+	}
+	if( dlg.DoModal()==IDOK )
+	{
+		m_floatName = dlg.GetPathName();
+		CEdit *pEdit = static_cast<CEdit*> (GetDlgItem(IDC_FLOATNAME));
+		pEdit->SetWindowText(m_floatName);
+	}
+	t.ReleaseBuffer();
+	
+}
+
+void CdlgRaytrace1::OnButtonAuto() 
+{
+	// TODO: Add your control notification handler code here
+//	char s[7];
+	int i;
+	CString l[33], t,t1, newName;
+
+	CdlgRayAuto dlg;
+	dlg.m_tmax = tmax;
+	dlg.m_tmin = tmin;
+	dlg.m_vred = vred;
+	dlg.m_xmax = xmax;
+	dlg.m_xmin = xmin;
+	dlg.m_xshot = xshot;  //OBS distance
+	dlg.m_zshot = zshot;  //OBS depth.
+	dlg.m_zmax = zmax;  //model max depth.
+	dlg.m_zmin = zmin;  //model min depth.
+
+
+	int pathLen = m_velName.ReverseFind( '\\' );
+	int pathLen2 = m_velName.ReverseFind( '.' );
+	if(pathLen>(-1) && pathLen2>pathLen+4)
+	{
+		CString txPath = m_velName.Left(pathLen);
+	//	txPath.MakeLower();
+	//	dlg.m_newName = txPath+ "\\r_" + m_velName.Mid(pathLen+1, pathLen2-pathLen-4) + ".in";
+		dlg.m_newName.Format( "%s\\r_%s.in", txPath, m_velName.Mid(pathLen+1, pathLen2-pathLen-4) );
+	}
+	else {
+	//	dlg.m_newName = "r_" +  m_velName + ".in";
+		dlg.m_newName.Format( "r_%s.in", m_velName );
+	}
+
+
+
+	dlg.m_timeSecName = timeSecName;
+	if(dlg.DoModal() == IDOK)
+	{
+		tmax = dlg.m_tmax;
+		tmin = dlg.m_tmin;
+		vred = dlg.m_vred;
+		xmax = dlg.m_xmax;
+		xmin = dlg.m_xmin;
+		xshot = dlg.m_xshot;
+		zshot = dlg.m_zshot;
+		zmax = dlg.m_zmax;
+		zmin = dlg.m_zmin;
+		newName = dlg.m_newName;
+		timeSecName = dlg.m_timeSecName;
+		if(newName == "") 
+		{
+			AfxMessageBox("Please specify a file name");
+			return;
+		}
+	}
+	else return;
+
+	FILE *stream;
+	stream = fopen( newName, "w" );
+	if( stream == NULL )
+	{
+		AfxMessageBox( "The new velocity file was not opened" );
+		return;
+	}
+
+	l[0] =  " &pltpar iroute=1,iseg=0,iray=2,ibnd=0,irays=0,ivel=0,";
+	l[1] = "	  itx=1,itxout=1,idump=0,iszero=0,idash=0,isum=1,iplot=0,";
+	l[2] = " ";
+	for (i=0; i<=2; i++)
+		fprintf(stream, "%s\n", l[i]);
+	fprintf(stream, "	  idata=0,vred=%6.3f,nrskip=3,nskip=0,velht=0.05,\n", vred);
+	l[4] = "          symht=0.1,itxbox=1,isep=0,istep=0,ircol=3,irayps=0,itcol=3,ifcol=6,ibcol=0,";
+	l[5] = "          mcol=8,14,1,4,14,  colour=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17";
+	l[6] = "  /";
+	for (i=4; i<=6; i++)
+		fprintf(stream, "%s\n", l[i]);
+	fprintf(stream, "  &axepar  xmin=%6.1f,xmax=%6.1f,xtmin=%6.1f,xtmax=%6.3f,xmm=200,ntickx=0,ndecix=-1,\n", xmin,xmax,xmin,xmax);
+	fprintf(stream, "           zmin=%6.1f,zmax=%6.1f,ztmin=%6.1f,ztmax=%6.3f,zmm=85,ntickz=0,ndeciz=-1,\n",zmin,zmax,zmin,zmax);
+	fprintf(stream, "           tmin=%6.1f,tmax=%6.1f,ttmin=%6.1f,ttmax=%6.1f,tmm=85,ntickt=0,ndecit=-1,\n",tmin,tmax,tmin,tmax);
+	fprintf(stream, "           xmint=%6.1f,xmaxt=%6.1f,xtmint=%6.1f,xtmaxt=%6.1f,xmm=200,ntickx=0,ndecix=-1,\n",xmin,xmax,xmin,xmax);
+	l[11] = "           iaxlab=1,itrev=0, sep=15, orig=15,";
+	l[12] = "  /";
+	l[13] = "  &trapar imodf=1, ibsmth=0, nbsmth=0, istop=0, crit=0., hws=1.0, iraysl=1,ifast=1,isrch=1,";
+	l[14] = "  ishot=   2,";
+	for (i=11; i<=14; i++)
+		fprintf(stream, "%s\n", l[i]);
+	fprintf(stream, "  xshot=%6.3f,\n", xshot);
+	fprintf(stream, "  zshot=%6.3f,\n", zshot);
+	l[17] = "  irayt=1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,";
+	l[18] = "        1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,";
+	l[19] = "  ray = 1.2, 2.2, 3.1, 3.2, 4.1, 4.2, 5.1, 5.2, 6.1, 6.2, 7.1, 7.2, 8.1, 8.2, 9.1, 9.2,";
+    l[20] = "  iturn=0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,";
+	l[21] = "  nray =20,  35,  20,  15,  20,  15,  20,  30,  15,  20,  30,  15,  20,  30,  15,  30,";
+	l[22] = "  xsmax=0.,nsmax=45,";
+	l[23] = "  space=1.0, 2.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0,";
+	l[24] = "  aamin=0.05, aamax=85., step=0.05,\n  i2pt=0,n2pt=100,";
+	l[25] = "  frbnd=0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,";
+	l[26] = "  frbnd=0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,";
+	l[27] = "  pois=0.5,0.25,0.25,0.25,0.25,0.25,0.25, 0.25,0.25,  nhray=30,";
+	l[28] = "  /";
+	l[29] = "  &invpar  invr=0,";
+	l[30] = "  ivray= 2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  8,  0,";
+	l[31] = "           bndunc=0.08,   velunc=0.05,  ximax=2.0,";
+	l[32] = "  /";
+	for (i=17; i<=32; i++)
+		fprintf(stream, "%s\n", l[i]);
+
+	fclose(stream);
+
+	showFileInNotePad(newName);
+	m_rayTracing = newName;
+	//end of generating ray parameters.
+
+/*
+	//check and/or modify segy.
+	union TWO_FOUR{
+		short hw[2];
+		int iv;
+	} ssmic;
+	segy tr;
+	short *i2buf;
+	i2buf = (short *) &tr;
+	if(timeSecName == "") return;
+	CFile file;
+	if (!file.Open(draw.timeSecName, CFile::modeReadWrite | CFile::typeBinary)) {
+		return;
+	}
+
+	//For progress control, need to know the last bytes no.
+	 LONGLONG curBytesRead, len;
+	LONGLONG totBytesRead = file.Seek(0, CFile::end);
+	 file.Seek(0, CFile::begin);
+	//Begin progress control.
+     CMainFrame* pFrame = 
+        (CMainFrame*)AfxGetMainWnd();
+     ASSERT(pFrame);
+     ASSERT_KINDOF(CMainFrame, pFrame);
+     pFrame->BeginProgress();
+
+	LONGLONG bytesRead = file.Seek(3200L, CFile::begin);
+	if(bytesRead < 3200) return;
+	bytesRead = file.Read(i2buf, 400);
+	if(bytesRead < 400) return;
+	if(i2buf[12]!=3)  
+		len = i2buf[10]*4;
+	else if(i2buf[12]<0 || i2buf[12]>4)
+		return;
+	else
+		len = i2buf[10]*2;
+
+	while (file.Read(&tr, 240) == 240)
+	{
+		curBytesRead = file.Seek(0, CFile::current);
+		int iPos = (int)((double)curBytesRead/(double)totBytesRead*100.);
+		if(iPos<0)iPos=0;
+		if(iPos>100)iPos=100;
+		pFrame->SetProgress(iPos);
+
+		if(xshot>0)
+			ssmic.iv = (long)((double)xshot*1000.+.5);
+		else
+			ssmic.iv = (long)((double)xshot*1000.-.5);
+
+		if(tr.sx == ssmic.iv) 
+		{
+			file.Close();
+			pFrame->EndProgress();
+			return; //this means the data is  already correct.
+		}
+		i2buf[36] = ssmic.hw[0];
+		i2buf[37] = ssmic.hw[1];
+		//now overwrite CDP to be offset+source position.
+		ssmic.hw[0] = i2buf[18];
+		ssmic.hw[1] = i2buf[19];
+		if(xshot>0)
+			ssmic.iv += (long)((double)xshot*1000.+.5);
+		else
+			ssmic.iv += (long)((double)xshot*1000.-.5);
+
+		// ssmic.iv += (long)((double)(xshot*1000.));
+		i2buf[10] = i2buf[40] = ssmic.hw[0];
+		i2buf[11] = i2buf[41] = ssmic.hw[1];
+		// i2buf[54] += -i2buf[52];  //in version 3.2, static shift is in i2buf[54], as opposed to [52] in previous version .
+		// i2buf[52] = 0;
+		i2buf[44] = 1;  //meters used.
+		file.Seek(-240, CFile::current);
+		file.Write(i2buf, 240);
+		file.Seek((long)len, CFile::current);
+	}
+	
+	file.Close();
+	pFrame->EndProgress();
+*/
+	UpdateData(FALSE);	//update the dialog box.
+}
+
+
+void CdlgRaytrace1::OnButtonEdit() 
+{
+	UpdateData(TRUE);
+	showFileInNotePad(m_rayTracing);
+	
+}
+
+void CdlgRaytrace1::OnButtonBrowseTx() 
+{
+#ifndef _MAC
+	CFileDialog dlg( TRUE,_T("in"),_T("*.in"),
+	                 OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT,
+	                 _T("Travel-time picks (*.in)|*.in|"));
+#else
+	CFileDialog dlg( TRUE,NULL,NULL,
+	                 OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT,
+	                 _T("Travel-time picks |in |"));
+#endif
+	int pathLen = m_txName.ReverseFind( '\\' );
+	CString t = m_txName.Left(pathLen);
+	LPCTSTR lpszFileName = t.GetBufferSetLength(t.GetLength());
+	if(pathLen>(-1))
+	{
+		dlg.m_ofn.lpstrInitialDir = lpszFileName;
+	}
+
+	if( dlg.DoModal()==IDOK )
+	{
+		m_txName = dlg.GetPathName();
+		CEdit *pEdit = static_cast<CEdit*> (GetDlgItem(IDC_TXNAME));
+		pEdit->SetWindowText(m_txName);
+	}
+	t.ReleaseBuffer();
+	
+	
+}

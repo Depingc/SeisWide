@@ -1,0 +1,61 @@
+ &pltpar iroute=1,iseg=0,iray=2,ibnd=0,irays=0,ivel=0,
+	  itx=1,itxout=1,idump=0,iszero=0,idash=0,isum=1,iplot=0,
+ 
+	  idata=0,vred= 7.000,nrskip=3,nskip=0,velht=0.05,
+          symht=0.1,itxbox=1,isep=0,istep=0,ircol=3,irayps=0,itcol=3,ifcol=6,ibcol=0,
+          mcol=8,14,1,4,14,  colour=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,
+  /
+  &axepar  xmin=   0.0,xmax=  35.0,xtmin=   0.0,xtmax=35.000,xmm=200,ntickx=0,ndecix=-1,
+           zmin=   0.0,zmax=  15.0,ztmin=   0.0,ztmax=15.000,zmm=85,ntickz=0,ndeciz=-1,
+           tmin=   0.0,tmax=  12.0,ttmin=   0.0,ttmax=  12.0,tmm=85,ntickt=0,ndecit=-1,
+           xmint=   0.0,xmaxt=  35.0,xtmint=   0.0,xtmaxt=  35.0,xmm=200,ntickx=0,ndecix=-1,
+           iaxlab=1,itrev=0, sep=15, orig=15,
+  /
+  &trapar imodf=1, ibsmth=0, nbsmth=0, istop=0, crit=0., hws=1.0, iraysl=1,ifast=1,isrch=1,is_anisotropy=1,
+  ishot=   -1,
+  xshot= 35.000, 
+  zshot= 0.060,
+  irayt=1,   1,   1,   1,         1,     1,          1,      1,        1,              1                1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,
+        1,   1,   1,   1,         1,     1,          1,      1,        1,              1,               1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,
+  ray =11.1, 6.1, 6.1, 5.1,       5.1,   4.1,        5.1,    5.1,      5.1,            6.1,             4.1, 4.1, 7.1, 8.2, 9.1, 10.1,10.2,11.1,11.2,7.1, 8.1,
+  iturn=0,   0,   0,   0,         0,     0,          0,      0,        0,              0,               0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+  nray =90,  90,  90,  90,        00,    80,         20,     00,       00,             0,               20,  70,  20,  20,  20,  20,  20,  20,  20,  70,  290,
+
+  nrbnd=0,   0,   2,   2,         2,     4,          0,      4,        6,              6,               0,   2,   0,   0,   0,   0,   0,   0,   0,   2,   2,
+  rbnd =          -2,6,-2,6,      -1,1,  -2,4,-2,4,          1,-1,-2,5,1,-1,-2,6,-2,6, 1,-1,-2,6,-2,6,       -2,5,                                   -2,8,-2,9,
+
+  ncbnd=2,  
+  cbnd =8,13,
+
+  xsmax=0.,nsmax=45,
+  space=2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0,
+  aamin=0.000, aamax=90, step=0.004,
+  i2pt=0,n2pt=100,
+  frbnd=0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+  frbnd=0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+  pois=0.5,0.28,0.28,0.28,0.28,0.28,0.28, 0.28,0.28,0.28,0.28,  nhray=30,
+  /
+  &invpar  invr=0,
+  ivray= 2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  8,  0,
+           bndunc=0.08,   velunc=0.05,  ximax=2.0,
+  /
+  &amppar iamp=1, isect=1, omega = 6.,
+          xmins=0., xmaxs=110., xincs=0.5,iden=1,
+  &end
+
+
+1 1.1 water wave
+2 1.2 seabed refl
+3 2.1 turning wave sed1 layer
+4 2.2 refl off sed1 base - no picks
+5 3.1 turning wave sed2 layer
+6 3.2 refl of base of sed2
+7 4.1 turning wave sed3 above basemenet
+8 4.2 reflection off basement
+9 5.1 turning waver upper crust
+10 5.2 refelction of base upper crust
+11 6.1 turning wave rmiddle crust
+12 6.2 refelction of base middle crust
+13 7.1 turning wave lower crust
+14 7.2 PmP
+15+17 8.1+9.1 Pn turning waves in mantle
