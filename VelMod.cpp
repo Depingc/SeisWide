@@ -305,9 +305,9 @@ BOOL CVelMod::formatCalcVelLimits(CVelMod::VELMOD * velm)
 		}
 	}
 
-	for (j = 0; j < velm->nzed[0]; j++) {
-		velm->zm[j][0] = 0.f;
-	}
+	//for (j = 0; j < velm->nzed[0]; j++) {
+	//	velm->zm[j][0] = 0.f;
+	//}
 
 
 	//Search for minimum and max model distance.
