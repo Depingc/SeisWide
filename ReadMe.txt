@@ -1,3 +1,15 @@
+Seiswide has been continually updated since its creation in 1996 using Microsoft Visual C++, aiming at unified graphical manipulation of Geophysical seismic data (SEG-Y; multichannel seismic reflection data, wide-angle Ocean Bottom Seismometer and sonobuoy data) with interactive 2D velocity modeling and digitizing.  These data are combined to compute and generate layered Earth model results in either time (TWTT) and/or depth domain with 2-Dimentional velocity variations in each layer.
+
+Seiswide tries to handle all needed data processing for the purpose of wide-angle modeling, including water wave picking and offset assigning, distance assignment for multichannel data, filtering (time varying or distance varying), despiking, deconvolution, time-code removal, regular noise reduction, and optimal coherency trace mixing.
+
+Documentation is hosted at
+http://seiswide.hopto.org/seiswide/
+(Note: this is a free domain; as a result some networks may block such free domain. I once had to turn off Wifi inside a large organization for my phone to access this URL)
+
+
+
+
+
 ========================================================================
        MICROSOFT FOUNDATION CLASS LIBRARY : SeisWide
 ========================================================================
