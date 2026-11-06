@@ -1,0 +1,6 @@
+SeisWide was designed to help majority of work for my geophysical research and publications for over 20 years since 1996. It uses Microsoft Visual C++ in Windows, coupled with OpenGL for graphics manipulations for 2D and 3D displays. Areas involved include signal processing, interactive graphical displays, computer modeling, and geological interpretations. It interacts with standard seismic data from oil industry. It interact with some other Fortran programs as well. 
+
+The latest Windows build of SeisWide can be downloaded from:
+https://depingc.github.io/SeisWide
+
+After download, uncompress in Windows, and run SeisWide/SeisWide64.exe . You may open some Demos files for some starting examples.
