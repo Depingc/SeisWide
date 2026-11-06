@@ -12,11 +12,8 @@ distance assignment for multichannel data, filtering (time varying or
 distance varying), despiking, deconvolution, time-code removal, regular 
 noise reduction, and optimal coherency trace mixing.
 
-Documentation is hosted at
-http://seiswide.hopto.org/seiswide/
-(Note: this is a free domain; as a result some networks may block such 
-free domain. I once had to turn off Wifi inside a large organization 
-for my phone to access this URL)
+A More Detailed Documentation can be found at
+https://depingc.github.io/SeisWide/index2.html
 
 
 
